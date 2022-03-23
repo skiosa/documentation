@@ -13,7 +13,6 @@
     headsepline,		% Linie nach Kopfzeile.
     footsepline,		% Linie vor Fusszeile.
     %footheight = 16pt,	% Höhe der Fusszeile
-    abstracton,		% Abstract Überschriften
     DIV=calc,		% Satzspiegel berechnen
     BCOR=8mm,		% Bindekorrektur links: 8mm
     headinclude=false,	% Kopfzeile nicht in den Satzspiegel einbeziehen
@@ -26,7 +25,7 @@
 \usepackage{xstring}
 
 \usepackage{lastpage}
-\usepackage{fancyhdr}
+\usepackage[automark,plainheadsepline,plainfootsepline]{scrlayer-scrpage}
 \newcommand{\einstellung}[1]{%
     \expandafter\newcommand\csname #1\endcsname{}
     \expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
@@ -45,21 +44,9 @@
 \newif\ifreddot
 \reddotfalse
 
-% Flag für gelben Vertraulichkeitspunkt, default: false
-\newif\ifyellowdot
-\yellowdotfalse
-
-% Flag für das Unterschriftenblatt, default: false
-\newif\ifunterschriftenblatt
-\unterschriftenblattfalse
-
 % Flag für Einfügen der Seitenzahl bei Verweis auf Kapitel/Abschnitt, default: false
 \newif\ifrefWithPages
 \refWithPagesfalse
-
-% Flag für Einfügen der Abstracts in deutsch und englisch, default: false
-\newif\ifbothabstracts
-\bothabstractsfalse
 
 % Flag für Einfügen des Abkürzungsverzeichnis
 \newif\ifabkverz
@@ -85,14 +72,6 @@
 \newif\iftableverz
 \tableverzfalse
 
-% Flag für Einfügen des Sperrvermerks
-\newif\ifsperrvermerk
-\sperrvermerkfalse
-
-% Flag für Einfügen des Abstracts
-\newif\ifabstract
-\abstractfalse
-
 % Flag für Anhang
 \newif\ifappendix
 \appendixfalse
@@ -100,10 +79,6 @@
 % Flag für Literaturverzeichnis
 \newif\ifliteratur
 \literaturfalse
-
-% Flag für Glossar
-\newif\ifglossar
-\glossarfalse
 
 % Flag für Inhaltsverzeichnis
 \newif\ifinhalt
@@ -170,78 +145,41 @@
 \setlength{\headheight}{40pt}
 
 \newcommand{\setpagestylehead}{%
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            %trim=left bottom right top
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{endOfRomanNumbering}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \cfoot*{}
+    \ofoot*{\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{roman}
 }
 
-\newcommand{\setpagestylecontent}{
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{endOfArabicNumbering}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+\newcommand{\setpagestylecontent}{%
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \cfoot*{}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \ofoot*{\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{arabic}
 }
 
-\newcommand{\setpagestylefoot}{
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+\newcommand{\setpagestylefoot}{%
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \cfoot*{}
+    \ofoot*{\tiny \langseite\ \pagemark\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{Alph}
 }
 
@@ -317,7 +255,6 @@
 % PDF Einstellungen
 \usepackage[%
     pdftitle={\titel},
-    pdfauthor={\autor},
     pdfsubject={\arbeit},
     pdfcreator={pdflatex, LaTeX with KOMA-Script},
     pdfpagemode=UseOutlines, 		% Beim Oeffnen Inhaltsverzeichnis anzeigen
@@ -348,7 +285,7 @@
 % Literaturverweise (sowohl deutsch als auch englisch)
 \iflang{de}{%
     \usepackage[
-        backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
+        backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
         bibwarn=true,
         bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
         sortlocale=de_DE,
@@ -357,7 +294,7 @@
 }
 \iflang{en}{%
     \usepackage[
-        backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
+        backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
         bibwarn=true,
         bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
         sortlocale=en_US,
@@ -428,17 +365,17 @@
 }
 
 \ifrefWithPages
-    %RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
-    %        useful for printed documents without clickable hyperlinks
-    \AtBeginDocument{\let\oldautoref\autoref}
-    \AtBeginDocument{
-        \renewcommand{\autoref}[1]{%
-            \oldautoref{#1}%
-            \ifthenelse{\thepage=\pageref{#1}}% if current page number equals the referenced page number
-            {}% then add nothing
-            { (S. \pageref{#1})}% else add the text
-        }
+%RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
+%        useful for printed documents without clickable hyperlinks
+\AtBeginDocument{\let\oldautoref\autoref}
+\AtBeginDocument{
+    \renewcommand{\autoref}[1]{%
+        \oldautoref{#1}%
+        \ifthenelse{\thepage=\pageref{#1}}% if current page number equals the referenced page number
+        {}% then add nothing
+        { (S. \pageref{#1})}% else add the text
     }
+}
 \fi
 
 \usepackage{amssymb} % Erweiterung der Symbole in Mathematikumgebung
