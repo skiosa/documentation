@@ -80,6 +80,7 @@
 \newif\ifliteratur
 \literaturfalse
 
+
 % Flag für Inhaltsverzeichnis
 \newif\ifinhalt
 \inhaltfalse
@@ -364,7 +365,7 @@
     }
 }
 
-\ifrefWithPages
+\ifrefWithPage
 %RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
 %        useful for printed documents without clickable hyperlinks
 \AtBeginDocument{\let\oldautoref\autoref}
