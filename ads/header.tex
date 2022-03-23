@@ -28,7 +28,7 @@
 \usepackage[automark,plainheadsepline,plainfootsepline]{scrlayer-scrpage}
 \newcommand{\einstellung}[1]{%
     \expandafter\newcommand\csname #1\endcsname{}
-    \expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
+\expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
 }
 \newcommand{\langstr}[1]{\einstellung{lang#1}}
 
@@ -189,14 +189,14 @@
 
 % Einstellung der Sprache des Paketes Babel und der Verzeichnisüberschriften
 
-\iflang{de}{
-    \usepackage[english, ngerman]{babel}
-    \selectlanguage{ngerman}
-}
-\iflang{en}{
-    \usepackage[ngerman, english]{babel}
-    \selectlanguage{english}
-}
+% \iflang{de}{
+%     \usepackage[english, ngerman]{babel}
+%     \selectlanguage{ngerman}
+% }
+% \iflang{en}{
+%     \usepackage[ngerman, english]{babel}
+%     \selectlanguage{english}
+% }
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -208,7 +208,6 @@
 \usepackage[activate]{microtype} %Zeilenumbruch und mehr
 \usepackage[onehalfspacing]{setspace}
 \usepackage{makeidx}
-\usepackage[autostyle=true,german=quotes]{csquotes}
 \usepackage{longtable}
 \usepackage{enumitem}	% mehr Optionen bei Aufzählungen
 \usepackage{graphicx}
@@ -225,8 +224,6 @@
 %\usepackage[printonlyused, footnote]{acronym} % falls gewünscht kann die Option footnote eingefügt werden, dann wird die Erklärung nicht inline sondern in einer Fußnote dargestellt
 \usepackage{scrhack} % in Kombination mit listings-Package kommt es zu Warnings, dieses Paket verhindert die Warnings! Ggf. auskommentieren und die Warnings akzeptieren falls Verzeichnisse nicht so dargestellt werden wie gewünscht
 \usepackage{listings} % Code-Listings
-%\usepackage[numbered, framed]{matlab-prettifier}
-\usepackage[framed]{matlab-prettifier} % .sty-Datei muss vorhanden sein! Kann auskommentiert werden, falls keine Matlab-Listings in der Arbeit enthalten sind.
 \usepackage{color, colortbl}  %Für Highlighten der Tabellenzeilen
 \usepackage{amsmath}% http://ctan.org/pkg/amsmath
 
@@ -286,7 +283,7 @@
 % Literaturverweise (sowohl deutsch als auch englisch)
 \iflang{de}{%
     \usepackage[
-        backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
+        backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
         bibwarn=true,
         bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
         sortlocale=de_DE,
@@ -295,7 +292,7 @@
 }
 \iflang{en}{%
     \usepackage[
-        backend=biber,		% empfohlen. Falls biber Probleme macht: bibtex
+        backend=bibtex,		% empfohlen. Falls biber Probleme macht: bibtex
         bibwarn=true,
         bibencoding=utf8,	% wenn .bib in utf8, sonst ascii
         sortlocale=en_US,
@@ -365,7 +362,7 @@
     }
 }
 
-\ifrefWithPage
+\ifrefWithPages
 %RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
 %        useful for printed documents without clickable hyperlinks
 \AtBeginDocument{\let\oldautoref\autoref}
