@@ -1,0 +1,29 @@
+kind: pipeline
+type: kubernetes
+name: build-pdf
+
+steps:
+- name: build pdf
+  image: registry.dev.skiosa.de/skiosa-latex:2060237
+  commands:
+  - pdflatex dokumentation.tex
+  - bibtex dokumentation
+  - pdflatex dokumentation.tex
+  - pdflatex dokumentation.tex
+
+- name: publish pdf
+  image: plugins/github-release
+  settings:
+    api_key:
+      from_secret: github_token
+    files: dokumentation.pdf
+    note: CHANGELOG.md
+    title: Skiosa-Dokumentation 
+
+image_pull_secrets:
+- dockerconfig
+
+trigger:
+  event:
+    - tag
+
