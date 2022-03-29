@@ -13,7 +13,6 @@
     headsepline,		% Linie nach Kopfzeile.
     footsepline,		% Linie vor Fusszeile.
     %footheight = 16pt,	% Höhe der Fusszeile
-    abstracton,		% Abstract Überschriften
     DIV=calc,		% Satzspiegel berechnen
     BCOR=8mm,		% Bindekorrektur links: 8mm
     headinclude=false,	% Kopfzeile nicht in den Satzspiegel einbeziehen
@@ -26,10 +25,10 @@
 \usepackage{xstring}
 
 \usepackage{lastpage}
-\usepackage{fancyhdr}
+\usepackage[automark,plainheadsepline,plainfootsepline]{scrlayer-scrpage}
 \newcommand{\einstellung}[1]{%
     \expandafter\newcommand\csname #1\endcsname{}
-    \expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
+\expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
 }
 \newcommand{\langstr}[1]{\einstellung{lang#1}}
 
@@ -45,21 +44,9 @@
 \newif\ifreddot
 \reddotfalse
 
-% Flag für gelben Vertraulichkeitspunkt, default: false
-\newif\ifyellowdot
-\yellowdotfalse
-
-% Flag für das Unterschriftenblatt, default: false
-\newif\ifunterschriftenblatt
-\unterschriftenblattfalse
-
 % Flag für Einfügen der Seitenzahl bei Verweis auf Kapitel/Abschnitt, default: false
 \newif\ifrefWithPages
 \refWithPagesfalse
-
-% Flag für Einfügen der Abstracts in deutsch und englisch, default: false
-\newif\ifbothabstracts
-\bothabstractsfalse
 
 % Flag für Einfügen des Abkürzungsverzeichnis
 \newif\ifabkverz
@@ -85,14 +72,6 @@
 \newif\iftableverz
 \tableverzfalse
 
-% Flag für Einfügen des Sperrvermerks
-\newif\ifsperrvermerk
-\sperrvermerkfalse
-
-% Flag für Einfügen des Abstracts
-\newif\ifabstract
-\abstractfalse
-
 % Flag für Anhang
 \newif\ifappendix
 \appendixfalse
@@ -101,9 +80,6 @@
 \newif\ifliteratur
 \literaturfalse
 
-% Flag für Glossar
-\newif\ifglossar
-\glossarfalse
 
 % Flag für Inhaltsverzeichnis
 \newif\ifinhalt
@@ -170,78 +146,41 @@
 \setlength{\headheight}{40pt}
 
 \newcommand{\setpagestylehead}{%
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            %trim=left bottom right top
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{endOfRomanNumbering}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \cfoot*{}
+    \ofoot*{\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{roman}
 }
 
-\newcommand{\setpagestylecontent}{
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{endOfArabicNumbering}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+\newcommand{\setpagestylecontent}{%
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \cfoot*{}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \ofoot*{\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{arabic}
 }
 
-\newcommand{\setpagestylefoot}{
-    \fancypagestyle{plain}{%
-        \fancyhf{}
-        \fancyhead[L]{\vspace{0.5cm}\small \langkopfz}
-        \fancyhead[R]{
-            \hspace{2.0cm}
-            \iflang{de}{
-                \begin{textblock*}{188mm}(-5mm,9mm)
-                    \includegraphics[height=1.4cm]{images/dhbw_de}
-                \end{textblock*}
-            }
-        }
-        \fancyfoot[L]{
-            \noindent{\tiny \langfussz\\
-                \begin{tabular*}{16cm}{@{\extracolsep{\fill}}l>{\raggedleft}p{8cm}}
-                    {\tiny \langstand: \datumAbgabe} &
-                    {\tiny \langseite\ \thepage\ \langseitevon\ \pageref*{LastPage}\vspace{1cm}}\tabularnewline
-                \end{tabular*}
-            }
-        }
-    }
-    \pagestyle{plain}
+\newcommand{\setpagestylefoot}{%
+    \ihead*{\small \headmark}
+    \ohead*{\iflang{de}{
+            \begin{textblock*}{188mm}(-5mm,9mm)
+                \includegraphics[height=1.4cm]{images/dhbw_de}
+            \end{textblock*}
+        }}
+    \ifoot*{\tiny \langstand: \datumAbgabe}
+    \cfoot*{}
+    \ofoot*{\tiny \langseite\ \pagemark\ \langseitevon\ \pageref*{LastPage}}
     \pagenumbering{Alph}
 }
 
@@ -250,14 +189,14 @@
 
 % Einstellung der Sprache des Paketes Babel und der Verzeichnisüberschriften
 
-\iflang{de}{
-    \usepackage[english, ngerman]{babel}
-    \selectlanguage{ngerman}
-}
-\iflang{en}{
-    \usepackage[ngerman, english]{babel}
-    \selectlanguage{english}
-}
+% \iflang{de}{
+%     \usepackage[english, ngerman]{babel}
+%     \selectlanguage{ngerman}
+% }
+% \iflang{en}{
+%     \usepackage[ngerman, english]{babel}
+%     \selectlanguage{english}
+% }
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -269,7 +208,6 @@
 \usepackage[activate]{microtype} %Zeilenumbruch und mehr
 \usepackage[onehalfspacing]{setspace}
 \usepackage{makeidx}
-\usepackage[autostyle=true,german=quotes]{csquotes}
 \usepackage{longtable}
 \usepackage{enumitem}	% mehr Optionen bei Aufzählungen
 \usepackage{graphicx}
@@ -286,8 +224,6 @@
 %\usepackage[printonlyused, footnote]{acronym} % falls gewünscht kann die Option footnote eingefügt werden, dann wird die Erklärung nicht inline sondern in einer Fußnote dargestellt
 \usepackage{scrhack} % in Kombination mit listings-Package kommt es zu Warnings, dieses Paket verhindert die Warnings! Ggf. auskommentieren und die Warnings akzeptieren falls Verzeichnisse nicht so dargestellt werden wie gewünscht
 \usepackage{listings} % Code-Listings
-%\usepackage[numbered, framed]{matlab-prettifier}
-\usepackage[framed]{matlab-prettifier} % .sty-Datei muss vorhanden sein! Kann auskommentiert werden, falls keine Matlab-Listings in der Arbeit enthalten sind.
 \usepackage{color, colortbl}  %Für Highlighten der Tabellenzeilen
 \usepackage{amsmath}% http://ctan.org/pkg/amsmath
 
@@ -317,7 +253,6 @@
 % PDF Einstellungen
 \usepackage[%
     pdftitle={\titel},
-    pdfauthor={\autor},
     pdfsubject={\arbeit},
     pdfcreator={pdflatex, LaTeX with KOMA-Script},
     pdfpagemode=UseOutlines, 		% Beim Oeffnen Inhaltsverzeichnis anzeigen
@@ -428,17 +363,17 @@
 }
 
 \ifrefWithPages
-    %RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
-    %        useful for printed documents without clickable hyperlinks
-    \AtBeginDocument{\let\oldautoref\autoref}
-    \AtBeginDocument{
-        \renewcommand{\autoref}[1]{%
-            \oldautoref{#1}%
-            \ifthenelse{\thepage=\pageref{#1}}% if current page number equals the referenced page number
-            {}% then add nothing
-            { (S. \pageref{#1})}% else add the text
-        }
+%RJG8FE: add a pageref to autoref whenever the referenced page is not the same as the current one
+%        useful for printed documents without clickable hyperlinks
+\AtBeginDocument{\let\oldautoref\autoref}
+\AtBeginDocument{
+    \renewcommand{\autoref}[1]{%
+        \oldautoref{#1}%
+        \ifthenelse{\thepage=\pageref{#1}}% if current page number equals the referenced page number
+        {}% then add nothing
+        { (S. \pageref{#1})}% else add the text
     }
+}
 \fi
 
 \usepackage{amssymb} % Erweiterung der Symbole in Mathematikumgebung
