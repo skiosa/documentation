@@ -1,3 +1,3 @@
-# Skiosa LaTeX Dokumentation
+# Release – Changelog
 ## Added
 - CI/CD – Pipeline
