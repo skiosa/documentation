@@ -1,3 +1,4 @@
 # Release – Changelog
 ## Added
-- CI/CD – Pipeline
+ - Added Umlet Extension to Devcontainer
+ - Added Documentation in Readme how to use UML
