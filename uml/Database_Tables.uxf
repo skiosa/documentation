@@ -1,29 +1,52 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>100</x><y>70</y><w>210</w><h>190</h></coordinates><panel_attributes>Article
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>113</x><y>54</y><w>290</w><h>230</h></coordinates><panel_attributes>Article
 -
+?id: INTEGER
 title: VARCHAR
-pageID: INTEGER
+description: VARCHAR 
+content: VARCHAR -- longer or equals description
 articleLink: VARCHAR
-authorID: INTEGER</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>70</y><w>210</w><h>190</h></coordinates><panel_attributes>FEED
+date: DATE
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>483</x><y>54</y><w>210</w><h>190</h></coordinates><panel_attributes>Feed
 --
-id: INTEGER
+?id: INTEGER
 link: VARCHAR
 ttl: INTEGER
+name: VARCHAR
+description: VARCHAR
 
 --
-Beispiel Tagesschau</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>100</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=-
+Beispiel Tagesschau
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>393</x><y>84</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=-
 m1=1
-m2=n</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>390</y><w>210</w><h>190</h></coordinates><panel_attributes>Category
+m2=n</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>483</x><y>384</y><w>210</w><h>190</h></coordinates><panel_attributes>Category
 --
 id: INTEGER
 name: VARCHAR
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>250</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>573</x><y>234</y><w>120</w><h>170</h></coordinates><panel_attributes>lt=-
 m1=n
-m2=n</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>250</y><w>190</w><h>160</h></coordinates><panel_attributes>lt=-
+m2=n
+Parent table Feed</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>393</x><y>274</y><w>170</w><h>130</h></coordinates><panel_attributes>lt=-
 m1=n
-m2=n</panel_attributes><additional_attributes>170;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>390</y><w>210</w><h>190</h></coordinates><panel_attributes>Author
+m2=n
+Parent table Article</panel_attributes><additional_attributes>90;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>113</x><y>374</y><w>210</w><h>190</h></coordinates><panel_attributes>Author
 --
 id: INTEGER
 name: VARCHAR
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>250</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>133</x><y>274</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=-
 m1=n
-m2=1</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element></diagram>
+m2=1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>783</x><y>244</y><w>210</w><h>190</h></coordinates><panel_attributes>User (Keycloak)
+--
+id: INTEGER
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>683</x><y>394</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Preferences</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>393</x><y>204</y><w>410</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Bookmark</panel_attributes><additional_attributes>390;90;90;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>683</x><y>194</y><w>140</w><h>70</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Subscription</panel_attributes><additional_attributes>10;20;110;20;110;50</additional_attributes></element><element><id>Relation</id><coordinates><x>393</x><y>224</y><w>410</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Like</panel_attributes><additional_attributes>390;120;110;120;10;10</additional_attributes></element></diagram>
