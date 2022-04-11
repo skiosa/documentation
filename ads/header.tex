@@ -28,7 +28,7 @@
 \usepackage[automark,plainheadsepline,plainfootsepline]{scrlayer-scrpage}
 \newcommand{\einstellung}[1]{%
     \expandafter\newcommand\csname #1\endcsname{}
-\expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
+    \expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
 }
 \newcommand{\langstr}[1]{\einstellung{lang#1}}
 

@@ -1,4 +1,10 @@
 # Release – Changelog
+
 ## Added
- - Added Umlet Extension to Devcontainer
- - Added Documentation in Readme how to use UML
+
+- Added second Chapter for technical information's
+- Added Database relationship model UML and short description
+
+## Changes
+
+- Changed citation style to IEEE
