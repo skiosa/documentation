@@ -1,0 +1,52 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>103</x><y>54</y><w>290</w><h>230</h></coordinates><panel_attributes>Article
+-
+?id: INTEGER
+title: VARCHAR
+description: VARCHAR 
+content: VARCHAR -- longer or equals description
+articleLink: VARCHAR
+date: TIMESTAMP
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>473</x><y>54</y><w>210</w><h>190</h></coordinates><panel_attributes>Feed
+--
+?id: INTEGER
+link: VARCHAR
+ttl: INTEGER
+name: VARCHAR
+description: VARCHAR
+lastPolled: TIMESTAMP
+--
+Beispiel Tagesschau
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>383</x><y>84</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=n</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>473</x><y>384</y><w>210</w><h>190</h></coordinates><panel_attributes>Category
+--
+id: INTEGER
+name: VARCHAR
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>563</x><y>234</y><w>120</w><h>170</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Parent table Feed</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>383</x><y>274</y><w>170</w><h>130</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Parent table Article</panel_attributes><additional_attributes>90;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>103</x><y>374</y><w>210</w><h>190</h></coordinates><panel_attributes>Author
+--
+id: INTEGER
+name: VARCHAR
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>123</x><y>274</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>773</x><y>244</y><w>210</w><h>190</h></coordinates><panel_attributes>User (Keycloak)
+--
+id: INTEGER
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>394</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Preferences</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>383</x><y>204</y><w>410</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Bookmark</panel_attributes><additional_attributes>390;90;90;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>194</y><w>140</w><h>70</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Subscription</panel_attributes><additional_attributes>10;20;110;20;110;50</additional_attributes></element><element><id>Relation</id><coordinates><x>383</x><y>224</y><w>410</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=n
+Like</panel_attributes><additional_attributes>390;120;110;120;10;10</additional_attributes></element></diagram>
