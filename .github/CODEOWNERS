@@ -1,6 +1,6 @@
 content/* @grossamos @Y05h129
 ads/appendix.tex @grossamos @Y05h129
+!content/* @jeppard
+!ads/appendix.tex @jeppard
 * @jeppard
-! content/* @jeppard
-! ads/appendix.tex @jeppard
 .drone.yml @lukasljl
