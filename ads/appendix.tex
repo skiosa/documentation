@@ -4,16 +4,27 @@
 \renewcommand\thelstlisting{A\arabic{lstlisting}}
 \renewcommand\thetable{A\arabic{table}}
 
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\Alph{subsection}}
+
+
 % Quellenverzeichnis nach Literatur und Weblinks trennen
 %\printbibliography[heading=subbibintoc,title={Literatur},nottype=online]
 %\printbibliography[heading=subbibintoc,title={Weblinks},type=online]
 
 % Quellenverzeichnis nicht trennen
 \ifliteratur
-    \printbibliography[heading=bibintoc]
+    \printbibliography[heading=bibintoc,title={Quellen}]
 \fi
 
 % Nummer des Inhaltes mit \setcounter{figure}{"`Number"'} (figure, lstlisting or table) ändern wenn nötig
 
 \addchap{\langanhang}
 %Place for extra content
+
+\section{Dokumentation der Software}
+\subsection{Architektur}
+\subsection{Frontend}
+\subsection{Core-Service}
+\subsection{Polling-Service}
