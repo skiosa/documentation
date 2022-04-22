@@ -1,6 +1,20 @@
 {
     "cSpell.words": [
-        "SKIOS"
+        "Codeowners",
+        "Eppard",
+        "Garidis",
+        "Hashi",
+        "Horlacher",
+        "Huida",
+        "Keycloak",
+        "kubectl",
+        "Kubernetes",
+        "newman",
+        "Qube",
+        "SKIOS",
+        "Skiosa",
+        "sonarqube",
+        "wontfix"
     ],
     "latex-workshop.latex.recipes": [
         {

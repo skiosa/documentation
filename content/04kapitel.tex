@@ -22,13 +22,12 @@
 \subsubsection{SKIOS-13 Create Basic Infrastructure}
 Das Ticket \enquote{SKIOS-13 Create Basic Infrastructure} hatte folgende User Story:
 \begin{quotation}
-    Als Product Owner möchte ich die möglichkeit haben das unser Produkt Weltweit sicher erreichbar ist. Um das zu erreichen muss eine Server gemietet werden
-    und eine passenden Domain mit dem Namen des Projekts. \\
+    Als Product Owner möchte ich die Möglichkeit haben das unser Produkt weltweit sicher erreichbar ist. Um das zu erreichen, muss ein Server mit einer passenden gemietet werden. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
         \item Die Domain \enquote{Skiosa.de} bestellt und dem Server zugewiesen.
-        \item Einen passenden Server bestellt und mit notwendigen Tools wie SSH aufgesetzt
-        \item K3S Basis Installation
+        \item Einen passenden Server bestellt und mit notwendigen Tools wie SSH aufgesetzt.
+        \item K3S Basis Installation.
         \item kubectl von Remote erreichbar und eingerichtet.
         \item Firewall Regeln angelegt um nur Web, SSH und Kubectl zuzulassen.
     \end{itemize} 
@@ -39,8 +38,8 @@ Reviewed von Tim Horlacher.
 \subsubsection{SKIOS-18 Basic Kubernetes Infra}
 Das Ticket \enquote{SKIOS-18 Basic Kubernetes Infra} hatte folgende User Story:
 \begin{quotation}
-    As a infra member I want a basic Infrastructure based on Kubernetes. This Infrastructure should container some CI/CD Pipeline Software and examples to Implement
-    a CI/CD Pipeline for our services. \\
+    As a infra member I want a basic Infrastructure based on Kubernetes. This Infrastructure should container some CI/CD pipeline software and examples to implement
+    a CI/CD pipeline for our services. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
         \item Working Ingress-Controller with correct Certs
@@ -56,29 +55,29 @@ Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
 
 \subsubsection{SKIOS-9 Create Continous Integration Pipeline}
-Das Ticket \enquote{SKIOS-9 Create Continous Integration Pipeline} hatte folgende User Story:
+Das Ticket \enquote{SKIOS-9 Create Continuos Integration Pipeline} hatte folgende User Story:
 \begin{quotation}
     As a developer I want my code to be tested and analyzed by sonar after every new commit so that our platform can ensure stability. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Pipelines for every Service
-        \item code of branches in pull requests trigger a pipeline after every commit
-        \item the pipeline runs through: (1) unit tests (2) integration tests (3) sonar qube
-        \item build container
+        \item A pipeline exists for every service.
+        \item A commit pipeline is triggered after every commit on a non master branch. This pipeline runs through: unit tests and sonarqube.
+        \item A pr pipeline is triggered after a pull requests is created. This pipeline runs through: unit tests, integration tests and sonarqube.
+        \item A main pipeline is triggered after a merge of a master branch. This pipeline runs through: unit tests, container build, CD-Script and sonarqube.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
 
 \subsubsection{SKIOS-10 Create Continous Delivery Pipeline}
-Das Ticket \enquote{SKIOS-10 Create Continous Delivery Pipeline} hatte folgende User Story:
+Das Ticket \enquote{SKIOS-10 Create Continuos Delivery Pipeline} hatte folgende User Story:
 \begin{quotation}
     As a developer I want my code to be delivered to prod after I merge it to master. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
         \item pipeline is triggered after merge to master
         \item pipeline tests code with unit/sonar before merge (is already managed by ci-pipeline)
-        \item pipeline tests code with newman after merge -> fail leads to rollback
+        \item pipeline tests code with newman after merge → fail leads to rollback
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -87,11 +86,10 @@ Reviewed von Jonas Eppard.
 \subsubsection{SKIOS-21 Initialize Keycloak}
 Das Ticket \enquote{SKIOS-21 Initialize Keycloak} hatte folgende User Story:
 \begin{quotation}
-    As a developer I would like to have keycloak setup so that we can test its usefullness. \\
+    As a developer I would like to have Keycloak setup so that we can test its usefulness. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Keycloak server is running in our cluster
-        \item 
+        \item A Keycloak server is running in our cluster and is reachable.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -103,7 +101,7 @@ Das Ticket \enquote{SKIOS-30 Preliminary Core service} hatte folgende User Story
     As a developer I want to have a basic core service with some boilerplate and mock endpoints to get started in the frontend. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item be able to fetch mock artciles with graphql
+        \item be able to fetch mock articles with graphql
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -112,10 +110,10 @@ Reviewed von Tim Horlacher.
 \subsubsection{SKIOS-37 Decision of Programming Database}
 Das Ticket \enquote{SKIOS-37 Decision of Programming Database} hatte folgende User Story:
 \begin{quotation}
-    As a developer I need to know which Database is used, to know which database connector for ORMs are needed. \\
+    As a developer I need to know which database is used, to know which database connector for ORMs are needed. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item A decision of a Database is done
+        \item A decision of a database is done
         \item The decision is documented in Confluence
     \end{itemize}
 \end{quotation}
@@ -128,10 +126,9 @@ Das Ticket \enquote{SKIOS-49 Create Example Service} hatte folgende User Story:
     As a developer I want an example service to test the CI/CD pipeline. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Code example service
-        \item Create Deployment for example service
-        \item Create Repo with CI Pipeline
-        \item Docker Credentials
+        \item An example service exists
+        \item A example deployment is created
+        \item A example CI pipeline is working with the example service
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -140,10 +137,10 @@ Reviewed von Tim Horlacher.
 \subsubsection{SKIOS-50 Deploy Database}
 Das Ticket \enquote{SKIOS-50 Deploy Database} hatte folgende User Story:
 \begin{quotation}
-    As a developer I want a central Database to store my Objects and Articles. \\
+    As a developer I want a central database to store my objects and articles. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item postgresql is deployed in a db namespace
+        \item PostgreSQL is deployed in a db namespace
         \item db is reachable in the default namespace with credentials stored at the vault
     \end{itemize}
 \end{quotation}
@@ -161,18 +158,18 @@ Reviewed von Jonas Eppard.
 \subsubsection{SKIOS-67 Enhanced Git/Jira Automation}
 Das Ticket \enquote{SKIOS-67 Enhanced Git/Jira Automation} hatte folgende User Story:
 \begin{quotation}
-    As a developer I would like enhanced automatition for Jira with the following requirements
+    As a developer I would like enhanced automation for Jira with the following requirements
     \begin{itemize}
-        \item Dev starts new Branch for his work, Story changes status to → in progress
-        \item Dev starts PR for his Story → Story changes status to → needs review
-        \item PR is merged → Story changes status to → done
-        \item Sync Reviewer between Jira and Git (optional) 
+        \item Dev starts new branch for his work, story changes status to → in progress
+        \item Dev starts PR for his Story → story changes status to → needs review
+        \item PR is merged → story changes status to → done
+        \item Sync reviewer between Jira and Git (optional) 
     \end{itemize}
 
     \textbf{Acceptance Criteria}
     \begin{itemize}
         \item Requirements above are covered
-        \item functionality works for all projects
+        \item functionality works for all git-repositories
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -218,8 +215,8 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
     As a developer I would like the polling service to be run as a cron job. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Polling service is called in intervalls
-        \item Pod isnt running all the time
+        \item Polling service is called in Intervalls.
+        \item Pod is not running all the time.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -256,18 +253,18 @@ Dies wurde folgendermaßen gelöst:
 Bearbeitet von Jonas Eppard.
 
 \subsubsection{SKIOS-73 Place new logo in git, jira, confluence, etc}
-Das Ticket \enquote{SKIOS-73 Place new logo in git, jira, confluence, etc} hatte folgende User Story:
+Das Ticket \enquote{SKIOS-73 Place new logo in git, Jira, confluence, etc} hatte folgende User Story:
 \begin{quotation}
-    As a Product Owner I want our logo to be placed in the git repository, jira \& confluence. \\
+    As a Product Owner I want our logo to be placed in the git repository, Jira \& confluence. \\
     \textbf{Requirements}
     \begin{itemize}
-        \item Add branding for skiosa
-        \item possibly also change look of Jira (at the top) and make it use our colorscheme    
+        \item Add branding for Skiosa
+        \item Possibly also change look of Jira (at the top) and make it use our colorscheme.  
     \end{itemize}   
     
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Skiosa Brandig is present in Git and Jira
+        \item Skiosa Brandig is present in Git and Jira.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
@@ -288,14 +285,14 @@ Reviewed von Tim Horlacher.
 \subsubsection{SKIOS-91 Checklist for PRs}
 Das Ticket \enquote{SKIOS-91 Checklist for PRs} hatte folgende User Story:
 \begin{quotation}
-    As a developer I would like a reminder to check off the checklist from our contributing guidelines. \\
+    As a developer, I would like to have a reminder to check off the checklist from our contributing guidelines. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item Every PR contains comment or default text including the checklist
+        \item Every PR contains comment or default text including the checklist.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
-Reviewd von Jonas Eppard.
+Reviewed von Jonas Eppard.
 
 \subsubsection{SKIOS-138 Use Keycloak in GraphQL}
 Das Ticket \enquote{SKIOS-138 Use Keycloak in GraphQL} hatte folgende User Story:
@@ -303,8 +300,8 @@ Das Ticket \enquote{SKIOS-138 Use Keycloak in GraphQL} hatte folgende User Story
     As a developer I want to secure some GraphQL resolver with our Keycloak. \\
     \textbf{Acceptance Criteria}
     \begin{itemize}
-        \item resolver can be secured with keycloak
-        \item example resolver is created with authentication
+        \item Every resolver can be secured with Keycloak.
+        \item An example resolver is created with Keycloak authentication.
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
