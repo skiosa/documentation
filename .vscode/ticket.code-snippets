@@ -1,20 +1,28 @@
 {
-    "User Story":{
-    "prefix": ["ticket", "userStory"],
-    "body": [
-        "\\subsubsection{$1}",
-        "Das Ticket \\enquote{$1} hatte folgende User Story:",
-        "\\begin{quotation}",
-        "\t$3",
-        "\\end{quotation}",
-        "Dies wurde folgendermaßen gelöst:",
-        "\\begin{quotation}",
-        "\t$4",
-        "\\end{quotation}",
-        "Bearbeitet von $5."
-    ]},
-    "Abbildung" : {
-        "prefix": ["Abbildung", "Bild"],
+    "User Story": {
+        "prefix": [
+            "ticket",
+            "userStory"
+        ],
+        "body": [
+            "\\subsubsection{$1}",
+            "Das Ticket \\enquote{$1} hatte folgende User Story:",
+            "\\begin{quotation}",
+            "\t$2",
+            "\\textbf{Acceptance Criteria}",
+            "\\begin{itemize}",
+            "\t\\item $3",
+            "\\end{itemize}",
+            "\\end{quotation}",
+            "Bearbeitet von $4.",
+            "Reviewed von $5."
+        ]
+    },
+    "Abbildung": {
+        "prefix": [
+            "Abbildung",
+            "Bild"
+        ],
         "body": [
             "Abbilung~\\ref{fig:$1}",
             "\\begin{figure}",
