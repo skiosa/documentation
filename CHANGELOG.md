@@ -1,6 +1,4 @@
 # Release – Changelog
 
 ## Added
-
-- Added Stories
-
+- User Story
