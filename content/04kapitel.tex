@@ -18,6 +18,73 @@
 
 
 \subsection{Bearbeitete User Storys}
+\subsubsection{SKIOS-22 POC for keycloak}
+Das Ticket \enquote{SKIOS-22 POC for keycloak} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to have a POC for two services using keycloak~\parencite{web/Keycloak} so that I`ll know how users will be managed in the future. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A backend service has an api that can get information about the logged in user
+        \item A frontend service can create users (in any primitive way) and log in + send a request to the aformentioned endpoint
+        \item Our keycloak~\parencite{git/skiosa/orm} instance is configured to work with both services
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-29 Undesigned Angular Boilerplate}
+Das Ticket \enquote{SKIOS-29 Undesigned Angular Boilerplate} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a boilerplate for angular to be created so that I can start work on the project. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item An angular boilderplate exists with basic pages and routing
+        \item A central structure for requests (using services) is created
+        \item Infrastructure for passing global data (such as a username) is implemented
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-31 Evaluate Core-Service}
+Das Ticket \enquote{SKIOS-31 Evaluate Core-Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to know which ORM will be used and whether or not to base our APIs around GraphQL~\parencite{web/GraphQL} or to stick with REST within the Core service. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item It is clear, what ORM to use and is documented somewhere (ex. comments of this story)
+        \item It is clear if GraphQL~\parencite{web/GraphQL} is used and findings are documented somewhere aswell
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-34 List of Participants}
+Das Ticket \enquote{SKIOS-34 List of Participants} hatte folgende User Story:
+\begin{quotation}
+    As our lecturer I would like a list of group members so that I can grade the project. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A list is created including all 11 names and matnr.
+        \item Said list is given to the professor
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-52 Devcontainer Guide}
+Das Ticket \enquote{SKIOS-52 Devcontainer Guide} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a guide on the usage of devcontainers for development. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A guide is created in confluence
+        \item A sample devcontainer is implemented
+        \item Other developers are taught about devcontainers 
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
 
 \subsubsection{SKIOS-13 Create Basic Infrastructure}
 Das Ticket \enquote{SKIOS-13 Create Basic Infrastructure} hatte folgende User Story:
@@ -194,6 +261,33 @@ Es wurden die Article von RSS-Feeds in dem Schema aus Abbildung~\ref{fig:databas
 \end{quotation}
 Bearbeitet von Jonas Eppard und Tim Horlacher.
 
+\subsubsection{SKIOS-92 Initialize Keycloak}
+Das Ticket \enquote{SKIOS-92 Initialize Keycloak} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want to connect keycloak~\parencite{web/Keycloak} to our services and protect certain resources. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Two keycloak realms exist (production, testing)
+        \item Our frontend connects to keycloak and resources are protectable
+        \item Our backend connects to keycloak and resources are protectable
+        \item Both realms have roles for users and admins
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-93 Document Submission Guideline}
+Das Ticket \enquote{SKIOS-93 Document Submission Guideline} hatte folgende User Story:
+\begin{quotation}
+    As a team member i would like to know what should be documented in our final documentation. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A confluence page should document what should be documented
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher.
+Reviewed von Amos Groß.
+
 \subsubsection{SKIOS-74 Extend workflow to include wontfix}
 Das Ticket \enquote{SKIOS-74 Extend workflow to include wontfix} hatte folgende User Story:
 \begin{quotation}
@@ -340,3 +434,21 @@ Das Ticket \enquote{SKIOS-138 Use Keycloak in GraphQL} hatte folgende User Story
 \end{quotation}
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-133 ORM Readme}
+Das Ticket \enquote{SKIOS-133 ORM Readme} hatte folgende User Story:
+\begin{quotation}
+    As a developer, I would like a README for ORM so that I read up on information on how to use it. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item README is created
+    \item README includes:
+    \begin{itemize}
+        \item development guide (how to create tags and to embed it to package.json)
+        \item description of what this module does
+        \item code owners 
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Lukas Huida.
