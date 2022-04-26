@@ -1,4 +1,10 @@
+[LaTeX]
+* @jeppard
+
+[Conent]
 content/* @grossamos @Y05h129
 ads/appendix.tex @grossamos @Y05h129
-* @jeppard
+ads/acronyms.tex @grossamos @Y05h129
+
+[CI/CD]
 .drone.yml @lukasljl
