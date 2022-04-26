@@ -452,3 +452,28 @@ Das Ticket \enquote{SKIOS-133 ORM Readme} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-84 Initial Uniform Polling Implementation}
+Das Ticket \enquote{SKIOS-84 Initial Uniform Polling Implementation} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like an initial implementaton of the polling service.\\
+    This implementation should parse a single “type” of RSS feeds including at minimum the following:
+    
+    \begin{itemize}
+        \item Link
+        \item Titel
+        \item Beschreibung
+    \end{itemize}
+
+    If an article doesn't contain this information it is ignored.\\
+    If an article contains more information than this that information will also be ignored (will be parsed in later story)\\
+    After parsing, it loads the information into the database.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Service can poll the structure above
+    \item Polling service loads data into DB
+    \item Multiple runs of the service don’t produce duplicate data
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer.
+Reviewed von --.
