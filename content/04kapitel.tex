@@ -497,6 +497,24 @@ Das Ticket \enquote{SKIOS-84 Initial Uniform Polling Implementation} hatte folge
 Bearbeitet von Jannik Springer.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-109 Backend Feed Mutation}
+Das Ticket \enquote{SKIOS-109 Backend Feed Mutation} hatte folgende User Story:
+\begin{quotation}
+As a developer, I would like to have muations for creating and deleting feeds.
+Goal of this story is to create Graphql Mutation to add a feed into our database. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Graphql mutation is created for feeds
+    \item calling one of the mutations results in a feed being created in the database
+    \item calling the mutation is possible only knowing the url of a feed (all other “not null” fields are left blank or filled with defaults)
+    \item calling the other mutation (by ID) results in the specified feed being deleted
+    \item deletion should only be possible for logged in users with a specific keycloak role
+    \item creation should be possible for all logged in users
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex und Tim Horlacher.
+Reviewed von Lukas Huida.
+
 \subsubsection{SKIOS-115 Core Service README}
 Das Ticket \enquote{SKIOS-115 Core Service README} hatte folgende User Story:
 \begin{quotation}
