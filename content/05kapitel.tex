@@ -4,8 +4,8 @@
 
 
 \section{Architektur}
-Um unsere Produkt der öffentlichkeit zugänglich zu machen, heißt live Hosten und dabei auch einen angehenmen Workflow\footnote{Arbeitsablauf} für die Entwickler bereitzustellen, haben wir uns entschieden einen Server in der Cloud zu mieten um dies zu erfüllen.
-Dabei läuft auf dem Server ein leichgewichtiges Kubernetes System welches sich \textit{k3s}~\parencite{web/k3s} nennt. Dies bietet für uns alle Kubernetes möglichkeiten und ist dabei sehr einfach zu verwalten. 
+Um unsere Plattform potenziellen Nutzern zugänglich zu machen und bestimmte Teile unseres Workflows\footnote{Arbeitsablauf} zu Automatisieren, hosten wir unsere Architektur in einer Cloud Umgebung.
+Dabei läuft unsere Architektur auf der Kontainer Orchestrierungs Plattform Kubernetes, für welches wir die leichgewichtige (und leichter zu verwaltende) Variante \textit{k3s}~\parencite{web/k3s} verwenden.
 Auf diesem Kubernetes System werden \ac{CI/CD} Plattformen gehosted und unsere Applikation sowie deren Abhängigkeiten. Dadruch sind wir nicht an öffentlich-kostenfreie System limitiert und können unsere
 System perfekt auf unseren Workflow und die Applikation anpassen.
 
