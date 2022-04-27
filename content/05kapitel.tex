@@ -4,17 +4,22 @@
 
 
 \section{Architektur}
+Um unsere Produkt der öffentlichkeit zugänglich zu machen, heißt live Hosten und dabei auch einen angehenmen Workflow\footnote{Arbeitsablauf} für die Entwickler bereitzustellen, haben wir uns entschieden einen Server in der Cloud zu mieten um dies zu erfüllen.
+Dabei läuft auf dem Server ein leichgewichtiges Kubernetes System welches sich \textit{k3s}~\parencite{web/k3s} nennt. Dies bietet für uns alle Kubernetes möglichkeiten und ist dabei sehr einfach zu verwalten. 
+Auf diesem Kubernetes System werden \ac{CI/CD} Plattformen gehosted und unsere Applikation sowie deren Abhängigkeiten. Dadruch sind wir nicht an öffentlich-kostenfreie System limitiert und können unsere
+System perfekt auf unseren Workflow und die Applikation anpassen.
 
 \subsection{Übersicht der Services}
 Unser Produkt ist in mehrere Services aufgeteilt. Die Services sind \textit{Core-Service}, \textit{Polling-Service} und das \textit{Frontend}.
 Desweiteren gibt es eine \textit{PostgreSQL Datenbank} und eine \textit{Keycloak} Instanz. Die letzten beiden Services sind Abhänigkeiten von unseren entwickelten Services.
 Die Datenbank wird dafür verwendet um Daten wie RSS-Feeds und Artikel zu speichern.
 Keycloak wird dafür verwendet um den \textit{Core-Service} und das \textit{Frontend} abzusichern und die Benutzer zu verwalten.
-Die Hauptaufgabe des \textit{Core-Services} ist es RSS-Feeds und Artikel zurverfügung zu stellen, dies geschieht mittels \textit{GraphQL}. Desweiteren bietet er die Möglichkeit
-neue RSS-Feeds anzulegen, oder auch Abonnents, Favouriten und Lesezeichen eines Benutzers zu verwalten. Der \textit{Polling-Service} ist für die automatische Datenabfrage von RSS-Feeds und
-deren Artikel, diese werden anschließend in der Datenbank gespeichert. Das \textit{Frontend} ist die Endschnittstelle unseres Produkts zu dem Benutzer.
+Die Hauptaufgabe des \textit{Core-Services} ist es RSS-Feeds und Artikel zur Verfügung zu stellen, dies geschieht mittels \textit{GraphQL}. Desweiteren bietet er die Möglichkeit
+RSS-Feeds anzulegen und Abonnents, Favouriten und Lesezeichen eines Benutzers zu verwalten.
+Der \textit{Polling-Service} ist für die automatische Datenabfrage von RSS-Feeds und deren Artikel zuständig. Diese werden anschließend in der Datenbank gespeichert.
+Das \textit{Frontend} ist die Endschnittstelle unseres Produkts zu dem Benutzer.
 Es wird dafür verwendet um die Daten des \textit{Core-Services} dem Benutzer zugänglich zu machen.
-Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur, die Sevices mit den gestrichelten Linien sind die Abhängigkeiten.
+Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur. Die Sevices mit den gestrichelten Linien sind die Abhängigkeiten.
 \begin{figure}[!htbp]
     \centering    
     \usetikzlibrary{positioning}
@@ -36,12 +41,14 @@ Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur, die Sevi
 \end{figure}
 
 \subsection{CI/CD Infrastrukture}
-Um Code Qualität zu gewährleisten, wurde eine \ac{CI/CD} Infrastruktur entwickelt. Diese ermöglicht es uns automatisiert Tests wie Unit und Integration Tests
-auszuführen und aktuelle Versionen der Software zu veröffentlichen.
+Um Code Qualität zu gewährleisten, wurde eine \ac{CI/CD} Infrastruktur entwickelt.
+Diese ermöglicht es uns automatisiert Tests wie Unit und Integration Tests auszuführen und nach jeder Änderung aktuelle Versionen der Software zu veröffentlichen.
+Da zum Beispiel eine neue veröffentlichung bei Änderungen auf der Master Branch stattfinden sollen, gibt es drei verschieden \ac{CI/CD} Pipelines.
+Eine die nur Unit-Tests ausführt, eine die komplexe Tests ausführt und eine die eine neue Version veröffentlicht.
 
 \subsubsection{Übersicht der Standard \ac{CI}-Pipline}
-Die Standard \ac{CI}-Pipeline wird bei jedem Commit der nicht auf dem Master Branch stattfindet ausgeführt. Dabei hat die Standard Pipiline den geringsten Umfang and Aufgaben.
-Diese führt nur die Unit-Tests aus, dazu muss der Code gecloned und alle Dependencies installiert werden. Somit sind direkt Fehler schon früh abfangbar, wenn diese Pipeline fehlschlägt.
+Die Standard \ac{CI}-Pipeline wird bei jedem Commit der nicht auf dem Master Branch stattfindet ausgeführt. Dabei hat die Standard Pipeline den geringsten Umfang and Aufgaben.
+Diese führt nur die Unit-Tests aus, dazu muss der Code gecloned und alle Dependencies installiert werden. Somit sind direkt Fehler schon früh erkennbar, wenn diese Pipeline fehlschlägt.
 \begin{figure}[!htbp]
     \centering    
     \usetikzlibrary{positioning}
@@ -61,7 +68,7 @@ Diese führt nur die Unit-Tests aus, dazu muss der Code gecloned und alle Depend
 
 \subsubsection{Übersicht der Pull-Request \ac{CI}-Pipline}
 Die Pull-Request \ac{CI}-Pipeline wird ausgeführt sobald ein Pull-Request erstellt wird. Ihr Ziel ist es den jeweiligen Reviewer zu unterstützen, indem sie Tests und Code-Analyse durchführt.
-Die Ergebnisse der Code Analyse werden direkt auf der Pull-Request Seite dargestellt. Sollten diese nicht den mindestanforderungen entsprechen wird der Pull-Request dadurch blockiert.
+Die Ergebnisse der Code Analyse werden direkt auf der Pull-Request Seite dargestellt. Sollten diese nicht den mindestanforderungen entsprechen, wird der Pull-Request dadurch blockiert.
 Die Pipeline beinhaltet die selben Schritte wie die Standard Pipeline, sie erweitert diese lediglich um Integration-Tests.
 \begin{figure}[!htbp]
     \centering    
@@ -91,7 +98,7 @@ Die Pipeline beinhaltet die selben Schritte wie die Standard Pipeline, sie erwei
 \subsubsection{Übersicht der Master \ac{CI}-Pipline}
 Die Master \ac{CI}-Pipeline wird bei einen Commit auf den Master Branch ausgeführt. Dabei hat die Pipeline die Aufgabe den neuen Code auszurollen und sommit live zu bringen.
 Zur Sicherheit werden auch wieder die Unit-Tests ausgeführt, damit auch wirklich sichergestellt wird, dass der Code lauffähig ist. Anschließend wird ein neues Docker-Image gebaut
-welches dann in der Docker-Registry gespeichert wird. Nach erfolgreichem bauen des Images, wird die neue Image-Version in das Kubernetes-Depyoment geschrieben. Denn ArgoCD unser \ac{CD} Tool
+welches dann in der Docker-Registry gespeichert wird. Nach erfolgreichem bauen des Images, wird die neue Image-Version in das Kubernetes-Depyoment geschrieben. Denn ArgoCD~\parencite{web/argocd} unser \ac{CD} Tool
 erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt diese. Somit sind die Code Änderungen an der Software in wenigen Minuten live ausgerollt.
 \begin{figure}[!htbp]
     \centering    
