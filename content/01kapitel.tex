@@ -7,6 +7,7 @@ Egal ob Amazon, Spotify oder Netflix, besteht das zentrale Angebot dieser Firmen
 Bei Spotify findet man an einer Stelle alle Lieder, die man hören wollen könnte und das Auffinden von neuen Genren und Musikern wird einem erheblich erleichtert.
 Netflix und Amazon haben ähnliche Konzepte was Filme und (physische) Einkaufswaren angeht.
 Ziel dieses Projektes soll es sein eine solche Plattform für RSS Feeds und den darin übermittelten Artikeln zu erstellen.
+Das Projekt ``Skiosa'' soll eine Plattform anbieten, die zur zentralen Anlaufstelle für RSS Feeds agieren kann so ihren Nutzern das Entdecken von neuen Artikeln aus bekannten, sowie unbekannten Feeds erleichtert.
 
 \section{Projektanforderungen}
 Im folgenden soll nun beschrieben werden, wie zu Anfang des Projektes die Requirements aufgefasst und beschreiben wurden.
@@ -14,11 +15,29 @@ Aus technischen Gründen hat sich im Verlauf des Prozesses herausgestellt, dass 
 Mehr Informationen hierzu sind im Abschnitt \ref{tech_changes} nachzulesen.
 
 \subsection{Must-have Requirements}
+Zu Begin müssen zentrale Interaktionsmechanismen für Artikel und Feeds gegeben sein.
+Seiten für das einsehen von Artikeln und Feeds bilden daher den Kern der Appikation.
+Auf dessen Einsichtsseiten muss es möglich sein Basisinformationen, wie etwa Titel oder Beschreibung, ablesen und auf den Inhalt zugreifen zu können.
+Bei Artikeln muss die Einsichtsseite so auf den eigentlichen Artikel verwiesen werden, während bei Feeds auf die in ihnen enthaltenen Artikel verlinken müssen.
+
+Damit Skiosa zu einer zentralen Anlaufstelle für RSS-Feeds werden kann müssen Nutzer einen Grund haben um wiederholt auf die Plattform zugreifen zu wollen.
+Subscription- und Bookmark-Funktionalitäten für eingeloggte Nutzer können genau diese Lücke füllen.
+Hieraus leiten sich drei weitere funktionale requirements ab;
+Erstens muss die Plattform ein User-Management besizen, in welcher sich Nutzer einloggen und registrieren können.
+Zweitens soll es angemeldeten Nutzern der Plattform möglich sein, bestimmte Feeds zu abbonieren und diese, sowie deren neusten Artikeln, im nachhinein aufzurufen zu können.
+Drittens sollen angemeldeten Nutzer Artikel ``bookmarken'' (dt. vermerken) können und diese zu einem späteren Zeitpunkt in der Plattform wieder finden.
+
+Auf nicht-funktionaler Ebene ist es für die Plattform wichtig, dass sie aesthetisch gut aussieht.
+Konkrete nicht-funktionale Requirements die sich hierraus ableiten sind, dass die Oberflächen der Plattform einer festen Design Sprache folgen und User Eperience Design Seitenübergreifen einheitlich gestaltet ist.
 
 \subsection{Erreichbare Ziele}
 
+- An User Angepasste Recomendations
+- Bookmarks, likes, etc.
+
 \subsection{Mögliche weiteren Ziele}
 
+\subsection{Explitize Nicht-Ziele}
 \section{Anfängliche Software Architektur}
 \todo{Services etc beschreiben}
 \todo{Software Auswahl beschreiben (express, angular)}
