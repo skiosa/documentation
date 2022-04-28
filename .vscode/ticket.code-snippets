@@ -24,7 +24,7 @@
             "Bild"
         ],
         "body": [
-            "Abbilung~\\ref{fig:$1}",
+            "Abbildung~\\ref{fig:$1}",
             "\\begin{figure}",
             "\t\\includegraphics[width=\\linewidth]{$2}",
             "\t\\caption{$3}",
