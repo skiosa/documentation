@@ -187,6 +187,52 @@ Das Ticket \enquote{SKIOS-37 Decision of Programming Database} hatte folgende Us
 Bearbeitet von Lukas Huida.
 Reviewed von Jonas Eppard.
 
+\subsubsection{SKIOS-38 Contribution Guidelines}
+Das Ticket \enquote{SKIOS-38 Contribution Guidelines} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to have a guidline for making contributions so that we have a defined process to get code resulting from stories into production. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Contribution Guidlines are documented in Confluence
+    \item Git Guidelines for naming schemes for git commits, branch names etc., squash/rebase merging are documented
+    \item Review and Testing has a process, defining what should be reviewed (integration tests, code style, etc) and who should review it
+    \item Code comments and code styles are defined and agreed upon by every member
+    \item Documentation style, including what to document where (Confluence vs. Git) is clarified
+    \item It is clarified when a task counts as done (review of dev, review of po, dev and tech lead, only review of tech/service lead)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simon Morgenstern.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-39 Guidelines Testing}
+Das Ticket \enquote{SKIOS-39 Guidelines Testing} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to have a guideline for testing so that I can know if I'm testing my code correctly. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The types of tests are clarified (unit, integration, manual, cypress/selenium, etc.)
+    \item The amount of test that have to be written is clear (ex. test coverage, integration test for ever use case or error, etc)
+    \item A decision is made when, where and by whom tests have to be written (ex. in separate stories per epic, implicitly with every story, etc.)
+    \item All findings are documented in confluence
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simon Morgenstern.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-40 Testing Frameworks}
+Das Ticket \enquote{SKIOS-40 Testing Frameworks} hatte folgende User Story:
+\begin{quotation}
+    As a developer, I would like to know which testing frameworks I need to use so that I can write tests. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Testing frameworks for every language are decided upon
+    \item The testing frameworks are added to the services documentation in confluence
+    \item Programs to to integration tests with are clear
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simon Morgenstern.
+Reviewed von Amos Groß.
+
 \subsubsection{SKIOS-49 Create Example Service}
 Das Ticket \enquote{SKIOS-49 Create Example Service} hatte folgende User Story:
 \begin{quotation}
@@ -213,6 +259,19 @@ Das Ticket \enquote{SKIOS-50 Deploy Database} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Lukas Huida.
 Reviewed von Jonas Eppard.
+
+\subsubsection{SKIOS-64 Guideline for Issues}
+Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
+\begin{quotation}
+    As a product owner, I would like to have a guideline for new issues so that the team can understand what their work is. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Issue Guideline is documented in confluence
+    \item Structure for future stories is clear
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simon Morgenstern.
+Reviewed von Amos Groß.
 
 \section{Sprint 2}
 \subsection{Produktincrement}
@@ -388,6 +447,29 @@ Das Ticket \enquote{SKIOS-91 Checklist for PRs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Jonas Eppard.
 
+\subsubsection{}
+Das Ticket \enquote{SKIOS-111 Angular Design Boilerplate} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer I would like our frontend to have the basic components.
+    Goal of this story ist to create components for:
+    \begin{itemize}
+        \item Buttons
+        \item The Sidebar
+        \item feeds
+    \end{itemize}
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Angular components are created for Buttons, Sidebar, Feeds
+    \item The components are visibly identical to those in figma
+    \item Button components can execute code when clicked on
+    \item components should look according to current color mode (light / dark)
+    \item Favicon of frontend is Skiosa Favicon
+    \item Sidebar expands on mobile (see hamburger icon on pages like github, etc.)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simon Morgenstern.
+Reviewed von Lukas Huida.
+
 \subsubsection{SKIOS-119 Frontend README}
 Das Ticket \enquote{SKIOS-119 Frontend README} hatte folgende User Story:
 \begin{quotation}
@@ -424,7 +506,7 @@ Das Ticket \enquote{SKIOS-120 Deployment README} hatte folgende User Story:
 \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
-Reviewed von Amos Gross.
+Reviewed von Amos Groß.
 
 \subsubsection{SKIOS-137 Angular Service Framework}
 Das Ticket \enquote{SKIOS-137 Angular Service Framework} hatte folgende User Story:
@@ -439,7 +521,7 @@ Das Ticket \enquote{SKIOS-137 Angular Service Framework} hatte folgende User Sto
 \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
-Reviewed von Amos Gross.
+Reviewed von Amos Groß.
 
 \subsubsection{SKIOS-138 Use Keycloak in GraphQL}
 Das Ticket \enquote{SKIOS-138 Use Keycloak in GraphQL} hatte folgende User Story:
@@ -453,6 +535,25 @@ Das Ticket \enquote{SKIOS-138 Use Keycloak in GraphQL} hatte folgende User Story
 \end{quotation}
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-123 LaTeX Requirements Page}
+Das Ticket \enquote{SKIOS-123 LaTeX Requirements Page} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our requirements documented in confluence so that I won't fail this class. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX
+    \item Page includes:
+    \begin{itemize}
+        \item functional requirements
+        \item non functional requirements 
+        \item optional and mandatory
+    \end{itemize}
+    \item Has a table explaining changes made to these over the course of the project
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
 
 \subsubsection{SKIOS-133 ORM Readme}
 Das Ticket \enquote{SKIOS-133 ORM Readme} hatte folgende User Story:
@@ -471,6 +572,23 @@ Das Ticket \enquote{SKIOS-133 ORM Readme} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-122 LaTeX Architecture Overview}
+Das Ticket \enquote{SKIOS-122 LaTeX Architecture Overview} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our architecture documented in confluence so that I won’t fail this class.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in our LaTeX documentation
+    \item Services are listed and explained
+    \item CI/CD infrasturture is explained
+    \item Security Infrastructure (Keycloak)
+    \item The Page explains the architecture in text form (prosa) 
+    \item A diagram (not UML) is created to visualize our plattform architecture
+\end{itemize}
+\end{quotation}
+Bearbeitet von Tim Horlacher und Lukas Huida.
+Reviewed von Amos Groß.
 
 \subsubsection{SKIOS-84 Initial Uniform Polling Implementation}
 Das Ticket \enquote{SKIOS-84 Initial Uniform Polling Implementation} hatte folgende User Story:
@@ -591,4 +709,4 @@ Das Ticket \enquote{SKIOS-124 \LaTeX Use cases page and UML} hatte folgende User
 \end{itemize}
 \end{quotation}
 Bearbeitet von Jonas Eppard und Sabrina Ladner.
-Reviewed von \todo{Reviewer}.
+Reviewed von Amos Groß.
