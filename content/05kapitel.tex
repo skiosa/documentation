@@ -124,3 +124,17 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 \section{Mockups}
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
+Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
+Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
+
+\begin{table}[h]
+    \resizebox{\textwidth}{!}{\begin{tabular}{|p{8cm}|p{8cm}|}
+    \hline
+    Beschreibung der Änderung & Begründung der Änderung\\ \hline
+    In der Plattform werden RSS Feeds keinen/wenig Inhalt anzeigen & Ein Großteil der im Internet vohandenen RSS Feeds verlinken nur auf Artikel und enthalten keinen Inhalt, was das Darstellen eines kompletten Artikels unmöglich macht. \\ 
+    Das Hinzufügen von Feeds aus der Creator Page wurde zu einem Must-Have Requirement & Das anfänglich geplante manuelle Einbinden von Feeds ist als zu zeitaufwändig eingeschätzt worden. \\
+    Die Creator Page wurde stark minimiert & Die geplanten Einstellungsmöglichkeiten der Creator Page wurden durch die Daten die ein RSS-Feeds liefert redundant. Um einen RSS-Feed hinzufügen ist lediglich die Adresse des Feeds notwendig. \\
+    Die Funktionalität der Artikel Recommendations wurde minimiert & Dadurch das RSS Feeds heutzutage wenige bis keine Daten liefern, wurde beschlossen die Recommendations auf zufällig vorgeschlagene Artikel zu limitiert.  \\
+    \hline
+\end{tabular}}
+\end{table}
