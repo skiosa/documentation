@@ -278,7 +278,6 @@ Reviewed von Amos Groß.
 \subsection{Charts}
 \subsection{Probleme und Verbesserungen}
 
-
 \subsection{Bearbeitete User Storys}
 
 \subsubsection{SKIOS-67 Enhanced Git/Jira Automation}
@@ -380,7 +379,6 @@ Reviewed von Tim Horlacher.
 \subsection{Produktincrement}
 \subsection{Charts}
 \subsection{Probleme und Verbesserungen}
-
 
 \subsection{Bearbeitete User Storys}
 \subsubsection{SKIOS-116 Structure and table of contents for submission (\LaTeX)}
@@ -693,7 +691,7 @@ Reviewed von Amos Groß.
 \subsubsection{SKIOS-124 \LaTeX Use cases page and UML}
 Das Ticket \enquote{SKIOS-124 \LaTeX Use cases page and UML} hatte folgende User Story:
 \begin{quotation}
-    As a team member I would like to have our use cases documented in LaTeX so that I won't fail this class.
+    As a team member I would like to have our use cases documented in LaTeX so that I won't fail this class. \\
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item A page is created in LaTeX
@@ -710,3 +708,64 @@ Das Ticket \enquote{SKIOS-124 \LaTeX Use cases page and UML} hatte folgende User
 \end{quotation}
 Bearbeitet von Jonas Eppard und Sabrina Ladner.
 Reviewed von Sabrina Ladner und Amos Groß.
+
+\subsubsection{SKIOS-82 Feed Overview Page}
+Das Ticket \enquote{SKIOS-82 Feed Overview Page} hatte folgende User Story:
+\begin{quotation}
+    As a user of Skiosa, I would like to view a feed, so that I can decide if I want to subscribe to it.
+    Content of this story is to implemented an overview page for feeds based on our mockups (this will exclude recommended feeds if part of the mockup). \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The page displays: 
+    \begin{itemize}
+        \item name
+        \item description
+        \item articles
+    \end{itemize}
+    \item Page is designed as specified in figma
+    \item The subscribe button subscribes a user (if not logged in redirects to login page)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-80 Article View Page}
+Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
+\begin{quotation}
+    As a user of Skiosa, I would like to view an article.
+    Content of this story is to implemented the view page based on our mockups without its references to other articles or likes/bookmarks. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Title, link, description, etc. are displayed 
+    \item Page uses endpoints from core-sevice to achieve this
+\end{itemize}
+\end{quotation}
+Bearbeitet von Simong Morgenstern und Jonas Eppard.
+Reviewed von Lukas Huida.
+
+\section{Sprint 4}
+\subsection{Produktincrement}
+\subsection{Charts}
+\subsection{Probleme und Verbesserungen}
+
+\subsection{Bearbeitete User Storys}
+\subsubsection{SKIOS-145 Mutators and Resolvers for Bookmarks}
+Das Ticket \enquote{SKIOS-145 Mutators and Resolvers for Bookmarks} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer I would like resolvers for bookmarks to be able to create and manage bookmarks. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A resolver is created for:
+    \begin{itemize}
+        \item Paginated fetch of all bookmarks
+        \item Check if article is bookmarked (in article resolver!)
+    \end{itemize}
+    \item A mutation is created for:
+    \begin{itemize}
+        \item Adding bookmarks
+        \item Removing Bookmarks
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Lukas Huida.
+Reviewed von Jonas Eppard.
