@@ -131,15 +131,16 @@ Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
     \resizebox{\textwidth}{!}{\begin{tabular}{|p{8cm}|p{8cm}|}
     \hline
     Beschreibung der Änderung & Begründung der Änderung\\ \hline
-    In der Plattform werden RSS Feeds keinen/wenig Inhalt anzeigen & Ein Großteil der im Internet vohandenen RSS Feeds verlinken nur auf Artikel und enthalten keinen Inhalt, was das Darstellen eines kompletten Artikels unmöglich macht. \\ 
     Das Hinzufügen von Feeds aus der Creator Page wurde zu einem Must-Have Requirement & Das anfänglich geplante manuelle Einbinden von Feeds ist als zu zeitaufwändig eingeschätzt worden. \\
     Polling Interval (TTL) nicht mehr Teil der Creator Page & Ein RSS Feed besitzt bereits ein TTL Feld, durch das dieser Interval bereits angegeben wird. \\
+    Recommendations wurden durch zufällige vorgeschlagene Artikel ersetzt & Aufgrund von Zeitmangel wurde die Recommendation-Funktion entsprechend angepasst. \\ 
     \hline
 \end{tabular}}
 \caption{Tabelle – Änderungen zur anfänglichen Struktur}
 \end{table}
 
 Wie im RSS Feed der tagesschau.de zu erkennen, liefert der RSS Feed alle Informationen die für die Erstellung eines Feeds benötigt werden.
+Sobald ein User die Adresse eines Feeds eingibt lassen sich alle anderen Informationen aus dem Feed ableiten.
 
 \begin{lstlisting}[title=Tagesschau RSS Feed,language=xml]
 <rss version="2.0">
