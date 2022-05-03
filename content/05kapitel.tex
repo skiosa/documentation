@@ -124,3 +124,53 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 \section{Mockups}
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
+Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
+Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
+
+\begin{table}[h]
+    \resizebox{\textwidth}{!}{\begin{tabular}{|p{8cm}|p{8cm}|}
+    \hline
+    Beschreibung der Änderung & Begründung der Änderung\\ \hline
+    In der Plattform soll von RSS Feeds kein Inhalt (bzw. nur eine Beschreibung) angezeigt werden & Ein Großteil der im Internet vohandenen RSS Feeds verlinken nur auf Artikel und enthalten keinen Inhalt. \\ 
+    Das Hinzufügen von Feeds aus der Creator Page wurde zu einem Must-Have Requirement & Das anfänglich geplante manuelle Einbinden von Feeds ist als zu zeitaufwändig eingeschätzt worden. \\
+    Polling Intervall (TTL) nicht mehr Teil der Creator Page & Ein RSS Feed besitzt bereits ein TTL Feld, durch das dieser Interval bereits angegeben wird. \\
+    \hline
+\end{tabular}}
+\caption{Tabelle – Änderungen zur anfänglichen Struktur}
+\end{table}
+
+Wie am Beispiel des RSS Feeds der Tagesschau\footnote{https://www.tagesschau.de/xml/rss2/} zu erkennen ist, liefern viele RSS Feeds einen TTL Wert.
+Mit diesem ist zu erkennen, in welchem Intervall der jeweilige Feed neue Informationen bereitstellt. Das mögliches Polling Intervall in der Content-Creator-Page (falls implementiert) wird dadurch redundant.
+Zusätzlich ist am obersten Artikel zu sehen, wie im Inhalt nur auf ein Link zur Webseite der Tagesschau verwiesen wird und nicht etwa der Inhalt des Artikels enthalten ist.
+So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in den initialen Requirements enthalten ist, nicht möglich ist.
+
+\begin{lstlisting}[title=Tagesschau RSS Feed,language=xml]
+<rss version="2.0">
+    <channel>
+        <title>tagesschau.de - Die Nachrichten der ARD</title>
+        <link>https://www.tagesschau.de</link>
+        <description>tagesschau.de</description>
+        <language>de</language>
+        <copyright>ARD-aktuell / tagesschau.de</copyright>
+        <lastBuildDate>Tue, 03 May 2022 16:54:20 +0200</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <ttl>10</ttl>
+        <item>
+            <title>Marktbericht: Anleger wagen sich noch etwas vor</title>
+            <link>
+            https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/boerse-marktbericht-dax-dow-jones-101.html
+            </link>
+            <pubDate>Tue, 03 May 2022 18:10:20 +0200</pubDate>
+            <description>
+            Nach meist richtungslosem Handel kam am Ende des Tages doch noch etwas Interesse auf. Die Anleger warten derweil mit Spannung auf die Ergebnisse der Zinssitzung der US-Notenbank.
+            </description>
+            <guid>
+            https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/boerse-marktbericht-dax-dow-jones-101.html
+            </guid>
+            <content:encoded>
+            <p> <a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/boerse-marktbericht-dax-dow-jones-101.html"><img src="https://www.tagesschau.de/multimedia/bilder/boerse-frankfurt-141~_v-mittel16x9.jpg"/></a> <br/> <br/> Nach meist richtungslosem Handel kam am Ende des Tages doch noch etwas Interesse auf. Die Anleger warten derweil mit Spannung auf die Ergebnisse der Zinssitzung der US-Notenbank. <a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/boerse-marktbericht-dax-dow-jones-101.html">mehr</a> </p> <ul> </ul> </p> <p><a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/boerse-marktbericht-dax-dow-jones-101.html">Meldung bei www.tagesschau.de lesen</a></p>
+            </content:encoded>
+        </item>
+    </channel>
+</rss>
+\end{lstlisting}
