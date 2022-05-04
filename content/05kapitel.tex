@@ -122,6 +122,89 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 \end{figure}
 
 \section{Mockups}
+\subsection{Design Language}
+A design language can be understood as a framework that allow teams to create and design cohesive interfaces and give applications or companies a “unique feel”.
+
+In the strictest sense, they can be understood as a set of rules dictating, typography, shapes and patterns.
+
+For more information on this topic, please read the following article by Adobe: 
+
+ 
+Goals of the Skiosa Design Language
+
+While creating this design language the following ideas and goals were kept in mind in order to maximize the benefits of such a system for our project:
+
+    Give a coherent feel to Skiosa, staying in line with branding and thus improving the perceived value of our project.
+
+    Visually sperate differet levels of interest (ex. content, settings, navigation)
+
+    Clearly indicate which parts of the UI are ours VS. which parts are from external sources for legal reasons.
+
+Fonts
+
+Please note, how the following fonts can all be used in private or corporate environments (for more information see the TOS of 
+
+ 
+
+    Primary Titles (such as “Login” on the login page): Pacifico
+
+    Helper Text (menu items, buttons, subtitles, etc): Ubuntu Mono in Bold
+
+Separation of Content
+
+In Skiosa, we will have three types of content: 
+
+    Side bar (split top bar on mobile) with important content
+
+    Main Content
+
+    Meta Content
+
+For users to be able to separate this content, the design of these three items will be different
+
+Side bar:
+
+    Darker (or inverse) coloration to make it stand out
+
+    Separation of Navigational and Interactional content (ex. liking an article vs. going to your subscriptions) will be indicated by filled shapes vs. wireframed shapes (see example below)
+
+Example for Separation of Navigational and International content (red: Interactional, green: navigational) :
+
+    Skiosa Logo will always be displayed at top
+
+Main Content
+
+    Consists of separate cards on darker background, without shadows
+
+    Single cards contain optional “subtitles” to explain their Point
+
+    If a page has a header, that header, along with a description or other meta data will make up the top tile (exceptions are single tile pages)
+
+    Content: Content is always the most colorful element of the page, switching between different tones for different items (see feeds in example)
+
+Example for page structure (red: subtitle, green: card)
+
+Meta Content
+
+    Always single card pages
+
+    Differentiated  to regular pages by being a softened version of the side bar
+
+    Use of multiple colors (as with feed above) should generally be avoided here
+
+ 
+Shapes
+
+Generally shapes should be squircles with a radius of 20. The outlier hereby is the sidebar with proper corners, this is done to intentionally to visually separate it from all other content.
+
+Buttons, Input fields, etc. should all be pill formed as can be seen below (Multi line Input fields or other inputs, such as radius select, lists, etc. do not have to conform with this rule): 
+
+ 
+
+When Indicating Fields that would otherwise have content or user profile pictures, we should use general icons relating to their category to fill this gap. (Note: if this is not technically possible, randomized icons are also fine). Colors should not be associated, as recommendations in one category could make our design look bad (=> allays randomize colors in this context).
+
+Example:
+
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
 Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
