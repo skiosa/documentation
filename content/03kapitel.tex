@@ -13,8 +13,7 @@ Vielmehr stellen die \ac{PI}s des Projektes den geplanten Pfad dar, in welchem d
 
 \section{Product Increments}
 Aus der obig erläuterten Überlegung leitet sich sie in Abbildung \ref{fig:roadmap} dargestellte Roadmap ab.
-
-\subsection{Initial Infrastructure}
+Die verschiedenen \ac{PI}s sollen nun in den folgenden Abschnitten erläutert werden.
 
 \begin{figure}
     \centering
@@ -23,11 +22,31 @@ Aus der obig erläuterten Überlegung leitet sich sie in Abbildung \ref{fig:road
     \label{fig:roadmap}
 \end{figure}
 
-% Über den einzelnen Sprint Zielen gab es PIs
-% das Konzept PIs kommen aus Safe und wurde hier als orrientierungshilfe für die Sprintziele verwendet
+\subsection{Initial Infrastructure}
+Ziel des \ac{PI}s ``Initial Infrastructure''\footnote{dt. Anfängliche Infrastruktur} ist es die Grundstruktur für die Plattform aufzusetzen und Workflow Elemente wie eine \ac{CI/CD} Pipeline, das Kubernetes Cluster und die initiale Servicestruktur zu erstellen.
+Fragen rund um, wie die Service-Architektur und Infrastruktur aufzusetzen ist, gilt hierbei zu klären.
+Am Ende dieses \ac{PI}s soll das Ergebnis eine funktionsfähige Infrastruktur sein, auf welcher in kommenden Sprints entwickelt und Sprint-Ergebnisse ausgeliefert werden können.
 
-% Erklärung zu den unterschiedlichen PIs
+\subsection{Article Views and Base Homepage}
+Ziel des \ac{PI}s ``Article Views and Base Homepage''\footnote{dt. Homepage und Einsichtseiten} ist es die wichtigsten Seiten der Applikation zu erstellen.
+Auf Basis von Mockdaten sollen hierbei die Requirements in Richtung der Einsichtseiten von Feed und Artikel Einsichtseiten bzw. der Homepage mit vorgeschlagenen Artikeln erfüllt werden.
+
+
+\subsection{User Interaction}
+Ziel des \ac{PI}s ``User Interaction''\footnote{dt. Bernutzerinteraktion} soll das Ausbauen des User-Management Requirements sein.
+Hierbei sollen sich Benutzer in die Plattform einloggen können, Feeds zur Plattform hinzufügen und abonnieren können bzw. Artikel liken und speichern können.
+Da es nun einen Weg gibt Artikel zur Plattform hinzuzufügen, ist es ebenfalls Teil dieses \ac{PI}s statt Mockdaten echte RSS Feeds zu verwenden.
+
+\subsection{Recommendations}
+Ziel des \ac{PI}s ``Recommendations''\footnote{dt. Vorschläge} ist es die Recommendations der Plattform auszubauen.
+Requirements wie das Angeben von Präferenzen in Richtung Kategorien und vorgeschlagenen Feeds gilt es hier zu implementieren.
+Am Ende des \ac{PI}s wäre eine deutliche Verbesserung der Vorschläge für Nutzer zu erkennen.
+
+\subsection{Enhanced Usability}
+Ziel des \ac{PI}s ``Enhanced Usability''\footnote{dt. Verbesserte Benutzbarkeit} ist es mögliche weitere Elemente der als unrealistisch eingeschätzten Requirements zu implementieren.
+Größter Fokus dieses Product Increments ist es ein Benachrichtigungssystem für Benutzer, sowie die Content-Creator Page zu implementieren.
 
 \section{Einbringen von Sonstigen Aufgaben}
-% Parallel zu PI, Mockups immer ein Product increment im vorraus
-% Dokumentation immer ein PI hinterher
+Parallel zu der eben in den \ac{PI}s erläuterten technischen Implementierung des Projektes gab es ebenfalls viel fachliche Arbeit.
+Aufgaben rund um Mockups und der Abgabedokumentation wurden bewusst aus der Roadmap entfernt, da diese was die Planung und Wertung angeht auf einer Meta-Ebene zum Projekt stattfanden.
+Üblicherweise wurden jedoch Mockups ein \ac{PI} im Voraus bzw. die Abgabedokumentation ein (oder mehrere) \ac{PI}s im Nachhinein abgearbeitet.
