@@ -273,6 +273,82 @@ Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
 Bearbeitet von Simon Morgenstern.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-11 Update Mockups for possible design language}
+Das Ticket \enquote{SKIOS-11 Update Mockups for possible design language} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to like to have a design language to follow when creating mockups.
+
+    If you’re unsure about what a design langage is, the following article explains it:  (this story references the “Style guidelines” part of their definition)
+
+    Also interesting thing to look up might be UI/UX design in general to understand why design languages matter and are necessary for good software.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item deas are documented in confluence
+    \item Figma Mock ups now represent new design language
+    \item Decisions on fonts, separation of pages and page structure are made
+    \item A clear design language is implemented for Skiosa
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-27 Document Initial Requirements}
+Das Ticket \enquote{SKIOS-27 Document Initial Requirements} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want the plattform's requirements and features to be documented, so that we can refer to it in the final documentation.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item All Requirements are listed in a confluence page
+    \item Must haves and optional requirements are listed or indicated as such
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-33 Mockups for Central Pages}
+Das Ticket \enquote{SKIOS-33 Mockups for Central Pages} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to have mockups of the main pages, so that it is clear how to design the frontend.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Mockups are created in figma
+    \item Overview and View pages have mockups
+    \item The Mockups have been discussed with the team (ie. review)
+    \item Mockups contain desktop and mobile versions
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-43 Fix Jira Workflow}
+Das Ticket \enquote{SKIOS-43 Fix Jira Workflow} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want to see if a Issue/Story/Ticket is Done. At the moment if its done the story is not crossed out as at should be.
+ 
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Tickets/Story/Issues are crosses out if there are done/resolved.
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-57 Figma Colors}
+Das Ticket \enquote{SKIOS-57 Figma Colors} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to have a central style in figma to base color choices off of.
+
+    Subject of this story is to create a style based off of whatever the current color scheme is and to replace all instances of that color with the style.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A new style is created in the figma draft
+    \item All hardcoded colors are replaced with mentions of styles
+    \item The colors in the style have names (as explained above)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Amos Groß.
+
 \section{Sprint 2}
 \subsection{Produktincrement}
 \subsection{Charts}
@@ -372,6 +448,39 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
     \end{itemize}
 \end{quotation}
 Bearbeitet von Lukas Huida.
+Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-83 Create Issue Template}
+Das Ticket \enquote{SKIOS-83 Create Issue Template} hatte folgende User Story:
+\begin{quotation}
+    As a member of the Jira org, I would like to have a default template for issues
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item An issue template exists for User Stories
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-77 Subscription Management Endpoints}
+Das Ticket \enquote{SKIOS-77 Subscription Management Endpoints} hatte folgende User Story:
+\begin{quotation}
+    As a front end developer I would like endpoints for subscription management so that I can create its interface.
+    Endpoint need to fulfill the following use cases:
+    \begin{itemize}
+        \item List subscribed feeds of current user
+        \item Paginated fetch of most recent articles from all feeds
+        \item Subscribe current user to feed
+    \end{itemize}
+
+    This functionality is part of the core-service
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Use cases above can be performed with created endpoints
+    \item Implementation contains reusable components for rest of plattform (aka is good code)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
 Reviewed von Tim Horlacher.
 
 \section{Sprint 3}
@@ -743,6 +852,73 @@ Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
 Bearbeitet von Simong Morgenstern und Jonas Eppard.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-78 Subscription Page}
+Das Ticket \enquote{SKIOS-78 Subscription Page} hatte folgende User Story:
+\begin{quotation}
+    As a user of Skiosa I would like to have a page for my subscriptions so that I can use them.
+
+    Goal of this story is to use the backend components provided in SKIOS-77 and to create a subscription page following our design.
+
+    Note: Subscription indicator of mockup will not be in scope for this story.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Subcription page follows design of figma mockups
+    \item Page contains list of the current users subscriptions
+    \item For non logged in users, this page redirects to login
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-94 Overview Page}
+Das Ticket \enquote{SKIOS-94 Overview Page} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like to have a homepage.
+
+    Goal of this story is to use the endpoints of the preliminary recomendation service and to display them as seen in the mockup.
+
+    The recomended feeds are not to be regarded here.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Overview Page exists at root ('/')
+    \item Overview Page follows design scheme 
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Simon Morgenstern.
+
+\subsubsection{SKIOS-114 Roadmap in Confluence}
+Das Ticket \enquote{SKIOS-114 Roadmap in Confluence} hatte folgende User Story:
+\begin{quotation}
+    As a Product owner I would like a roadmap in confluence.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Preliminary Roadmap in Front Page of Confluence is Replaced
+    \item Roadmap reflects or PIs
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-123 Latex Requirements Page}
+Das Ticket \enquote{SKIOS-123 Latex Requirements Page} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our requirements documented in confluence so that I won’t fail this class.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX
+    \item Has a table explaining changes made to these over the course of the project
+    \item Page includes:
+    \begin{itemize}
+    \item functional requirements
+    \item non functional requirements 
+    \item optional and mandatory
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
 \section{Sprint 4}
 \subsection{Produktincrement}
 \subsection{Charts}
@@ -829,3 +1005,19 @@ Das Ticket \enquote{SKIOS-166 \LaTeX Technical Changelog} hatte folgende User St
 \end{quotation}
 Bearbeitet von Tim Horlacher.
 Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-151 Latex Roadmap Chapter}
+Das Ticket \enquote{SKIOS-151 Latex Roadmap Chapter} hatte folgende User Story:
+\begin{quotation}
+    As a member of this team I would like to have a road map chapter, so that I won’t fail this class.
+
+    Note: this story should be done by the PO
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item LaTeX Chapter is created and filled out
+    \item Chapter explains PIs
+    \item Chapter explains Rationale behind Planning
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß
+Reviewed von Jonas Eppard.
