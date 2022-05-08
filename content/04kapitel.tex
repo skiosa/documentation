@@ -273,6 +273,18 @@ Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
 Bearbeitet von Simon Morgenstern.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-23 Design Logo}
+Das Ticket \enquote{SKIOS-23 Design Logo} hatte folgende User Story:
+\begin{quotation}
+    As a user i would like to see a logo when visiting Skiosa. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A good looking icon exists
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Lukas Huida.
+
 \section{Sprint 2}
 \subsection{Produktincrement}
 \subsection{Charts}
@@ -373,6 +385,27 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-55 Skiosa Colorscheme}
+Das Ticket \enquote{SKIOS-55 Skiosa Colorscheme} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, i would like to know which colors to use for mockups. \\
+    \textbf{Ideas for a possible solution}
+    \begin{itemize}
+    \item Look at colors already used by the figma mockups 
+    \item Modify Logo or colors (ex. dark blue to dark green)
+    \item Possibly use a color scheme generator as suggested by Simon Morgenstern
+    \end{itemize}
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+    \item A colorscheme has been created
+    \item Colorscheme is decided on and briefly documented under “UI/UX” in confluence
+    \item Colorscheme has light and dark mode
+    \item Ladner Sabrina's Logo now reflects this color scheme
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
 
 \section{Sprint 3}
 
@@ -742,6 +775,92 @@ Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Simong Morgenstern und Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-110 Mockup for Adding Feeds}
+Das Ticket \enquote{SKIOS-110 Mockup for Adding Feeds} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a figma design for an adding feeds page. \\
+\textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma page follows color scheme and design guidelines
+        \item User has a field to add a URL
+        \begin{itemize}
+            \item Disabled Name, Description field.
+        \end{itemize}
+        \item Sidebar is updated to include button for link to this page
+        \item Workflow for adding link includes:
+        \begin{itemize}
+            \item Testing the url / rss feed if it can be parsed
+            \item Parse Name, Description and TTL
+            \item Name and Description fields are updated to the parsed ones, user can adjust them after parsing
+            \item (Add Button will send the actual post request)
+        \end{itemize}
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-78 Design Bookmarks Page}
+Das Ticket \enquote{SKIOS-78 Design Bookmarks Page} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer, I would like to know how our bookmark page should look. \\
+\textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma Mockups are designed for the bookmarks page
+        \item Mockups use existing components for articles, buttons and input fields
+        \item Pages follow workflow for likes and bookmarks
+        \item Design uses SKIOSA colorscheme
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-71 Design Login and registration pages}
+Das Ticket \enquote{SKIOS-71 Design Login and registration pages} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer, I would like to know how our login page and registration page should look. \\
+    This page should \textbf{not} include the sidebar, but be designed as a page for keycloak.
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma Mockups are created for the login and registration pages
+        \item Mockups include all fields and elements (such as a field to enter name, username, email, etc) present in Keycloak
+        \item Design does not have a sidebar
+        \item Design uses colors of colorscheme
+        \item Design uses common input field or button components
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-56 Common Figma Components}
+Das Ticket \enquote{SKIOS-56 Common Figma Components} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to have common components to drop in for Mockups. \\
+    These components include:
+    \begin{itemize}
+        \item Buttons
+        \item Input fields
+        \item Main Pages
+        \item Sidebars
+        \item Titles
+        \item Subtitles (ex. Recommended Feeds)
+        \item Article Tiles
+        \item etc.
+    \end{itemize}
+    More Information for how to create common components can be found at https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-Components-in-Figma \\
+    \textbf{Ideas for a possible solution}
+    \begin{itemize}
+        \item Look at design guidelines for fonts, separation, etc. (should comply with it)
+        \item Possibly copy some ideas from mockups you can find on the internet: ex. https://www.behance.net/gallery/104152447/Mobile-App-Design-Challenge-Figma-Free-UXUI-2 \\
+    \end{itemize}
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item The components above have common components in figma
+        \item Components are in a seperate page in figma (see https://help.figma.com/hc/en-us/articles/360038511293-Create-and-Manage-Pages) \\
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
 
 \section{Sprint 4}
 \subsection{Produktincrement}
