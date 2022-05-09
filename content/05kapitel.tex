@@ -129,22 +129,22 @@ Im engeren Sinne kann eine Design-Language als Set von Regeln, die Typografie, F
 
 Zur Maximierung der Vorteile eines solchen Systems in unserem Projekt wurden folgende Ziele und Ideen genutzt:
 \begin{itemize}
-    \item Give a coherent feel to Skiosa, staying in line with branding and thus improving the perceived value of our project.
-    \item Visually sperate differet levels of interest (ex. content, settings, navigation)
-    \item Clearly indicate which parts of the UI are ours VS. which parts are from external sources for legal reasons.
+    \item Skiosa ein kohärentes Erscheinungsbild zu geben, das mit dem Branding übereinstimmt und so den wahrgenommenen Wert unseres Projekts verbessert.
+    \item Visuelle Trennung der verschiedenen Interessenebenen (z. B. Inhalt, Einstellungen, Navigation)
+    \item Klar anzugeben, welche Teile der Benutzeroberfläche von Skiosa sind und welche von externen Quellen stammen.
 \end{itemize}
 
 Folgende Schriftarten sollen verwendet werden. 
 
 \begin{itemize}
-    \item Primary Titles (such as “Login” on the login page): Pacifico
-    \item Helper Text (menu items, buttons, subtitles, etc): Ubuntu Mono in Bold
+    \item Primary Titles (wie z. B. "Login" auf der Anmeldeseite): Pacifico
+    \item Helper Text (Menüpunkte, Schaltflächen, Untertitel, etc.): Ubuntu Mono in Bold
 \end{itemize}
 
 
 In SKIOSA gibt es drei Arten von Content.  
 \begin{itemize}
-    \item Side bar (split top bar on mobile) with important content
+    \item Side bar (split top bar on mobile) mit wichtigen Inhalten
     \item Main Content
     \item Meta Content
 \end{itemize}
@@ -153,9 +153,9 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 
 \textbf{Side bar:}
 \begin{itemize}
-    \item Darker (or inverse) coloration to make it stand out
-    \item Separation of Navigational and Interactional content (ex. liking an article vs. going to your subscriptions) will be indicated by filled shapes vs. wireframed shapes (vgl. Abbildung~\ref{fig:Sidebar-Design-Shema})
-    \item Skiosa Logo will always be displayed at top
+    \item Dunklere (oder umgekehrte) Färbung, um sie hervorzuheben
+    \item Trennung von Navigations- und Interaktionsinhalten (z.B. einen Artikel liken vs. zu den Abonnements gehen)  durch ausgefüllte Formen vs. Wireframes (vgl. Abbildung~\ref{fig:Sidebar-Design-Shema})
+    \item Das Skiosa Logo wird immer oben angezeigt
 \end{itemize}
 
 \begin{figure}
@@ -166,10 +166,10 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 
 \textbf{Main Content}
 \begin{itemize}
-    \item Consists of separate cards on darker background, without shadows
-    \item Single cards contain optional “subtitles” to explain their Point
-    \item If a page has a header, that header, along with a description or other meta data will make up the top tile (exceptions are single tile pages)
-    \item Content is always the most colorful element of the page, switching between different tones for different items (vgl. Abbildung~\ref{fig:Page-Structure-Example})
+    \item Besteht aus einzelnen Karten auf dunklerem Hintergrund, ohne Schatten
+    \item Einzelne Karten enthalten optionale "Untertitel" zur Erläuterung ihres Sinns
+    \item Wenn eine Seite eine Überschrift hat, wird diese zusammen mit einer Beschreibung oder anderen Metadaten die oberste Kachel bilden (Ausnahmen sind Seiten mit nur einer Kachel)
+    \item Inhalt ist immer das farbigste Element der Seite und wechselt zwischen verschiedenen Farbtönen für verschiedene Elemente (vgl. Abbildung~\ref{fig:Page-Structure-Example})
 \end{itemize}
 
 \begin{figure}
@@ -180,9 +180,9 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 
 \textbf{Meta Content}
 \begin{itemize}
-    \item Always single card pages
-    \item Differentiated  to regular pages by being a softened version of the side bar
-    \item Use of multiple colors (as with feed above) should generally be avoided here
+    \item Seiten haben eine Karte
+    \item Unterscheidet sich von normalen Seiten durch eine abgeschwächte Version der Seitenleiste
+    \item Vermeidung von mehreren Farben (wie bei der obigen Feed)
 \end{itemize}
  
 \textbf{Formen}
@@ -223,7 +223,113 @@ Für Komponenten die häufig verwendet werden sollen (bpsw. Buttons oder Farben)
 Diese können bei der Erstellung von neuen Seiten wieder verwendet werden. 
 Dadurch bleibt ein Button immer gleich und wird auch nur einmal in einem Angular-Component umgesetzt werden.
 Ähnlich werden auch die Farben umgesetzt. 
-Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design passen. 
+Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design passen.
+
+\subsection{Figma Designs}
+
+Auf der Add-Feed-Page kann ein RSS-Feed für die Seite hinzugefügt werden. Mit dem Button "search" kann überprüft werden, ob die RSS-URL funktioniert.
+Dabei kann einem RSS-Feed ein eigenden Namen und Beschreibung gegeben werden.(vgl. Abbildung~\ref{fig:Add Feed Desktop Light}) 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Add Feed Desktop Lightfigma-mockups.png}
+    \caption{Feed Hinzufügen auf Desktop Light}
+    \label{fig:Add Feed Desktop Light}
+\end{figure}
+
+Auf der Bookmarks-Page werden alle bookmarked Artikel angezeit.
+Dabei können diese Artikel noch zusätzlich geliked werden. (vgl. Abbildung~\ref{fig:Bookmarks Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Bookmarks Interface Desktop Lightfigma-mockups.png}
+    \caption{Seite für Lesezeichen Light Desktop}
+    \label{fig:Bookmarks Interface Desktop Light}
+\end{figure}
+
+Auf der Feed-Overview-Page werden von einem Feed sowohl die neusten Artkel als auch alternative Artikel aus dem Feed angezeigt.
+Die Artikel können hier direkt sowohl geliked als auch bookmarked werden. (vgl. Abbildung~\ref{fig:Feed Overview Page Light Desktop})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Feed Overview Page Desktop Lightfigma-mockups.png}
+    \caption{Seite für alle importierten Feeds}
+    \label{fig:Feed Overview Page Light Desktop}
+\end{figure}
+
+Auf der Registrierungsseite wird der User nach dem 
+Vornamen, Nachnamen, E-Mail-Adresse, Nutzername und nach seinem Passwort gefragt. Das Passwort muss dabei wiederhohlt werden. (vgl. Abbildung~\ref{fig:Registration Page Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Framefigma-mockups-1.png}
+    \caption{Registrierungsseite Light Desktop}
+    \label{fig:Registration Page Light}
+\end{figure}
+
+Auf der Login-Page wird der User nach seinem Nutzername und Passwort gefragt, damit er auf der Seite angemeldet werden kann. (vgl. Abbildung~\ref{fig:Login Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Login Page Desktop Lightfigma-mockups.png}
+    \caption{Loginseite Light Desktop}
+    \label{fig:Login Page Desktop Light}
+\end{figure}
+
+Auf der Overview-Page werden dem Nutzer empfohlende Artikel und Feeds vorgeschlagen. Dabei kann in eine detailierte Sicht für den Artikel gewechselt werden mit einem Klick auf einen Artikel. (vgl. Abbildung~\ref{fig:Overview Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Overview Page Desktop Lightfigma-mockups.png}
+    \caption{Overview Page Light Desktop}
+    \label{fig:Overview Page Desktop Light}
+\end{figure}
+
+In den Einstellungen hat der Nutzer die Möglichkeit seine Konto-Einstellungen anzupassen oder zwischen dem Light- und Darkmodus zu wechseln. (vgl. Abbildung~\ref{fig:Settings Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/Settings Interface Desktop Lightfigma-mockups.png}
+    \caption{Einstellungsseite Light Desktop}
+    \label{fig:Settings Interface Desktop Light}
+\end{figure}
+
+Auf der Subscription-Page werden alle abbonierten RSS-Feeds angezeigt. Dabei können mit einem Klick auf den Pfeil auf der rechten Seite die letzten veröffentlichten Artikel dieses Feeds angezeigt werden. (vgl. Abbildung~\ref{fig:Subscription Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/Subscription Interface Desktop Lightfigma-mockups.png}
+    \caption{Subscription Interface Desktop Light}
+    \label{fig:Subscription Interface Desktop Light}
+\end{figure}
+
+Auf der Article-View-Page werden die Details des Artikel angezeigt. Dabei kann man den Link zu dem Artikes teilen, den Artikel liken und bookmarken. 
+Darüber hinaus gibt es Links zum Originalartikel und zum Feed, indem der Artikel veröffentlicht wurde. Unter "Similar Articles" werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/View Page Desktop Lightfigma-mockups.png}
+    \caption{View Page Desktop Light}
+    \label{fig:View Page Desktop Light}
+\end{figure}
+
+Für jede Page wurde dabei ein Mockup für den Light-Mode, 
+für den Dark-Mode in der Desktop-Ansicht und ein Mockup im 
+Light-Mode und ein Mockup im Dark-Mode in der mobilen Ansicht 
+erstellt. Zur Feed-Overview-Page sehen diese folgendermaßen aus:
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Feed Overview Page Desktop Darkfigma-mockups.png}
+    \caption{Feed Overview Page Dark Desktop}
+    \label{fig:Feed Overview Page Dark Desktop}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=10cm]{Feed Overview Page Mobile Darkfigma-mockups.png}
+    \end{center}
+    \caption{Feed Overview Page Light Mobile}
+    \label{fig:Feed Overview Page Light Mobile}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=10cm]{Feed Overview Page Mobile Lightfigma-mockups.png}
+    \end{center}
+    \caption{Feed Overview Page Light Desktop}
+    \label{fig:Feed Overview Page Light Mobile}
+\end{figure}
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
 Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
