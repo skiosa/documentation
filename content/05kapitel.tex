@@ -123,6 +123,105 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 
 \section{Mockups}
 
+\subsection{Aktivitätsdiagramme}
+Das Aktivitätsdiagram der Loginseite ist in Abbildung~\ref{fig:umlActivityLogin.png} dargestellt.
+Auf der Seite kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
+Sind die Anmeldedaten korrekt wird man eingeloggt, sind die Anmeldedaten fehlerhaft können diese korrigiert werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityLogin.png}
+    \caption{Aktivitätsdiagramm der Loginseite}
+    \label{fig:umlActivityLogin.png}
+\end{figure}
+
+In Abbildung~\ref{fig:umlActivityRegister.png} wird die Registrierungsseite beschrieben.
+Auf der Seite müssen Daten, wie Vorname, Nachname, E-Mail, Benutzername, sowie Passwort und dessen Wiederholung eingetragen werden.
+Sind die Registrierungsdaten korrekt, bzw. nicht bereits registriert (z.B. Benutzername) kann mit Bestätigung auf registrieren ein User angelegt werden.
+Zu jedem Zeitpunkt kann die Registrierung abgebrochen und zur Loginseite zurückgekehrt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityRegister.png}
+    \caption{Aktivitätsdiagramm der Registrierungsseite}
+    \label{fig:umlActivityRegister.png}
+\end{figure}
+
+Die Sidebar ist auf jeder Seite mit Außnahme Login-, Registrierungs- und Add-Feedseite erreichbar.
+In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Sidebar dargestellt.
+Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich direkt einloggen
+oder falls bereits geschehen auf die Einstellungen gewechselt werden. Unter der Voraussetzung, dass der Benutzer eingeloggt ist kann direkt zu den
+Empfehlungen, den Lesezeichen, den Abonnements und Explore gewechselt werden. Zusätzlich kann direkt ein neuer RSS Feed hinzugefügt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySidebar.png}
+    \caption{Aktivitätsdiagramm der Sidebar}
+    \label{fig:umlActivitySidebar.png}
+\end{figure}
+
+Auf der Übersichtsseite können empfohlene Feeds oder empfohlene Artikel besucht werden.
+Das Aktivitätsdiagramm ist in Abbildung~\ref{fig:umlActivityOverview.png} dargestellt.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityOverview.png}
+    \caption{Aktivitätsdiagramm der Übersichtsseite}
+    \label{fig:umlActivityOverview.png}
+\end{figure}
+
+In Abbildung~\ref{fig:umlActivityFeed.png} werden die möglichen Aktionen auf der Feedseite dargestellt.
+Der aufgerufene Feed kann aus den Abonnement ausgetragen werden. Im Feed kann gefiltert und/ oder gesucht werden.
+Einzelne Artikel können als Lesezeichen gespeichert oder geliked werden. Per Klick auf den Artikel kann dieser aufgerufen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityFeed.png}
+    \caption{Aktivitätsdiagramm der Feedseite}
+    \label{fig:umlActivityFeed.png}
+\end{figure}
+
+Auf der Artikelseite kann wie in Abbildung~\ref{fig:umlActivityView.png} dargestellt der Artikel gelesen werden.
+Darüber hinaus kann der Artikel als Lesezeichen gespeichert, geliked und/oder geteilt werden.
+Auch die Feedseite des Artikels kann aufgerufen werden. Die Ursprungswebseite des Artikels kann auch geöffnet werden.
+Unter den ähnlichen Artikeln kann zu diesem per Klick gewechselt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityView.png}
+    \caption{Aktivitätsdiagramm der Artikelseite}
+    \label{fig:umlActivityView.png}
+\end{figure}
+
+
+In Abbildung~\ref{fig:umlActivityBookmarks.png} ist das Aktivitätsdiagramm der Lesezeichenseite dargestellt.
+Alle vom Nutzer gespeicherten Lesezeichen werden hier aufgelistet und es kann gefiltert und/ oder darin gesucht werden.
+Einzelne Artikel können aus den Lesezeichen gelöscht werden. Auch können einzelne Artikel geliked oder entliked werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityBookmarks.png}
+    \caption{Aktivitätsdiagramm der gespeicherten Lesezeichenseite}
+    \label{fig:umlActivityBookmarks.png}
+\end{figure}
+
+Die Aktivitäten der Abonnementsseite werden in Abbildung~\ref{fig:umlActivitySubscription.png} abgebildet.
+Die Abonnements können gefiltert und/oder darin gesucht werden. Jeder abonnierte Feed kann abgewählt werden.
+Ein Feed kann ausgeklappt werden und einzelne Artikel geliked oder als Lesezeichen gespeichert werden.
+Die Artikel können mit einem Klick aufgerufen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySubscription.png}
+    \caption{Aktivitätsdiagramm der Abonnements}
+    \label{fig:umlActivitySubscription.png}
+\end{figure}
+
+In der Abbildung~\ref{fig:umlActivityAddFeed.png} wird der Ablauf zum Hinzufügen eines neuen Feeds dargestellt.
+Ein RSS-Link wird eingetragen und mit klick auf "load" wird der Link geprüft. Ist der Link fehlerbehaftet muss er korrigiert werden.
+Funktioniert der Link werden Name und Beschreibung vorausgefüllt.
+Der Name und die Beschreibung kann vor dem finalen hinzufügen noch angepasst werden.
+Das Hinzufügen eines Feeds kann jederzeit über die Schaltfläche verlassen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityAddFeed.png}
+    \caption{Aktivitätsdiagramm zum Hinzufügen eines Feeds}
+    \label{fig:umlActivityAddFeed.png}
+\end{figure}
+
+Der Nutzer kann die Einstellungen gemäß Abbildung~\ref{fig:umlActivitySettings.png} ändern.
+Es können die Accounteinstellungen, die Benachrichtigung und das Farbschema angepasst werden.
+Ausloggen kann sich der Nutzer in den Einstellungen auch.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySettings.png}
+    \caption{Aktivitätsdiagramm der Einstellungsseite}
+    \label{fig:umlActivitySettings.png}
+\end{figure}
+
+
 
 
 
