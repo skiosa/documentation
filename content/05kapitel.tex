@@ -123,8 +123,9 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 
 \section{Mockups}
 \subsection{Design Language}
+Im Projekt haben wir mit dem Ziel eines einheitlichen Designs eine Design-Language definiert.
 Eine Design-Language kann als Framework verstanden werden, das es Teams ermöglicht, 
-zusammenhängende Schnittstellen zu erstellen und zu entwerfen um Anwendungen ein "einzigartiges Gefühl" zu verleihen.
+zusammenhängende Schnittstellen zu erstellen und zu entwerfen um Anwendungen ein \enquote{einzigartiges Gefühl} zu verleihen.
 Im engeren Sinne kann eine Design-Language als Set von Regeln, die Typografie, Formen und Muster vorschreiben.
 
 Zur Maximierung der Vorteile eines solchen Systems in unserem Projekt wurden folgende Ziele und Ideen genutzt:
@@ -134,13 +135,8 @@ Zur Maximierung der Vorteile eines solchen Systems in unserem Projekt wurden fol
     \item Klar anzugeben, welche Teile der Benutzeroberfläche von Skiosa sind und welche von externen Quellen stammen.
 \end{itemize}
 
-Folgende Schriftarten sollen verwendet werden. 
-
-\begin{itemize}
-    \item Primary Titles (wie z. B. "Login" auf der Anmeldeseite): Pacifico
-    \item Helper Text (Menüpunkte, Schaltflächen, Untertitel, etc.): Ubuntu Mono in Bold
-\end{itemize}
-
+Als Schriftart soll für primäre Schaltflächen oder Texte \enquote{Ubuntu Mono} in Bold verwendet werden.
+Für zusätzliche \enquote{Helper Texte} wie Menüpunkte, Schaltflächen oder Untertitel sollte \enquote{Ubuntu Mono} in Bold genutzt werden.
 
 In SKIOSA gibt es drei Arten von Content.  
 \begin{itemize}
@@ -154,20 +150,13 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 \textbf{Side bar:}
 \begin{itemize}
     \item Dunklere (oder umgekehrte) Färbung, um sie hervorzuheben
-    \item Trennung von Navigations- und Interaktionsinhalten (z.B. einen Artikel liken vs. zu den Abonnements gehen)  durch ausgefüllte Formen vs. Wireframes (vgl. Abbildung~\ref{fig:Sidebar-Design-Shema})
     \item Das Skiosa Logo wird immer oben angezeigt
 \end{itemize}
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{Sidebar-Design-Sheme.png}
-    \caption{Example for Separation of Navigational and International content (red: Interactional, green: navigational)}
-    \label{fig:Sidebar-Design-Shema}
-\end{figure}
 
 \textbf{Main Content}
 \begin{itemize}
     \item Besteht aus einzelnen Karten auf dunklerem Hintergrund, ohne Schatten
-    \item Einzelne Karten enthalten optionale "Untertitel" zur Erläuterung ihres Sinns
+    \item Einzelne Karten enthalten optionale \enquote{Untertitel} zur Erläuterung ihres Sinns
     \item Wenn eine Seite eine Überschrift hat, wird diese zusammen mit einer Beschreibung oder anderen Metadaten die oberste Kachel bilden (Ausnahmen sind Seiten mit nur einer Kachel)
     \item Inhalt ist immer das farbigste Element der Seite und wechselt zwischen verschiedenen Farbtönen für verschiedene Elemente (vgl. Abbildung~\ref{fig:Page-Structure-Example})
 \end{itemize}
@@ -187,7 +176,7 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
  
 \textbf{Formen}
 
-Im Allgemeinen sollen Formen abgerundete Rechtecke mit einem Radius von 20 sein. Die Sidebar ist hier die Außnahme, da sie richtige Ecken hat, 
+Im Allgemeinen sollen Formen abgerundete Rechtecke mit einem Radius von 20px sein. Die Sidebar ist hier die Außnahme, da sie richtige Ecken hat, 
 mit dem Ziel diese bewusst visuell vom restlichen Content abzugrenzen.
 Buttons, Input-Felder, etc. sollen wie in Abbildung~\ref{fig:Design-Shapes-Example} aussehen. 
 Dabei müssen Felder, die über mehrere Lines gehen, wie bspw. Listen, diese Regel nicht befolgen.
@@ -227,7 +216,7 @@ Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design pas
 
 \subsection{Figma Designs}
 
-Auf der Add-Feed-Page kann ein RSS-Feed für die Seite hinzugefügt werden. Mit dem Button "search" kann überprüft werden, ob die RSS-URL funktioniert.
+Auf der Add-Feed-Page kann ein RSS-Feed für die Seite hinzugefügt werden. Mit dem Button \enquote{search} kann überprüft werden, ob die RSS-URL funktioniert.
 Dabei kann einem RSS-Feed ein eigenden Namen und Beschreibung gegeben werden.(vgl. Abbildung~\ref{fig:Add Feed Desktop Light}) 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Add Feed Desktop Lightfigma-mockups.png}
@@ -295,7 +284,7 @@ Auf der Subscription-Page werden alle abbonierten RSS-Feeds angezeigt. Dabei kö
 \end{figure}
 
 Auf der Article-View-Page werden die Details des Artikel angezeigt. Dabei kann man den Link zu dem Artikes teilen, den Artikel liken und bookmarken. 
-Darüber hinaus gibt es Links zum Originalartikel und zum Feed, indem der Artikel veröffentlicht wurde. Unter "Similar Articles" werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
+Darüber hinaus gibt es Links zum Originalartikel und zum Feed, indem der Artikel veröffentlicht wurde. Unter \enquote{Similar Articles} werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{images/View Page Desktop Lightfigma-mockups.png}
