@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "argocd",
         "Codeowners",
+        "Devcontainer",
+        "Devcontainers",
         "Eppard",
         "Garidis",
         "Hashi",
@@ -12,6 +15,7 @@
         "newman",
         "Qube",
         "SKIOS",
+        "skiosa",
         "Skiosa",
         "sonarqube",
         "wontfix"
