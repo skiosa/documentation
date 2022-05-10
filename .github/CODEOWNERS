@@ -1,4 +1,7 @@
+* @jeppard
+
 content/* @grossamos @Y05h129
 ads/appendix.tex @grossamos @Y05h129
-* @jeppard
+ads/acronyms.tex @grossamos @Y05h129
+
 .drone.yml @lukasljl

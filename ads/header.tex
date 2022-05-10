@@ -32,6 +32,8 @@
 }
 \newcommand{\langstr}[1]{\einstellung{lang#1}}
 
+\usepackage[printonlyused,footnote]{acronym}
+
 % Flag für die Selbstständigkeitserklärung, Default: true
 \newif\ifselbsterkl
 \selbsterklfalse
@@ -212,7 +214,7 @@
 \usepackage{enumitem}	% mehr Optionen bei Aufzählungen
 \usepackage{graphicx}
 \usepackage{xcolor} 	% für HTML-Notation
-\usepackage{csquotes}
+\usepackage{csquotes}[german=quotes]
 \usepackage{float}
 \usepackage{array}
 \usepackage{calc}		% zum Rechnen (Bildtabelle in Deckblatt)
