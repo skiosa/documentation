@@ -62,11 +62,11 @@ Im folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Eine REST-API gegenüber liefert nur eine konkrete Datenstruktur.
     In diesem Projekt haben wir uns für GraphQL entschieden, um gezielter Daten abzufragen und somit den Datenverkehr zwischen Client und Server möglichst minimal zu halten.
 \subsection{TypeORM}
-    TypeORM ist ein \ac{ORM} für das Javascript Universum. Es erleichtert das nutzen einer Datenbank, da man sich nicht mit \ac{SQL} Befehlen beschäftigen muss sondern sich nur Gedanken um die Strutkur seiner Daten machen muss.
-    Auf der Datenstruktur baut TypeORM dann die Datenbank mit allen Tabellen. Das praktische ist, man kann TypeORM in Klassen mit Anotaions benutzen, heißt man eine Klasse schreiben die dann für die Datenbank benutzt wird
+    TypeORM ist ein \ac{ORM} für das Javascript Universum. Es erleichtert das Nutzen einer Datenbank, da man sich nicht mit \ac{SQL} Befehlen beschäftigen muss, sondern sich nur Gedanken um die Struktur seiner Daten machen muss.
+    Auf der Datenstruktur baut TypeORM dann die Datenbank mit allen Tabellen. Das praktische ist, man kann TypeORM in Klassen mit Annotations benutzen, heißt man eine Klasse schreiben, die dann für die Datenbank benutzt wird
     aber auch gleichzeitig für den Programmcode.
 \subsection{PostgreSQL}
-    PostgreSQL ist ein relationales Datenbankmanagemt-System. Es wird in diesem Projekt verwendet, um die Datenbank zu verwalten. In dieser Datenbank werden alle notwendigen Daten erfasst.
+    PostgreSQL ist ein relationales Datenbankmanagement-System. Es wird in diesem Projekt verwendet, um die Datenbank zu verwalten. In dieser Datenbank werden alle notwendigen Daten erfasst.
     Die Entscheidung auf PostgreSQL wurde getroffen, da dieses Produkt Open-Source und kostenlos ist.    
 \subsection{Git}
     Git ist ein Versionsverwaltungssystem. Es wird in diesem Projekt verwendet, um unseren Code zu verwalten. Als Plattform für Git nutzen wird \textit{Github}.
@@ -89,25 +89,25 @@ Im folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Dazu ist immer den Stand des Master-Branches direkt deployed und kann auch von Benutzer getestet werden, um schneller Fehler zu finden. Als alternative hätte man auch Github Actions benutzen können, was einen geringeren
     aufwand in der Ersteinrichtung hätte, jedoch wären wir dort bei Privaten Repositories limitiert was Ressourcen betrifft. Ein Vorteil von \textit{Drone.io} ist, dass es selber gehosted wird und somit eine bessere Privacy gewährt.
 \subsection{SonarQube}
-    SonarQube ist eine Software welche Code analysieren kann und dabei auch zum Beispiel Sicherheitslücken erkennt.
-    Es wird in diesem Projekt verwendet, um den Code zu analysieren um dadurch wiederum die Qualität zu verbessern.
+    SonarQube ist eine Software, welche Code analysieren kann und dabei auch zum Beispiel Sicherheitslücken erkennt.
+    Es wird in diesem Projekt verwendet, um den Code zu analysieren, um dadurch wiederum die Qualität zu verbessern.
     Dabei wird bei jedem Pull-Request der Code überprüft und ein Entwickler erkennt direkt, ob zum Beispiel Bugs gefunden wurden oder sogenannte \textit{Code-Smells}. 
-    Diese können zum Beispiel aufkommen wenn vergessen wurde, nicht genutzte \textit{Imports} zu entfernene.
-    Desweiteren wird auch überprüft ob duplizierter Code vorhanden ist.
+    Diese können zum Beispiel aufkommen, wenn vergessen wurde, nicht genutzte \textit{Imports} zu entfernen.
+    Des Weiteren wird auch überprüft ob duplizierter Code vorhanden ist.
 \subsection{Jira}
     Jira ist ein Issue-Tracking-System, das für die Projekt-Management- und Projekt-Management-Prozesse verwendet wird.
     In Jira können Tickets erstellt, zugeordnet und bearbeitet werden. Sie lassen sich einem Sprint zuordnen und im Kanban Board visualisieren.
     Zusätzlich lassen sich einfach Diagramme erstellen, die die Projekt-Management-Prozesse darstellen.
     In unserem Projekt haben wir uns für Jira entschieden, da die meisten es aus ihrer Praxisphase bereits kannten.
 \subsection{Github(Pull Requests)}
-    Für jede Story wird ein eigener Pull-Request auf Github erstellt. Dieser wird von den Architekten und den Service-Leads überprüft um anschließend in die
+    Für jede Story wird ein eigener Pull-Request auf Github erstellt. Dieser wird von den Architekten und den Service-Leads überprüft, um anschließend in die
     produktive Anwendung integriert zu werden. Der Zustand der Pull-Request wird automatisch mit den Tickets in Jira synchronisiert.
-    Pull Request wurden verwendet um immer ein funktionierendes Inkrement des Produkts zu gewährleisten.
+    Pull Request wurden verwendet, um immer ein funktionierendes Inkrement des Produkts zu gewährleisten.
 \subsection{Confluence}
-    Confluence dient als Wiki-Plattform für das Projekt. Es dient dazu um wichtige Entscheidungen/Requirements zu dokumentieren und zu vermitteln.
+    Confluence dient als Wiki-Plattform für das Projekt. Es dient dazu, um wichtige Entscheidungen/Requirements zu dokumentieren und zu vermitteln.
 \subsection{Figma}
     Figma ist eine Software für die Erstellung von Prototypen/Mockups im Bereich UI/UX. Durch die kollaborativen Funktionen können mehrere Personen einen Prototyp erstellen.
-    Da es sich um eine Webanwendung handelt können Mockups schnell geöffnet werden und jeder mit Zugriff kann sich über den aktuellen Arbeitsstand infomieren.
+    Da es sich um eine Webanwendung handelt können Mockups schnell geöffnet werden und jeder mit Zugriff kann sich über den aktuellen Arbeitsstand Infomieren.
 
 \section{Meetings}
 Zur Koordination des Teams wurden während des Projektes für Scrum übliche Meetings abgehalten und teilweise an unsere Rahmenbedingungen angepasst.
