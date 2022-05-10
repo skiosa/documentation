@@ -471,6 +471,25 @@ Das Ticket \enquote{SKIOS-106 ORM in Polling Service} hatte folgende User Story:
 Bearbeitet von Jannik Springer.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-81 creating feed service}
+Das Ticket \enquote{SKIOS-81 creating feed service} hatte folgende User Story:
+\begin{quotation}
+As a front-end developer I would like to have service to base feed views off of so that i can create their pages.
+The created service should cover the following use cases:
+\begin{itemize}
+    \item fetch single feeds
+    \item fetch articles of feed (paginated)
+\end{itemize}
+This functionality is part of the core-service.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Acceptance Criteria
+    \item This functionality is implemented in core-service
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcle Alex.
+Reviewed von Lukas Huida.
+
 \section{Sprint 3}
 
 \subsection{Produktincrement}
@@ -740,7 +759,7 @@ Reviewed von Lukas Huida.
 Das Ticket \enquote{SKIOS-109 Backend Feed Mutation} hatte folgende User Story:
 \begin{quotation}
 As a developer, I would like to have muations for creating and deleting feeds.
-Goal of this story is to create Graphql Mutation to add a feed into our database. \\
+Goal of this story is to create Graphql Mutation to add a feed into our database.\\
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Graphql mutation is created for feeds
@@ -903,6 +922,24 @@ Das Ticket \enquote{SKIOS-113 LaTeX Organigram/Orthography} hatte folgende User 
 Bearbeitet von Theo Krinitz
 Reviewed von Jannik Springer
 
+\subsubsection{SKIOS-109 backend mutation for feeds}
+Das Ticket \enquote{SKIOS-109 backend mutation for feeds} hatte folgende User Story:
+\begin{quotation}
+As a developer, I would like to have muations for creating and deleting feeds.
+Goal of this story is to create Graphql Mutation to add a feed into our database. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Graphql mutation is created for feeds
+    \item calling one of the mutations results in a feed being created in the database
+    \item calling the mutation is possible only knowing the url of a feed (all other “not null” fields are left blank or filled with defaults)
+    \item calling the other mutation (by ID) results in the specified feed being deleted
+    \item deletion should only be possible for logged in users with a specific keycloak role
+    \item creation should be possible for all logged in users
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Lukas Huida.
+
 \section{Sprint 4}
 \subsection{Produktincrement}
 \subsection{Charts}
@@ -1053,3 +1090,43 @@ Das Ticket \enquote{SKIOS-153 LaTeX Mockup showcase} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Theo Krinitz
 Reviewed von Amos Groß
+
+\subsubsection{SKIOS 82 Feed Overview Page}
+Das Ticket \enquote{SKIOS 82 Feed Overview Page} hatte folgende User Story:
+\begin{quotation}
+As a user of Skiosa, I would like to view a feed, so that I can decide if I want to subscribe to it.
+Content of this story is to implemented an overview page for feeds based on our mockups (this will exclude recommended feeds if part of the mockup). \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The page displays: 
+    \begin{itemize}
+        \item name
+        \item description
+        \item articles
+    \end{itemize}
+    \item Page is designed as specified in figma+
+    \item The subscribe button subscribes a user (if not logged in redirects to login page)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-146 Angular Likes}
+Das Ticket \enquote{SKIOS-146 Angular Likes} hatte folgende User Story:
+\begin{quotation}
+As a user I would like a likes component to be able to like articles.
+Goal of this story is to implement the likes button for articles in the view page and individual article components. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Heart Icon is visible in our (Angular) Article Component
+    \item Like Button is visible in the article page
+    \item In both cases:
+    \begin{itemize}
+        \item Clicking on the Heart likes the article (aka. makes the appropriate call to our backend)
+        \item For liked articles this heart has a solid fill (same color as outline in mockup)
+        \item Clicking the heart changes the fill of the icon WITHOUT having to refresh the page
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Ladner Sabrina.
