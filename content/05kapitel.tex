@@ -375,6 +375,12 @@ So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in
 \section{Workflows}
 \subsection{Feed-Workflow}
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlFeedWorkflow.png}
+    \caption{Feed-Workflow}
+    \label{fig:feedWorkflow}
+\end{figure}
+
 \subsection{Article-Workflow}
 
 Mithilfe des Polling-Service werden periodisch neue Artikel-Metadaten in unsere Datenbank eingepflegt. Dieser holt sich zuerst die Feeds aus der Datenbank deren \ac{TTL} abgelaufen sind und ruft diese ab (polling).
