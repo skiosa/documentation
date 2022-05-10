@@ -371,3 +371,21 @@ So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in
     </channel>
 </rss>
 \end{lstlisting}
+
+\section{Workflows}
+\subsection{Feed-Workflow}
+
+\subsection{Article-Workflow}
+
+Mithilfe des Polling-Service werden periodisch neue Artikel-Metadaten in unsere Datenbank eingepflegt. Dieser holt sich zuerst die Feeds aus der Datenbank deren \ac{TTL} abgelaufen sind und ruft diese ab (polling).
+Die dabei erhaltenen XML-Daten werden dann in ein Objekt geparst, welches weiter in unser Artikel-Objekt-Format geparst wird. Dieses enthält Informationen wie Titel, Beschreibung und einen Link zum eigentlichen Artikel.
+Diese Artikel werden dann in die Datenbank eingetragen und die entsprechenden Zeitstempel der Feeds (welche zum prüfen der \acs{TTL} verwendet werden) geupdated.
+
+Besucht ein Nutzer unsere Startseite oder eine Artikel-Seite wird vom Frontend eine Anfrage an das Backend (Core-Service) gestellt, um Artikel zu erhalten. Dieses holt sich Artikel aus der Datenbank und gibt explizit
+angefragte Artikel sowie Empfehlungen für weitere Artikel an das Frontend zurück. Das Frontend stellt dem Nutzer dann die Artikel(-empfehlungen) dar. Der gesamte Workflow ist in Abbildung~\ref{fig:articleWorkflow} dargestellt.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlArticleWorkflow.png}
+    \caption{Artikel-Workflow}
+    \label{fig:articleWorkflow}
+\end{figure}
