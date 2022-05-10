@@ -320,6 +320,116 @@ erstellt. Zur Feed-Overview-Page sehen diese folgendermaßen aus:
     \label{fig:Feed Overview Page Light Mobile}
 \end{figure}
 
+
+\subsection{Erläuterung zur Funktionalität einzelner Seiten}
+
+Um zusätzliche Fragen, wie etwa die Funktionalität einzelner Mockups und unserer Plattform zu erklären, wurden nachtäglich ebenfalls Aktivitätsdiagramme zu den einzelnen Seiten (bzw. globalen Komponenten) erstellt.
+Diese erläutern das Verhalten verschiedener Seiten und werden im Folgenden erläutert.
+
+Das Aktivitätsdiagram der Loginseite ist in Abbildung~\ref{fig:umlActivityLogin.png} dargestellt.
+Auf dieser Seite ist es möglich kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
+Sind die Anmeldedaten korrekt wird man eingeloggt, sind die Anmeldedaten fehlerhaft können diese korrigiert werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityLogin.png}
+    \caption{Aktivitätsdiagramm der Loginseite}
+    \label{fig:umlActivityLogin.png}
+\end{figure}
+
+In Abbildung~\ref{fig:umlActivityRegister.png} wird die Registrierungsseite beschrieben.
+Auf der Seite müssen Daten, wie Vorname, Nachname, E-Mail, Benutzername, sowie Passwort und dessen Wiederholung eingetragen werden.
+Sind die Registrierungsdaten korrekt, bzw. nicht bereits registriert (z.B. Benutzername) kann mit Bestätigung auf registrieren ein User angelegt werden.
+Zu jedem Zeitpunkt kann die Registrierung abgebrochen und zur Loginseite zurückgekehrt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityRegister.png}
+    \caption{Aktivitätsdiagramm der Registrierungsseite}
+    \label{fig:umlActivityRegister.png}
+\end{figure}
+
+Die Seitenleiste ist auf jeder Seite mit Außnahme Login- und Registrierungsseite, sowie während des Pop-ups zum Hinzufügen eines Feeds erreichbar.
+In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Seitenleiste dargestellt.
+Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich einloggen
+oder falls bereits geschehen auf die Einstellungen gewechselt werden. Die Schaltfläche des Login wird nach erfolgreichem Login auf Settings geändert.
+Es kann immer auf die Empfehlungen zugegriffen werden, sowohl als eingeloggter wie auch als nicht eingeloggter Nutzer.
+Unter der Voraussetzung, dass der Benutzer eingeloggt ist, kann direkt zu den Lesezeichen und den Abonnements gewechselt werden.
+Zusätzlich kann direkt ein neuer RSS Feed hinzugefügt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySidebar.png}
+    \caption{Aktivitätsdiagramm der Seitenleiste}
+    \label{fig:umlActivitySidebar.png}
+\end{figure}
+
+Auf der Übersichtsseite können empfohlene Feeds oder empfohlene Artikel besucht werden.
+Das Aktivitätsdiagramm ist in Abbildung~\ref{fig:umlActivityOverview.png} dargestellt.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityOverview.png}
+    \caption{Aktivitätsdiagramm der Übersichtsseite}
+    \label{fig:umlActivityOverview.png}
+\end{figure}
+
+In Abbildung~\ref{fig:umlActivityFeed.png} werden die möglichen Aktionen auf der Feedseite dargestellt.
+Der aufgerufene Feed kann abonniert und deabonniert werden. Im Feed kann gefiltert und/oder gesucht werden.
+Einzelne Artikel können als Lesezeichen gespeichert oder geliked werden. Per Klick auf den Artikel kann dieser aufgerufen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityFeed.png}
+    \caption{Aktivitätsdiagramm der Feedseite}
+    \label{fig:umlActivityFeed.png}
+\end{figure}
+
+Auf der Artikelseite kann, wie in Abbildung~\ref{fig:umlActivityView.png} dargestellt der Artikel gelesen werden.
+Darüber hinaus kann der Artikel als Lesezeichen gespeichert, geliked und/oder geteilt werden (Link wird in die Zwischenablage kopiert).
+Auch die Feedseite des Artikels kann aufgerufen werden. Die Ursprungswebseite des Artikels kann auch geöffnet werden.
+Unter den ähnlichen Artikeln kann zu diesem per Klick gewechselt werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityView.png}
+    \caption{Aktivitätsdiagramm der Artikelseite}
+    \label{fig:umlActivityView.png}
+\end{figure}
+
+
+In Abbildung~\ref{fig:umlActivityBookmarks.png} ist das Aktivitätsdiagramm der Lesezeichenseite dargestellt.
+Alle vom Nutzer gespeicherten Lesezeichen werden hier aufgelistet und es kann gefiltert und/ oder darin gesucht werden.
+Einzelne Artikel können aus den Lesezeichen gelöscht werden. Auch können einzelne Artikel geliked oder entliked werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityBookmarks.png}
+    \caption{Aktivitätsdiagramm der gespeicherten Lesezeichenseite}
+    \label{fig:umlActivityBookmarks.png}
+\end{figure}
+
+Die Aktivitäten der Abonnementsseite werden in Abbildung~\ref{fig:umlActivitySubscription.png} abgebildet.
+Die Abonnements können gefiltert und/oder durchsucht werden. Jeder Feed kann direkt deabonniert werden.
+Jeder abonnierte Feed kann per Klick auf diesen aufgerufen werden.
+Ein Feed kann ausgeklappt werden und die 10 aktuellsten Artikel werden angezeigt.
+Die gezeigten einzelnen Artikel geliked oder als Lesezeichen gespeichert werden.
+
+Die Artikel können mit einem Klick aufgerufen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySubscription.png}
+    \caption{Aktivitätsdiagramm der Abonnements}
+    \label{fig:umlActivitySubscription.png}
+\end{figure}
+
+In der Abbildung~\ref{fig:umlActivityAddFeed.png} wird der Ablauf zum Hinzufügen eines neuen Feeds dargestellt.
+Ein RSS-Link wird eingetragen und mit klick auf \enquote{load} wird der Link geprüft.
+Ist der Link fehlerbehaftet oder entspricht er nicht unserem Schema muss er korrigiert werden.
+Funktioniert der Link werden Name und Beschreibung vorausgefüllt.
+Der Name und die Beschreibung kann vor dem finalen Hinzufügen noch angepasst werden.
+Das Hinzufügen eines Feeds kann jederzeit über die Schaltfläche verlassen werden.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivityAddFeed.png}
+    \caption{Aktivitätsdiagramm zum Hinzufügen eines Feeds}
+    \label{fig:umlActivityAddFeed.png}
+\end{figure}
+
+Der Nutzer kann die Einstellungen gemäß Abbildung~\ref{fig:umlActivitySettings.png} ändern.
+Es können die Accounteinstellungen und das Farbschema angepasst werden.
+Ausloggen kann sich der Nutzer in den Einstellungen auch.
+\begin{figure}
+    \includegraphics[width=\linewidth]{umlActivitySettings.png}
+    \caption{Aktivitätsdiagramm der Einstellungsseite}
+    \label{fig:umlActivitySettings.png}
+\end{figure}
+
+
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
 Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
 Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
@@ -371,3 +481,31 @@ So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in
     </channel>
 </rss>
 \end{lstlisting}
+
+\section{Workflows}
+\subsection{Feed-Workflow}
+Feeds können nur von angemeldeten Benutzer mittels unseres Frontends hinzugefügt werden. Hierfür gibt es eine Button \textit{Add Feed}, welcher ein Pop-up öffnet, in dem eine \ac{URL} zu einem \ac{RSS} Feed angegeben werden kann.
+Nachdem dieser angegeben wurde, muss der Nutzer einen \textit{Load} Button betätigen, um Basis Informationen des gewünschten Feeds zu erhalten.
+Falls es ein valider RSS Feed ist, werden dann die darunter liegenden Felder automatisch mit den Metadaten wie Title und Beschreibung ausgefüllt.
+Dem Benutzer ist es dann möglich den Feed mit dem Button \textit{Add Feed} der Plattform hinzuzufügen.
+Erst dann geschieht der eigentliche Core-Service Request, welcher versucht den angeforderten Feed abzuspeichern. Falls der Feed bereits existiert, wird eine Fehlermeldung ausgegeben.
+Der Core-Service wiederum speichert den RSS Feed in der Datenbank ab. Der gesamte Workflow ist in Abbildung~\ref{fig:feedWorkflow} dargestellt.
+\begin{figure}[!hbt]
+    \includegraphics[width=\linewidth]{umlFeedWorkflow.png}
+    \caption{Feed-Workflow}
+    \label{fig:feedWorkflow}
+\end{figure}
+
+\subsection{Article-Workflow}
+Mithilfe des Polling-Service werden periodisch neue Artikel-Metadaten in unsere Datenbank eingepflegt. Dieser holt sich zuerst die Feeds aus der Datenbank deren \ac{TTL} abgelaufen sind und ruft diese ab (polling).
+Die dabei erhaltenen XML-Daten werden dann in ein Objekt geparst, welches weiter in unser Artikel-Objekt-Format geparst wird. Dieses enthält Informationen wie Titel, Beschreibung und einen Link zum eigentlichen Artikel.
+Diese Artikel werden dann in die Datenbank eingetragen und die entsprechenden Zeitstempel der Feeds (welche zum prüfen der \acs{TTL} verwendet werden) geupdated.
+
+Besucht ein Nutzer unsere Startseite oder eine Artikel-Seite wird vom Frontend eine Anfrage an das Backend (Core-Service) gestellt, um Artikel zu erhalten. Dieses holt sich Artikel aus der Datenbank und gibt explizit
+angefragte Artikel sowie Empfehlungen für weitere Artikel an das Frontend zurück. Das Frontend stellt dem Nutzer dann die Artikel(-empfehlungen) dar. Der gesamte Workflow ist in Abbildung~\ref{fig:articleWorkflow} dargestellt.
+
+\begin{figure}[!hbt]
+    \includegraphics[width=\linewidth]{umlArticleWorkflow.png}
+    \caption{Artikel-Workflow}
+    \label{fig:articleWorkflow}
+\end{figure}
