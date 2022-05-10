@@ -32,6 +32,48 @@ Das Ticket \enquote{SKIOS-22 POC for keycloak} hatte folgende User Story:
 Bearbeitet von Tim Horlacher.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-25 LaTeX Template}
+Das Ticket \enquote{SKIOS-25 LaTeX Template} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want a working LaTeX Template to be present so that the platform is easy to document.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The template is compiling to pdf
+    \item The template includes boilerplate information such as title, our names, the date, etc.
+    \item Potentially unnessicary pages (such as the \enquote*{Sperrvermerk}) are NOT in the template
+    \item A mechanism for dealing with sources (ex. Citavi, BibTex, etc.) is clarified
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-26 Preliminary Recommendation Service}
+Das Ticket \enquote{SKIOS-26 Preliminary Recommendation Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want a mock/boilerplate recommendation service to be created so that development can start.
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Boilerplate for a basic service internal architecture is created
+        \item Mock endpoints for sending random recommendations not coming from a database are created
+        \item Basic testing framework is set up for this service
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-28 Clarify Article Structure}
+Das Ticket \enquote{SKIOS-28 Clarify Article Structure} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want a definition for the article Structure inside TypeScript and GraphQL.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A Structure inside TypeScript is created
+    \item The Structure uses GraphQL Decorators
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard und Tim Horlacher.
+Reviewed von Tim Horlacher und Lukas Huida.
+
 \subsubsection{SKIOS-29 Undesigned Angular Boilerplate}
 Das Ticket \enquote{SKIOS-29 Undesigned Angular Boilerplate} hatte folgende User Story:
 \begin{quotation}
@@ -100,6 +142,20 @@ Das Ticket \enquote{SKIOS-52 Devcontainer Guide} hatte folgende User Story:
     \end{itemize}
 \end{quotation}
 Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-53 Devcontainer for LaTeX Documentation}
+Das Ticket \enquote{SKIOS-53 Devcontainer for LaTeX Documentation} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want a devcontainer for the documentation
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A docker devcontainer is created
+    \item The devcontainer is compatible with \ac{VSC}'s Extension Remote - Containers
+    \item \LaTeX is running in devcontainer
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
 Reviewed von Lukas Huida.
 
 \subsubsection{SKIOS-13 Create Basic Infrastructure}
@@ -585,6 +641,7 @@ Reviewed von Lukas Huida.
 \subsection{Probleme und Verbesserungen}
 
 \subsection{Bearbeitete User Storys}
+
 \subsubsection{SKIOS-116 Structure and table of contents for submission (\LaTeX)}
 Das Ticket \enquote{SKIOS-116 Structure and table of contents for submission (\LaTeX)}
 hatte folgende User Story:
@@ -984,8 +1041,25 @@ Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
     \item Page uses endpoints from core-sevice to achieve this
 \end{itemize}
 \end{quotation}
-Bearbeitet von Simong Morgenstern und Jonas Eppard.
+Bearbeitet von Simon Morgenstern, Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-105 Structure and table of contents for submission LaTeX}
+Das Ticket \enquote{SKIOS-105 Structure and table of contents for submission LaTeX} hatte folgende User Story:
+\begin{quotation}
+    As a team member, I would like to have a rough structure to orient myself while writing our submission documentation.
+    For this story, please read the requirements and guidelines set out by Garidis and develop a rough idea on how to structure our LaTeX project.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Table of contents is created (with \\section, \\subsection, etc.) in LaTeX
+    \item Structure reflects guidelines of Garidis
+    \item Structure is explained in confluence page
+    \item Existing LaTeX stories have a defined place where their pages will go
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Amos Groß.
+
 
 \subsubsection{SKIOS-78 Subscription Page}
 Das Ticket \enquote{SKIOS-78 Subscription Page} hatte folgende User Story:
@@ -1050,6 +1124,20 @@ Das Ticket \enquote{SKIOS-123 Latex Requirements Page} hatte folgende User Story
 Bearbeitet von Amos Groß.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-128 Mock Recomendations for simmilar articles}
+Das Ticket \enquote{SKIOS-128 Mock Recomendations for simmilar articles} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer I would like a mock endpoint for “simmilar article” recomendations.
+This story is a part of recomendation service
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Resolver is created in recomendation service
+    \item Resolver returns a random list of articles when provided with an article ID
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Amos Groß und Tim Horlacher.
+
 \subsubsection{SKIOS-113 LaTeX Organigram/Orthography}
 Das Ticket \enquote{SKIOS-113 LaTeX Organigram/Orthography} hatte folgende User Story:
 \begin{quotation}
@@ -1100,7 +1188,7 @@ Das Ticket \enquote{SKIOS-145 Mutators and Resolvers for Bookmarks} hatte folgen
 Bearbeitet von Lukas Huida und Tim Horlacher.
 Reviewed von Jonas Eppard.
 
-\subsubsection{SKIOS-147 Angular Bookmarks Page}
+\subsubsection{SKIOS-147 Angular Bookmarks Page} \label{story:147}
 Das Ticket \enquote{SKIOS-147 Angular Bookmarks Page} hatte folgende User Story:
 \begin{quotation}
     As a user I would like to have a page to view my bookmarks in. \\
@@ -1134,6 +1222,39 @@ Das Ticket \enquote{SKIOS-144 Mutators and Resolvers for Likes} hatte folgende U
 \end{quotation}
 Bearbeitet von Tim Horlacher
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-150 Feed Adding Page} \label{story:150}
+Das Ticket \enquote{SKIOS-150 Feed Adding Page} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like a page to add RSS feeds into our plattform.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Any logged in User can add feeds to our application
+    \item Page looks like mockup
+    \item Page is linked as a button in our sidebar
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Simon Morgenstern.
+
+\subsubsection{SKIOS-161 Angular Bookmarks Buttons}
+Das Ticket \enquote{SKIOS-161 Angular Bookmarks Buttons} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like a bookmarks button to be able to bookmark articles.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Bookmarks Icon is visible in our (Angular) Article Component
+    \item Bookmarks Button is visible in the article page
+    \item In both cases:
+    \begin{itemize}
+        \item Clicking on the Bookmark button bookmarks the article (aka. makes the appropriate call to our backend)
+        \item For bookmarked articles the icon has a solid fill (same color as outline in mockup)
+        \item Clicking the button changes the fill of the icon WITHOUT having to refresh the page
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Simon Morgenstern und Sabrina Ladner.
 
 \subsubsection{SKIOS-164 LaTeX Meeting Summary}
 Das Ticket \enquote{SKIOS-164 LaTeX Meeting Summary} hatte folgende User Story:
@@ -1194,6 +1315,35 @@ Das Ticket \enquote{SKIOS-166 \LaTeX Technical Changelog} hatte folgende User St
 Bearbeitet von Tim Horlacher.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-169 Link Angular Application Up}
+Das Ticket \enquote{SKIOS-169 Link Angular Application Up} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like our applicatiion to have more links.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Link from Article to feed is created
+    \item The following links work:
+    \begin{itemize}
+        \item Clicking on feed in subscription => feed
+        \item Clicking on article in subscription => article
+        \item Article in Homepage => article
+        \item Article in feed overview => article
+        \item feed in article view => feed
+    \end{itemize}
+    \item Skiosa side bar contains buttons for and links to: 
+    \begin{itemize}
+        \item Recommendations => '/'
+        \item Subscriptions => ‘/subscriptions’
+        \item Feed adding page,(see SKIOS-150 Seite~\ref{story:150}) 
+        \item Bookmarks see SKIOS-147 Seite~\ref{story:147}
+        \item Explore button is removed
+    \end{itemize}
+    \item Clicking on the Skiosa logo leads to the homepage
+    \item Subscriptions, Bookmarks, Settings use login guard
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von \todo{Reviewer}.
 
 \subsubsection{SKIOS-151 Latex Roadmap Chapter}
 Das Ticket \enquote{SKIOS-151 Latex Roadmap Chapter} hatte folgende User Story:
