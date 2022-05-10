@@ -59,6 +59,22 @@ Das Ticket \enquote{SKIOS-31 Evaluate Core-Service} hatte folgende User Story:
 Bearbeitet von Tim Horlacher.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-32 Preliminary Polling service}
+Das Ticket \enquote{SKIOS-32 Preliminary Polling service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a basic boilerplate for the polling service so that development can start.
+    Functionally this Polling service only loads mock data into the database (intervall will be implemnted in k8s and not here) and isn't a \enquote{basic polling service}.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Mock data is loaded into the database at startup
+    \item Basic boilerplate and infrastructure for the service is created (ex. project and file/directory structure)
+    \item Mock data isn't provided from an RSS feed 
+    \item Basic testing framework is set up
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer.
+Reviewed von Lukas Huida.
+
 \subsubsection{SKIOS-34 List of Participants}
 Das Ticket \enquote{SKIOS-34 List of Participants} hatte folgende User Story:
 \begin{quotation}
@@ -273,6 +289,132 @@ Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
 Bearbeitet von Simon Morgenstern.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-11 Update Mockups for possible design language}
+Das Ticket \enquote{SKIOS-11 Update Mockups for possible design language} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to like to have a design language to follow when creating mockups.
+    If you're unsure about what a design langage is, the following article explains it:  (this story references the \enquote{Style guidelines} part of their definition)
+    Also interesting thing to look up might be UI/UX design in general to understand why design languages matter and are necessary for good software. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item deas are documented in confluence
+    \item Figma Mock ups now represent new design language
+    \item Decisions on fonts, separation of pages and page structure are made
+    \item A clear design language is implemented for Skiosa
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-27 Document Initial Requirements}
+Das Ticket \enquote{SKIOS-27 Document Initial Requirements} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want the plattform's requirements and features to be documented, so that we can refer to it in the final documentation. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item All Requirements are listed in a confluence page
+    \item Must haves and optional requirements are listed or indicated as such
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-33 Mockups for Central Pages}
+Das Ticket \enquote{SKIOS-33 Mockups for Central Pages} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like to have mockups of the main pages, so that it is clear how to design the frontend. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Mockups are created in figma
+    \item Overview and View pages have mockups
+    \item The Mockups have been discussed with the team (ie. review)
+    \item Mockups contain desktop and mobile versions
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-43 Fix Jira Workflow}
+Das Ticket \enquote{SKIOS-43 Fix Jira Workflow} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want to see if a Issue/Story/Ticket is Done. At the moment if its done the story is not crossed out as at should be. \\ 
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Tickets/Story/Issues are crosses out if there are done/resolved.
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-57 Figma Colors}
+Das Ticket \enquote{SKIOS-57 Figma Colors} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to have a central style in figma to base color choices off of.
+
+    Subject of this story is to create a style based off of whatever the current color scheme is and to replace all instances of that color with the style. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A new style is created in the figma draft
+    \item All hardcoded colors are replaced with mentions of styles
+    \item The colors in the style have names (as explained above)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-66 LaTeX Introduction}
+Das Ticket \enquote{SKIOS-66 LaTeX Introduction} hatte folgende User Story:
+\begin{quotation}
+    As a member of the team, I would like to have an introduction to LaTeX, so that I can help with documentation.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item LaTeX was presented to the team and team members understand gist of working with LaTeX
+    \item README of LaTeX Project summarises the basics needed to write sections, etc.
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer und Jonas Eppard.
+Reviewed von Lukas Huida.
+
+\subsubsection{Skios-35 Decision of Programming Language of Recomodation Engine}
+Das Ticket \enquote{Skios-35 Decision of Programming Language of Recomodation Engine} hatte folgende User Story:
+\begin{quotation}
+    As a developer I need to know in which Programming Language the recomondation Engine is written. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A decision of a Programming Language is done
+        \item The decision is documented in Confluence
+    \end{itemize}    
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Tim Horlacher.
+
+\subsubsection{Skios-36 Decision of Programming Language of Polling Service}
+Das Ticket \enquote{Skios-36 Decision of Programming Language of Polling Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I need to know in which programming language the polling-service is written. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A decision of a programming language is done
+        \item The decision is documented in Confluence
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-58 Approachable Filter}
+Das Ticket \enquote{SKIOS-58 Approachable Filter} hatte folgende User Story:
+\begin{quotation}
+    As a developer, I would like a filter for approachable tickets to be created, so that I can pull tickets with greater ease.\\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A filter exists at the top of the sprint board
+        \item That filter filters for approachable tickets
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Lukas Huida.
+
+
 \section{Sprint 2}
 \subsection{Produktincrement}
 \subsection{Charts}
@@ -318,6 +460,21 @@ Es wurden die Article von RSS-Feeds in dem Schema aus Abbildung~\ref{fig:databas
 \end{figure}
 \end{quotation}
 Bearbeitet von Jonas Eppard und Tim Horlacher.
+
+\subsubsection{SKIOS-83 List of initial Feeds}
+Das Ticket \enquote{SKIOS-83 List of initial Feeds} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a list of initial feeds that we can poll before giving users the ability to add them in manually. 
+    Goal of this story is to find 20-30 good (non reddit) feeds.\\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item 20-30 feeds have been found and contain actual articles
+        \item Structure of feeds is similar enough for polling service 
+        \item The List is documented either in confluence or JSON in polling-service
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Jannik Springer
 
 \subsubsection{SKIOS-92 Initialize Keycloak}
 Das Ticket \enquote{SKIOS-92 Initialize Keycloak} hatte folgende User Story:
@@ -374,6 +531,53 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
 
+\subsubsection{SKIOS-63 Create Issue Template}
+Das Ticket \enquote{SKIOS-63 Create Issue Template} hatte folgende User Story:
+\begin{quotation}
+    As a member of the Jira org, I would like to have a default template for issues. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item An issue template exists for User Stories
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-77 Subscription Management Endpoints}
+Das Ticket \enquote{SKIOS-77 Subscription Management Endpoints} hatte folgende User Story:
+\begin{quotation}
+    As a front end developer I would like endpoints for subscription management so that I can create its interface.
+    Endpoint need to fulfill the following use cases:
+    \begin{itemize}
+        \item List subscribed feeds of current user
+        \item Paginated fetch of most recent articles from all feeds
+        \item Subscribe current user to feed
+    \end{itemize}
+
+    This functionality is part of the core-service \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Use cases above can be performed with created endpoints
+    \item Implementation contains reusable components for rest of plattform (aka is good code)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-106 ORM in Polling Service}
+Das Ticket \enquote{SKIOS-106 ORM in Polling Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer of our polling service I would like to use our shared ORM.
+    Goal of this story is to replace all current ORM or datatbase logic with the new common node module and to load mock articles into the database following the structures provided.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Polling service now uses the common ORM logic
+    \item Database is loaded up with min. of 5-10 Articles (using ORM)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer.
+Reviewed von Lukas Huida.
+
 \section{Sprint 3}
 
 \subsection{Produktincrement}
@@ -402,6 +606,32 @@ Dies wurde folgendermaßen gelöst:
     Die Verwendung wurde in Confluence dokumentiert.
 \end{quotation}
 Bearbeitet von Jonas Eppard.
+
+\subsubsection{Skios-79 Basic Article Endpoints}
+Das Ticket \enquote{Skios-79 Basic Article Endpoints} hatte folgende User Story:
+\begin{quotation}
+    As a front-end developer I would like to have endpoints to base article views off of so that i can create their pages.\\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Endpoints are created to cover the case above including fieldresolver for 1-n and n-m relations
+        \item This functionality is implemented in core-service
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Jonas Eppard
+
+\subsubsection{SKIOS-134 Fix core-service tests}
+Das Ticket \enquote{SKIOS-134 Fix core-service tests} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want a working testing framework, which implements unit and integration tests.\\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item newman is installed inside dev container
+        \item npm script is added that runs newman tests
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Jannik Springer
 
 \subsubsection{SKIOS-73 Place new logo in git, jira, confluence, etc}
 Das Ticket \enquote{SKIOS-73 Place new logo in git, Jira, confluence, etc} hatte folgende User Story:
@@ -445,7 +675,7 @@ Das Ticket \enquote{SKIOS-91 Checklist for PRs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Jonas Eppard.
 
-\subsubsection{}
+\subsubsection{SKIOS-111 Angular Design Boilerplate}
 Das Ticket \enquote{SKIOS-111 Angular Design Boilerplate} hatte folgende User Story:
 \begin{quotation}
     As a frontend developer I would like our frontend to have the basic components.
@@ -709,6 +939,20 @@ Das Ticket \enquote{SKIOS-124 \LaTeX Use cases page and UML} hatte folgende User
 Bearbeitet von Jonas Eppard und Sabrina Ladner.
 Reviewed von Sabrina Ladner und Amos Groß.
 
+\subsubsection{SKIOS-127 Finalize ORM}
+Das Ticket \enquote{SKIOS-127 Finalize ORM} hatte folgende User Story:
+\begin{quotation}
+    As a developer, I would like to finalize our ORM, so that I can load data into the DB without having to fear it breaking.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Urls are Unique
+    \item Articles have a timestamp
+    \item Changes are signed off by both Architects
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard und Jannik Springer.
+Reviewed von Tim Horlacher, Lukas Huida und Jannik Springer.
+
 \subsubsection{SKIOS-82 Feed Overview Page}
 Das Ticket \enquote{SKIOS-82 Feed Overview Page} hatte folgende User Story:
 \begin{quotation}
@@ -742,6 +986,92 @@ Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Simong Morgenstern und Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-78 Subscription Page}
+Das Ticket \enquote{SKIOS-78 Subscription Page} hatte folgende User Story:
+\begin{quotation}
+    As a user of Skiosa I would like to have a page for my subscriptions so that I can use them.
+    Goal of this story is to use the backend components provided in SKIOS-77 and to create a subscription page following our design.
+    Note: Subscription indicator of mockup will not be in scope for this story. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Subcription page follows design of figma mockups
+    \item Page contains list of the current users subscriptions
+    \item For non logged in users, this page redirects to login
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-94 Overview Page}
+Das Ticket \enquote{SKIOS-94 Overview Page} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like to have a homepage.
+    Goal of this story is to use the endpoints of the preliminary recomendation service and to display them as seen in the mockup.
+    The recomended feeds are not to be regarded here. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Overview Page exists at root ('/')
+    \item Overview Page follows design scheme 
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Simon Morgenstern.
+
+\subsubsection{SKIOS-114 Roadmap in Confluence}
+Das Ticket \enquote{SKIOS-114 Roadmap in Confluence} hatte folgende User Story:
+\begin{quotation}
+    As a Product owner I would like a roadmap in confluence. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Preliminary Roadmap in Front Page of Confluence is Replaced
+    \item Roadmap reflects or PIs
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-123 Latex Requirements Page}
+Das Ticket \enquote{SKIOS-123 Latex Requirements Page} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our requirements documented in confluence so that I won't fail this class. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX
+    \item Has a table explaining changes made to these over the course of the project
+    \item Page includes:
+    \begin{itemize}
+    \item functional requirements
+    \item non functional requirements 
+    \item optional and mandatory
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-113 LaTeX Organigram/Orthography}
+Das Ticket \enquote{SKIOS-113 LaTeX Organigram/Orthography} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our orthography documented in confluence in LaTeX. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX
+    \item Page includes Diagram displaying team members
+    \item Page includes short explanations for the jobs that the following roles undertook (even when in overlap with SCRUM)
+    \begin{itemize}
+        \item Service Lead
+        \item Architects
+        \item Product owner
+        \item Scrum Master
+        \item Team Member (optional)
+    \end{itemize}
+    \item Page is written in text form (prosa) and refers to diagram/organigramm
+    \item Page explains WHY we chose to structure our team in this manner   
+\end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
+Reviewed von Jannik Springer.
 
 \section{Sprint 4}
 \subsection{Produktincrement}
@@ -805,6 +1135,40 @@ Das Ticket \enquote{SKIOS-144 Mutators and Resolvers for Likes} hatte folgende U
 Bearbeitet von Tim Horlacher
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-164 LaTeX Meeting Summary}
+Das Ticket \enquote{SKIOS-164 LaTeX Meeting Summary} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like a LaTeX page explaining the various meetings we organised in our project.
+    This story will fill out section 2.3 \enquote{Zusammenarbeit} and If considered a bad title should be renamed to something containing the work \enquote{meetings}.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Page is created in LaTeX
+    \item Page is Spell Checked in Review
+    \item Page explains the following meetings:
+    \begin{itemize}
+        \item Estimations
+        \item Bi Weeklys
+        \item Dailys
+        \item Planning
+        \item Retro
+        \item Review
+        \item Roadmap Meetings (Held between PO and Tech Leads)
+    \end{itemize}
+    \item Explanations include:
+    \begin{itemize}
+        \item Frequency of the meeting (once a week, every sprint, every class, alternating such as with estimations etc.)
+        \item Purpose of the meeting (why do we need this meeting?)
+        \item Structure of the meeting (ex. bi weekly = daily, then general talking points and discussion)
+        \item Result of the meeting (ex. Retro = Action items)
+        \item If present team specifc adaptations to these meetings (ex. Daily being held once a week)
+    \end{itemize}
+    \item All explanations conform with SCRUM (see \url{https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf#zoom=100})
+    \item Individual Meetings are not explained in this section
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer und Amos Groß.
+Jeweils gegenseitig reviewed von Amos Groß und Jannik Springer.
+
 \subsubsection{SKIOS-166 \LaTeX Technical Changelog}
 Das Ticket \enquote{SKIOS-166 \LaTeX Technical Changelog} hatte folgende User Story:
 \begin{quotation}
@@ -828,4 +1192,50 @@ Das Ticket \enquote{SKIOS-166 \LaTeX Technical Changelog} hatte folgende User St
 \end{itemize}
 \end{quotation}
 Bearbeitet von Tim Horlacher.
+Reviewed von Amos Groß.
+
+
+\subsubsection{SKIOS-151 Latex Roadmap Chapter}
+Das Ticket \enquote{SKIOS-151 Latex Roadmap Chapter} hatte folgende User Story:
+\begin{quotation}
+    As a member of this team I would like to have a road map chapter, so that I won't fail this class.
+    Note: this story should be done by the PO \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item LaTeX Chapter is created and filled out
+    \item Chapter explains PIs
+    \item Chapter explains Rationale behind Planning
+\end{itemize}
+\end{quotation}
+Bearbeitet von Amos Groß
+Reviewed von Jonas Eppard.
+
+\subsubsection{SKIOS-153 LaTeX Mockup showcase}
+Das Ticket \enquote{SKIOS-153 LaTeX Mockup showcase} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have a page explaining our Mockups. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Page is is created in LaTeX
+    \item Page is spellchecked
+    \item Page explains our Design Language
+    \begin{itemize}
+        \item What a design language is (quick definition)
+        \item What our design language is
+        \item What our colorscheme is
+    \end{itemize}
+    \item Page explains our usage of Figma
+    \begin{itemize}
+        \item Common Components
+        \item Common Colors (figma styles)
+    \end{itemize}
+    \item Page showcases every page of our figma designs
+    \begin{itemize}
+        \item Includes Screenshot
+        \item Includes Quick summary (2 sentences on the behaviour of the page and what it shows, ex. clicking on subscribe in feed overview subscribes a user) 
+        \item Focus on Actions that are not explained in use case ( section 1.4)
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Theo Krinitz
 Reviewed von Amos Groß.
