@@ -122,10 +122,212 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 \end{figure}
 
 \section{Mockups}
+\subsection{Design Language}
+Im Projekt haben wir mit dem Ziel eines einheitlichen Designs eine Design-Language definiert.
+Eine Design-Language kann als Framework verstanden werden, das es Teams ermöglicht, 
+zusammenhängende Schnittstellen zu erstellen und zu entwerfen um Anwendungen ein \enquote{einzigartiges Gefühl} zu verleihen.
+Im engeren Sinne kann eine Design-Language als Set von Regeln, die Typografie, Formen und Muster vorschreiben.
 
-\subsection{Aktivitätsdiagramme}
+Zur Maximierung der Vorteile eines solchen Systems in unserem Projekt wurden folgende Ziele und Ideen genutzt:
+\begin{itemize}
+    \item Skiosa ein kohärentes Erscheinungsbild zu geben, das mit dem Branding übereinstimmt und so den wahrgenommenen Wert unseres Projekts verbessert.
+    \item Visuelle Trennung der verschiedenen Interessenebenen (z. B. Inhalt, Einstellungen, Navigation)
+    \item Klar anzugeben, welche Teile der Benutzeroberfläche von Skiosa sind und welche von externen Quellen stammen.
+\end{itemize}
+
+Als Schriftart soll für primäre Schaltflächen oder Texte \enquote{Pacifico} in Bold verwendet werden.
+Für zusätzliche \enquote{Helper Texte} wie Menüpunkte, Schaltflächen oder Untertitel sollte \enquote{Ubuntu Mono} in Bold genutzt werden.
+
+In SKIOSA gibt es drei Arten von Content.  
+\begin{itemize}
+    \item Side bar (split top bar on mobile) mit wichtigen Inhalten
+    \item Main Content
+    \item Meta Content
+\end{itemize}
+
+Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser drei Items unterschiedlich sein.
+
+\textbf{Side bar:}
+\begin{itemize}
+    \item Dunklere (oder umgekehrte) Färbung, um sie hervorzuheben
+    \item Das Skiosa Logo wird immer oben angezeigt
+\end{itemize}
+
+\textbf{Main Content}
+\begin{itemize}
+    \item Besteht aus einzelnen Karten auf dunklerem Hintergrund, ohne Schatten
+    \item Einzelne Karten enthalten optionale \enquote{Untertitel} zur Erläuterung ihres Sinns
+    \item Wenn eine Seite eine Überschrift hat, wird diese zusammen mit einer Beschreibung oder anderen Metadaten die oberste Kachel bilden (Ausnahmen sind Seiten mit nur einer Kachel)
+    \item Inhalt ist immer das farbigste Element der Seite und wechselt zwischen verschiedenen Farbtönen für verschiedene Elemente (vgl. Abbildung~\ref{fig:Page-Structure-Example})
+\end{itemize}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{Page-Structure.png}
+    \caption{Example for page structure (red: subtitle, green: card)}
+    \label{fig:Page-Structure-Example}
+\end{figure}
+
+\textbf{Meta Content}
+\begin{itemize}
+    \item Seiten haben eine Karte
+    \item Unterscheidet sich von normalen Seiten durch eine abgeschwächte Version der Seitenleiste
+    \item Vermeidung von mehreren Farben (wie bei der obigen Feed)
+\end{itemize}
+ 
+\textbf{Formen}
+
+Im Allgemeinen sollen Formen abgerundete Rechtecke mit einem Radius von 20px sein. Die Sidebar ist hier die Außnahme, da sie richtige Ecken hat, 
+mit dem Ziel diese bewusst visuell vom restlichen Content abzugrenzen.
+Buttons, Input-Felder, etc. sollen wie in Abbildung~\ref{fig:Design-Shapes-Example} aussehen. 
+Dabei müssen Felder, die über mehrere Lines gehen, wie bspw. Listen, diese Regel nicht befolgen.
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Design-Shapes-Example.png}
+    \caption{Beispiel für Form von Buttons und Input-Feldern}
+    \label{fig:Design-Shapes-Example}
+\end{figure}
+
+Bei der Angabe von Feldern, die andernfalls Inhalte oder Benutzerprofilbilder enthalten würden,
+sollten wir allgemeine Symbole verwenden, die sich auf ihre Kategorie beziehen, um diese Lücke zu schließen.
+
+\textbf{Farbschema}
+
+In Skiosa wurde ein Farbschema festgelegt mit dem Ziel, 
+eine möglichst einheitliche Nutzererfahrung zu ermöglichen. 
+Dabei wird zwischen einem Dark-Mode und einem Light-Mode unterschieden (vgl. Abbildung~\ref{fig:Vergleich-light-dark}).
+Für beide Modi wurden die Farben von Hintergründen und Artikelschriftart festgelegt.
+Der Light- und Dark-Modus verwendet 
+aber bei sonstigen Schriftfarben, Buttons, Eingabefeldern und Navigationshintergründen die selben Farben.
+
+\begin{figure}[h]
+    \includegraphics[width=\linewidth]{Vergleich-zwischen-light-und-dark-theme.png}
+    \caption{Vergleich zwischen Light- und Dark-Modus in Skiosa}
+    \label{fig:Vergleich-light-dark}
+\end{figure}
+
+\subsection{Nutzung von Figma}
+
+Zur Erstellung des Designs und der Mockups wurde in Skiosa das Tool Figma verwendet. 
+Für Komponenten die häufig verwendet werden sollen (bpsw. Buttons oder Farben) wurden sogenannte Common-Components erstellt.
+Diese können bei der Erstellung von neuen Seiten wieder verwendet werden. 
+Dadurch bleibt ein Button immer gleich und wird auch nur einmal in einem Angular-Component umgesetzt werden.
+Ähnlich werden auch die Farben umgesetzt. 
+Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design passen.
+
+\subsection{Figma Designs}
+
+Auf der Add-Feed-Page kann ein RSS-Feed für die Seite hinzugefügt werden. Mit dem Button \enquote{search} kann überprüft werden, ob die RSS-URL funktioniert.
+Dabei kann einem RSS-Feed ein eigenden Namen und Beschreibung gegeben werden.(vgl. Abbildung~\ref{fig:Add Feed Desktop Light}) 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Add Feed Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Add-Feed-Page auf Desktop im Light-Mode}
+    \label{fig:Add Feed Desktop Light}
+\end{figure}
+
+Auf der Bookmarks-Page werden alle bookmarked Artikel angezeit.
+Dabei können diese Artikel noch zusätzlich geliked werden. (vgl. Abbildung~\ref{fig:Bookmarks Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Bookmarks Interface Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Bookmark-Page auf Desktop im Light-Mode}
+    \label{fig:Bookmarks Interface Desktop Light}
+\end{figure}
+
+Auf der Feed-Overview-Page werden von einem Feed sowohl die neusten Artkel als auch alternative Artikel aus dem Feed angezeigt.
+Die Artikel können hier direkt sowohl geliked als auch bookmarked werden. (vgl. Abbildung~\ref{fig:Feed Overview Page Light Desktop})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Feed Overview Page Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Feed-Overview-Page auf Desktop im Light-Mode}
+    \label{fig:Feed Overview Page Light Desktop}
+\end{figure}
+
+Auf der Registrierungsseite wird der User nach dem 
+Vornamen, Nachnamen, E-Mail-Adresse, Nutzername und nach seinem Passwort gefragt. Das Passwort muss dabei wiederhohlt werden. (vgl. Abbildung~\ref{fig:Registration Page Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Framefigma-mockups-1.png}
+    \caption{Mockup für Registration-Page auf Desktop im Light-Mode}
+    \label{fig:Registration Page Light}
+\end{figure}
+
+Auf der Login-Page wird der User nach seinem Nutzername und Passwort gefragt, damit er auf der Seite angemeldet werden kann. (vgl. Abbildung~\ref{fig:Login Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Login Page Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Login-Page auf Desktop im Light-Mode}
+    \label{fig:Login Page Desktop Light}
+\end{figure}
+
+Auf der Overview-Page werden dem Nutzer empfohlende Artikel und Feeds vorgeschlagen. Dabei kann in eine detailierte Sicht für den Artikel gewechselt werden mit einem Klick auf einen Artikel. (vgl. Abbildung~\ref{fig:Overview Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Overview Page Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Overview-Page auf Desktop im Light-Mode}
+    \label{fig:Overview Page Desktop Light}
+\end{figure}
+
+In den Einstellungen hat der Nutzer die Möglichkeit seine Konto-Einstellungen anzupassen oder zwischen dem Light- und Darkmodus zu wechseln. (vgl. Abbildung~\ref{fig:Settings Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/Settings Interface Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Settingspage auf Desktop im Light-Mode}
+    \label{fig:Settings Interface Desktop Light}
+\end{figure}
+
+Auf der Subscription-Page werden alle abbonierten RSS-Feeds angezeigt. Dabei können mit einem Klick auf den Pfeil auf der rechten Seite die letzten veröffentlichten Artikel dieses Feeds angezeigt werden. (vgl. Abbildung~\ref{fig:Subscription Interface Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/Subscription Interface Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Subscription-Page auf Desktop im Light-Mode}
+    \label{fig:Subscription Interface Desktop Light}
+\end{figure}
+
+Auf der Article-View-Page werden die Details des Artikel angezeigt. Dabei kann man den Link zu dem Artikes teilen, den Artikel liken und bookmarken. 
+Darüber hinaus gibt es Links zum Originalartikel und zum Feed, indem der Artikel veröffentlicht wurde. Unter \enquote{Similar Articles} werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/View Page Desktop Lightfigma-mockups.png}
+    \caption{Mockup für Article-View-Page auf Desktop im Light-Mode}
+    \label{fig:View Page Desktop Light}
+\end{figure}
+
+Für jede Page wurde dabei ein Mockup für den Light-Mode, 
+für den Dark-Mode in der Desktop-Ansicht und ein Mockup im 
+Light-Mode und ein Mockup im Dark-Mode in der mobilen Ansicht 
+erstellt. Zur Feed-Overview-Page sehen diese folgendermaßen aus:
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Feed Overview Page Desktop Darkfigma-mockups.png}
+    \caption{Mockup für Feed-Overview-Page auf Desktop im Dark-Mode}
+    \label{fig:Feed Overview Page Dark Desktop}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=10cm]{Feed Overview Page Mobile Darkfigma-mockups.png}
+    \end{center}
+    \caption{Mockup für Feed-Overview-Page auf Mobile im Dark-Mode}
+    \label{fig:Feed Overview Page Light Mobile}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=10cm]{Feed Overview Page Mobile Lightfigma-mockups.png}
+    \end{center}
+    \caption{Mockup für Feed-Overview-Page auf Mobile im Light-Mode}
+    \label{fig:Feed Overview Page Light Mobile}
+\end{figure}
+
+
+\subsection{Erläuterung zur Funktionalität einzelner Seiten}
+
+Um zusätzliche Fragen, wie etwa die Funktionalität einzelner Mockups und unserer Plattform zu erklären, wurden nachtäglich ebenfalls Aktivitätsdiagramme zu den einzelnen Seiten (bzw. globalen Komponenten) erstellt.
+Diese erläutern das Verhalten verschiedener Seiten und werden im Folgenden erläutert.
+
 Das Aktivitätsdiagram der Loginseite ist in Abbildung~\ref{fig:umlActivityLogin.png} dargestellt.
-Auf der Seite kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
+Auf dieser Seite ist es möglich kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
 Sind die Anmeldedaten korrekt wird man eingeloggt, sind die Anmeldedaten fehlerhaft können diese korrigiert werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivityLogin.png}
@@ -224,9 +426,6 @@ Ausloggen kann sich der Nutzer in den Einstellungen auch.
     \caption{Aktivitätsdiagramm der Einstellungsseite}
     \label{fig:umlActivitySettings.png}
 \end{figure}
-
-
-
 
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
