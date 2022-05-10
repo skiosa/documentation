@@ -43,13 +43,13 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
 \subsection{Typescript} \label{sub:Typescript}
     Typescript ist ein Superset von JavaScript. Dabei wurden in dieser Sprache Programmierkonstrukte wie Klassen und Vererbungen sowie Typisierungen implementiert. Das hilft uns, besseren Code zu entwickeln als in JavaScript.
     Der Grund weshalb wir Typescript in diesem Projekt verwenden, lässt sich damit Begründen, dass in vorherigen Semestern diese Sprache schon des Öfteren in Projekten verwendet wurde und deshalb bei jedem Entwickler gewisse Grundkenntnisse
-    gegeben sind. Daher kann Zeit eingespart werden, um eine neue Sprache zu lernen. Typescript wird in diesem Projekt bei jedem Service verwendet, heißt sowohl Backend Services als auch das Frontend werden in Typescript geschrieben.
+    gegeben sind. Daher kann Zeit eingespart werden, um eine neue Sprache zu lernen. Typescript wird in diesem Projekt bei jedem Service verwendet, dass heißt sowohl Backend Services als auch das Frontend werden in Typescript geschrieben.
 \subsection{Node.js}
     Node.js ist eine Javascript Laufzeitumgebung, welches ermöglicht Javascript Code, ohne einen Browser auszuführen. Dies kann zum Beispiel für Backend Services verwendet werden. Dabei muss nicht zwingend Javascript verwendet werden,
     in unserem Projekt benutzen wir es in Verbindung mit Typescript. Dies hat denselben Grund, wie der aus Abschnitt \ref{sub:Typescript}.
 \subsection{Express}
     Express ist ein Web-Framework welches im Zusammenhang mit Node.js benutzt wird. Diese Technologie kommt im \textit{Core-Service} zum Einsatz. Es erleichtert es einem in Typescript Web-Services zu entwickeln.
-    Dazu wurde auf Express in diesem Projekt noch Apollo-Server implementiert, welches für den GraphQL Endpoint zuständig ist.
+    Dazu wurde auf Express noch Apollo-Server verwendet, welches für den GraphQL Endpoint zuständig ist.
 \subsection{Devcontainers}
     Ein Devcontainer erlaubt den Entwicklern das einfache Erstellen einer Entwicklungsumgebung auf ihrem lokalen System.
     Dabei werden alle benötigten Entwicklungstools innerhalb eines Containers installiert, in dem dann entwickelt werden kann.
@@ -94,20 +94,28 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Dabei wird bei jedem Pull-Request der Code überprüft und ein Entwickler erkennt direkt, ob zum Beispiel Bugs gefunden wurden oder sogenannte \textit{Code-Smells}. 
     Diese können zum Beispiel aufkommen, wenn vergessen wurde, nicht genutzte \textit{Imports} zu entfernen.
     Des Weiteren wird auch überprüft ob duplizierter Code vorhanden ist.
+
+\section{Eingesetzte Collaboration Technologien} 
 \subsection{Jira}
     Jira ist ein Issue-Tracking-System, das für die Projekt-Management- und Projekt-Management-Prozesse verwendet wird.
     In Jira können Tickets erstellt, zugeordnet und bearbeitet werden. Sie lassen sich einem Sprint zuordnen und im Kanban Board visualisieren.
     Zusätzlich lassen sich einfach Diagramme erstellen, die die Projekt-Management-Prozesse darstellen.
     In unserem Projekt haben wir uns für Jira entschieden, da die meisten es aus ihrer Praxisphase bereits kannten.
+    Für unsere Projekt wurde auch das Kanban Board verwendet, diese hatte mehrere Swimlanes, welche den Status eines Tickets präsentiert haben.
+    Des weiteren haben wir in den einzelnen Swimlanes \ac{WIP} genutzt um einen Projekt Fluss zu gewährleisten. 
 \subsection{Github(Pull Requests)}
     Für jede Story wird ein eigener Pull-Request auf Github erstellt. Dieser wird von den Architekten und den Service-Leads überprüft, um anschließend in die
-    produktive Anwendung integriert zu werden. Der Zustand der Pull-Request wird automatisch mit den Tickets in Jira synchronisiert.
-    Pull Request wurden verwendet, um immer ein funktionierendes Inkrement des Produkts zu gewährleisten.
+    produktive Anwendung integriert zu werden.  Pull Request wurden verwendet, um immer ein funktionierendes Inkrement des Produkts zu gewährleisten.
+    Der Zustand der Pull-Request wird automatisch mit den Tickets in Jira synchronisiert. Das heißt sobald ein neuer Branch mit dem Ticketnamen erstellt wird,
+    geht das Ticket von \textit{Open} in den Status \textit{In Progress}. Anschließend wenn ein Pull-Request eröffnet wird welchen den Branch beihnaltet der dem Ticker zugeordnet ist,
+    wird der Status von \textit{In Progress} in \textit{Needs Review} verändert. Hier muss dann ein Entwickler manuell das Ticket in \textit{In Review} verschieben da er seinen Namen unter dem Feld \textit{Reviewer}
+    eintragen muss. Wenn ein Entwickler das Ticket bzw. den Pull-Request überprüft hat und in den Master Branch\textit{merged}, wird der Status von \textit{In Review} in \textit{Done} geändert.
 \subsection{Confluence}
     Confluence dient als Wiki-Plattform für das Projekt. Es dient dazu, um wichtige Entscheidungen/Requirements zu dokumentieren und zu vermitteln.
 \subsection{Figma}
     Figma ist eine Software für die Erstellung von Prototypen/Mockups im Bereich UI/UX. Durch die kollaborativen Funktionen können mehrere Personen einen Prototyp erstellen.
     Da es sich um eine Webanwendung handelt können Mockups schnell geöffnet werden und jeder mit Zugriff kann sich über den aktuellen Arbeitsstand Infomieren.
+    Vor einer Feature Implementierung in der Softwre wurde zurerst immer ein Mockup in Figma dafür erstellt.
 
 \section{Meetings}
 Zur Koordination des Teams wurden während des Projektes für Scrum übliche Meetings abgehalten und teilweise an unsere Rahmenbedingungen angepasst.
