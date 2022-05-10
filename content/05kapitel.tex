@@ -143,14 +143,15 @@ Zu jedem Zeitpunkt kann die Registrierung abgebrochen und zur Loginseite zurück
     \label{fig:umlActivityRegister.png}
 \end{figure}
 
-Die Sidebar ist auf jeder Seite mit Außnahme Login-, Registrierungs- und Add-Feedseite erreichbar.
-In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Sidebar dargestellt.
-Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich direkt einloggen
-oder falls bereits geschehen auf die Einstellungen gewechselt werden. Unter der Voraussetzung, dass der Benutzer eingeloggt ist kann direkt zu den
-Empfehlungen, den Lesezeichen, den Abonnements und Explore gewechselt werden. Zusätzlich kann direkt ein neuer RSS Feed hinzugefügt werden.
+Die Seitenleiste ist auf jeder Seite mit Außnahme Login- und Registrierungsseite, sowie während des Pop-ups zum Hinzufügen eines Feeds erreichbar.
+In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Seitenleiste dargestellt.
+Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich einloggen
+oder falls bereits geschehen auf die Einstellungen gewechselt werden. Die Schaltfläche des Login wird nach erfolgreichem Login auf Settings geändert.
+Unter der Voraussetzung, dass der Benutzer eingeloggt ist, kann direkt zu den
+Empfehlungen, den Lesezeichen und den Abonnements gewechselt werden. Zusätzlich kann direkt ein neuer RSS Feed hinzugefügt werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivitySidebar.png}
-    \caption{Aktivitätsdiagramm der Sidebar}
+    \caption{Aktivitätsdiagramm der Seitenleiste}
     \label{fig:umlActivitySidebar.png}
 \end{figure}
 
@@ -163,7 +164,7 @@ Das Aktivitätsdiagramm ist in Abbildung~\ref{fig:umlActivityOverview.png} darge
 \end{figure}
 
 In Abbildung~\ref{fig:umlActivityFeed.png} werden die möglichen Aktionen auf der Feedseite dargestellt.
-Der aufgerufene Feed kann aus den Abonnement ausgetragen werden. Im Feed kann gefiltert und/ oder gesucht werden.
+Der aufgerufene Feed kann abonniert und deabonniert werden. Im Feed kann gefiltert und/oder gesucht werden.
 Einzelne Artikel können als Lesezeichen gespeichert oder geliked werden. Per Klick auf den Artikel kann dieser aufgerufen werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivityFeed.png}
@@ -171,8 +172,8 @@ Einzelne Artikel können als Lesezeichen gespeichert oder geliked werden. Per Kl
     \label{fig:umlActivityFeed.png}
 \end{figure}
 
-Auf der Artikelseite kann wie in Abbildung~\ref{fig:umlActivityView.png} dargestellt der Artikel gelesen werden.
-Darüber hinaus kann der Artikel als Lesezeichen gespeichert, geliked und/oder geteilt werden.
+Auf der Artikelseite kann, wie in Abbildung~\ref{fig:umlActivityView.png} dargestellt der Artikel gelesen werden.
+Darüber hinaus kann der Artikel als Lesezeichen gespeichert, geliked und/oder geteilt werden (Link wird in die Zwischenablage kopiert).
 Auch die Feedseite des Artikels kann aufgerufen werden. Die Ursprungswebseite des Artikels kann auch geöffnet werden.
 Unter den ähnlichen Artikeln kann zu diesem per Klick gewechselt werden.
 \begin{figure}
@@ -192,8 +193,10 @@ Einzelne Artikel können aus den Lesezeichen gelöscht werden. Auch können einz
 \end{figure}
 
 Die Aktivitäten der Abonnementsseite werden in Abbildung~\ref{fig:umlActivitySubscription.png} abgebildet.
-Die Abonnements können gefiltert und/oder darin gesucht werden. Jeder abonnierte Feed kann abgewählt werden.
-Ein Feed kann ausgeklappt werden und einzelne Artikel geliked oder als Lesezeichen gespeichert werden.
+Die Abonnements können gefiltert und/oder durchsucht werden. Jeder abonnierte Feed per Klick auf diesen aufgerufen werden.
+Ein Feed kann ausgeklappt werden und die 10 aktuellsten Artikel werden angezeigt.
+Die gezeigten einzelnen Artikel geliked oder als Lesezeichen gespeichert werden.
+
 Die Artikel können mit einem Klick aufgerufen werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivitySubscription.png}
@@ -202,9 +205,10 @@ Die Artikel können mit einem Klick aufgerufen werden.
 \end{figure}
 
 In der Abbildung~\ref{fig:umlActivityAddFeed.png} wird der Ablauf zum Hinzufügen eines neuen Feeds dargestellt.
-Ein RSS-Link wird eingetragen und mit klick auf "load" wird der Link geprüft. Ist der Link fehlerbehaftet muss er korrigiert werden.
+Ein RSS-Link wird eingetragen und mit klick auf \enquote{load} wird der Link geprüft.
+Ist der Link fehlerbehaftet oder entspricht er nicht unserem Schema muss er korrigiert werden.
 Funktioniert der Link werden Name und Beschreibung vorausgefüllt.
-Der Name und die Beschreibung kann vor dem finalen hinzufügen noch angepasst werden.
+Der Name und die Beschreibung kann vor dem finalen Hinzufügen noch angepasst werden.
 Das Hinzufügen eines Feeds kann jederzeit über die Schaltfläche verlassen werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivityAddFeed.png}
@@ -213,7 +217,7 @@ Das Hinzufügen eines Feeds kann jederzeit über die Schaltfläche verlassen wer
 \end{figure}
 
 Der Nutzer kann die Einstellungen gemäß Abbildung~\ref{fig:umlActivitySettings.png} ändern.
-Es können die Accounteinstellungen, die Benachrichtigung und das Farbschema angepasst werden.
+Es können die Accounteinstellungen und das Farbschema angepasst werden.
 Ausloggen kann sich der Nutzer in den Einstellungen auch.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivitySettings.png}
