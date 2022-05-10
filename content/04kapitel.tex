@@ -59,6 +59,22 @@ Das Ticket \enquote{SKIOS-31 Evaluate Core-Service} hatte folgende User Story:
 Bearbeitet von Tim Horlacher.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-32 Preliminary Polling service}
+Das Ticket \enquote{SKIOS-32 Preliminary Polling service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a basic boilerplate for the polling service so that development can start.
+    Functionally this Polling service only loads mock data into the database (intervall will be implemnted in k8s and not here) and isn't a \enquote{basic polling service}.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Mock data is loaded into the database at startup
+    \item Basic boilerplate and infrastructure for the service is created (ex. project and file/directory structure)
+    \item Mock data isn't provided from an RSS feed 
+    \item Basic testing framework is set up
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer.
+Reviewed von Lukas Huida.
+
 \subsubsection{SKIOS-34 List of Participants}
 Das Ticket \enquote{SKIOS-34 List of Participants} hatte folgende User Story:
 \begin{quotation}
@@ -273,6 +289,19 @@ Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
 Bearbeitet von Simon Morgenstern.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-66 LaTeX Introduction}
+Das Ticket \enquote{SKIOS-66 LaTeX Introduction} hatte folgende User Story:
+\begin{quotation}
+    As a member of the team, I would like to have an introduction to LaTeX, so that I can help with documentation.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item LaTeX was presented to the team and team members understand gist of working with LaTeX
+    \item README of LaTeX Project summarises the basics needed to write sections, etc.
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer und Jonas Eppard.
+Reviewed von Lukas Huida.
+
 \subsubsection{Skios-35 Decision of Programming Language of Recomodation Engine}
 Das Ticket \enquote{Skios-35 Decision of Programming Language of Recomodation Engine} hatte folgende User Story:
 \begin{quotation}
@@ -428,6 +457,20 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
 
+\subsubsection{SKIOS-106 ORM in Polling Service}
+Das Ticket \enquote{SKIOS-106 ORM in Polling Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer of our polling service I would like to use our shared ORM.
+    Goal of this story is to replace all current ORM or datatbase logic with the new common node module and to load mock articles into the database following the structures provided.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Polling service now uses the common ORM logic
+    \item Database is loaded up with min. of 5-10 Articles (using ORM)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer.
+Reviewed von Lukas Huida.
+
 \section{Sprint 3}
 
 \subsection{Produktincrement}
@@ -525,7 +568,7 @@ Das Ticket \enquote{SKIOS-91 Checklist for PRs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Jonas Eppard.
 
-\subsubsection{}
+\subsubsection{SKIOS-111 Angular Design Boilerplate}
 Das Ticket \enquote{SKIOS-111 Angular Design Boilerplate} hatte folgende User Story:
 \begin{quotation}
     As a frontend developer I would like our frontend to have the basic components.
@@ -789,6 +832,20 @@ Das Ticket \enquote{SKIOS-124 \LaTeX Use cases page and UML} hatte folgende User
 Bearbeitet von Jonas Eppard und Sabrina Ladner.
 Reviewed von Sabrina Ladner und Amos Groß.
 
+\subsubsection{SKIOS-127 Finalize ORM}
+Das Ticket \enquote{SKIOS-127 Finalize ORM} hatte folgende User Story:
+\begin{quotation}
+    As a developer, I would like to finalize our ORM, so that I can load data into the DB without having to fear it breaking.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Urls are Unique
+    \item Articles have a timestamp
+    \item Changes are signed off by both Architects
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard und Jannik Springer.
+Reviewed von Tim Horlacher, Lukas Huida und Jannik Springer.
+
 \subsubsection{SKIOS-82 Feed Overview Page}
 Das Ticket \enquote{SKIOS-82 Feed Overview Page} hatte folgende User Story:
 \begin{quotation}
@@ -907,6 +964,40 @@ Das Ticket \enquote{SKIOS-144 Mutators and Resolvers for Likes} hatte folgende U
 \end{quotation}
 Bearbeitet von Tim Horlacher
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-164 LaTeX Meeting Summary}
+Das Ticket \enquote{SKIOS-164 LaTeX Meeting Summary} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like a LaTeX page explaining the various meetings we organised in our project.
+    This story will fill out section 2.3 \enquote{Zusammenarbeit} and If considered a bad title should be renamed to something containing the work \enquote{meetings}.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Page is created in LaTeX
+    \item Page is Spell Checked in Review
+    \item Page explains the following meetings:
+    \begin{itemize}
+        \item Estimations
+        \item Bi Weeklys
+        \item Dailys
+        \item Planning
+        \item Retro
+        \item Review
+        \item Roadmap Meetings (Held between PO and Tech Leads)
+    \end{itemize}
+    \item Explanations include:
+    \begin{itemize}
+        \item Frequency of the meeting (once a week, every sprint, every class, alternating such as with estimations etc.)
+        \item Purpose of the meeting (why do we need this meeting?)
+        \item Structure of the meeting (ex. bi weekly = daily, then general talking points and discussion)
+        \item Result of the meeting (ex. Retro = Action items)
+        \item If present team specifc adaptations to these meetings (ex. Daily being held once a week)
+    \end{itemize}
+    \item All explanations conform with SCRUM (see \url{https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf#zoom=100})
+    \item Individual Meetings are not explained in this section
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jannik Springer und Amos Groß.
+Jeweils gegenseitig reviewed von Amos Groß und Jannik Springer.
 
 \subsubsection{SKIOS-166 \LaTeX Technical Changelog}
 Das Ticket \enquote{SKIOS-166 \LaTeX Technical Changelog} hatte folgende User Story:
