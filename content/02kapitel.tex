@@ -77,7 +77,7 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Zum Beispiel ist es dann möglich Services als Cronjob auszuführen, was wir für den Polling-Service benutzen. Alternativ hätte man auch das ganze System nur in Docker aufsetzten können, hätte dann aber 
     nicht Flexibilität wie wir sie jetzt haben, da Container Orchestriert verwenden.
 \subsection{Traefik}
-    Traefik ist ein Reverse-Proxy, welcher sich auch um die Verwaltung von SSL Zertifikaten kümmert. Er wird dafür verwendet um mehrere Anwendungen auf dem Projekt Server zu hosten.
+    Traefik ist ein Reverse-Proxy, welcher sich auch um die Verwaltung von \ac{SSL} Zertifikaten kümmert. Er wird dafür verwendet um mehrere Anwendungen auf dem Projekt Server zu hosten.
     Zum Beispiel wird \textit{skiosa.de} und \textit{argocd.dev.skiosa.de} auf dem gleichen Server gehosted und Traefik verwalten den Netzwerkverkehr so, dass die korrekte Anfrage an den richtigen Service geht.
     Als alternative hätte man ein \textit{Nginx} benutzen können, hier wäre aber der Konfigurationsaufwand größer.
 \subsection{Argo CD}
