@@ -64,7 +64,7 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
 \subsection{TypeORM}
     TypeORM ist ein \ac{ORM} für das Javascript. Es erleichtert das Nutzen einer Datenbank, da man sich nicht mit \ac{SQL} Befehlen beschäftigen muss, sondern sich nur Gedanken um die Struktur seiner Daten machen muss.
     Auf der Datenstruktur baut TypeORM dann die Datenbank mit allen Tabellen. Das praktische ist, man kann TypeORM in Klassen mit Annotations benutzen, heißt man eine Klasse schreiben, die dann für die Datenbank benutzt wird
-    aber auch gleichzeitig für den Programmcode.
+    aber auch gleichzeitig für den Programmcode. Um unsere Klassen auch für GrapQL zuverwenden nutzen wir zusätzlich TypeGraphQL, welches Klassen automatisch in GraphQL Objekte konvertiert.
 \subsection{PostgreSQL}
     PostgreSQL ist ein relationales Datenbankmanagement-System. Es wird in diesem Projekt verwendet, um die Datenbank zu verwalten. In dieser Datenbank werden alle notwendigen Daten erfasst.
     Die Entscheidung auf PostgreSQL wurde getroffen, da dieses Produkt Open-Source und kostenlos ist.    
