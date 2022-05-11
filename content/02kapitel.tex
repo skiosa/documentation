@@ -5,11 +5,11 @@
 \section{Rollenverteilung}
     Zusätzlich zu den klassischen Scrum-Rollen Product-Owner, Scrum-Master und Entwickler 
     wurden im Projekt weitere Rollen eingeführt: Architekten und Service-Leads (vgl. \ref*{fig:Rollenverteilung}). 
-    Grundsätzliches Ziel war es die Komplexität des Projektes durch Arbeitsteiltung und feste Ansprechpartner abzufangen.
+    Grundsätzliches Ziel war es die Komplexität des Projektes durch Arbeitsteilung und feste Ansprechpartner abzufangen.
     Damit sollte auch eine Zusammenarbeit trotz verschiedener Kenntnisstände zu ermöglichen und einen Wissensaustausch zu erleichtern.   
 
     Die Aufgabe des Produkt-Owners ist es, den Wert des Produkts bzw. des Projekts
-    zu maximieren. Mit Hilfe des Backlogs und der Priorisierung der Aufgaben darin stellt der Produkt Owner
+    zu maximieren. Mithilfe des Backlogs und der Priorisierung der Aufgaben darin stellt der Produkt Owner
     sicher, dass das Team an den richtigen Aufgaben arbeitet.
     Zusätzlich wurden in unserem Team die Storys vom Product Owner erstellt und die Estimation- sowie Planning-Meetings geplant.
 
@@ -18,10 +18,10 @@
     das Team vor ungewolltem Einfluss von außen. Zusammenfassend kann
     man sagen, dass der Scrum-Master dafür verantwortlich ist, dass sich das Team selbst
     organisieren und arbeiten kann. Der Scrum-Master hat auch die Aufgabe, darauf zu achten, dass das Team sich an die
-    Scrum-Regeln hält, also alle Meetings regelmäßig durchgeführt werden und tritt wenn nötig in den Meetings als Moderator auf.
+    Scrum-Regeln hält, also alle Meetings regelmäßig durchgeführt werden und tritt, wenn nötig in den Meetings als Moderator auf.
 
     Die Architekten sind für die grundsätzliche Infrastruktur im Projekt zuständig. 
-    Dazu entwarfen sie eine Service-übergreifende Architektur und bestimmten nach Evalurierung die eingesetzten Technologien.
+    Dazu entwarfen sie eine Service-übergreifende Architektur und bestimmten nach Evaluierung die eingesetzten Technologien.
     Ziel war es, dass die Architekten einen Gesamtüberblick über das Projekt behalten, 
     und somit Kommunikation zwischen den Services ermöglichen.
      
@@ -64,7 +64,7 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
 \subsection{TypeORM}
     TypeORM ist ein \ac{ORM} für das Javascript. Es erleichtert das Nutzen einer Datenbank, da man sich nicht mit \ac{SQL} Befehlen beschäftigen muss, sondern sich nur Gedanken um die Struktur seiner Daten machen muss.
     Auf der Datenstruktur baut TypeORM dann die Datenbank mit allen Tabellen. Das praktische ist, man kann TypeORM in Klassen mit Annotations benutzen, heißt man eine Klasse schreiben, die dann für die Datenbank benutzt wird
-    aber auch gleichzeitig für den Programmcode. Um unsere Klassen auch für GrapQL zuverwenden nutzen wir zusätzlich TypeGraphQL, welches Klassen automatisch in GraphQL Objekte konvertiert.
+    aber auch gleichzeitig für den Programmcode. Um unsere Klassen auch für GraphQL zu verwenden, nutzen wir zusätzlich TypeGraphQL, welches Klassen automatisch in GraphQL Objekte konvertiert.
 \subsection{PostgreSQL}
     PostgreSQL ist ein relationales Datenbankmanagement-System. Es wird in diesem Projekt verwendet, um die Datenbank zu verwalten. In dieser Datenbank werden alle notwendigen Daten erfasst.
     Die Entscheidung auf PostgreSQL wurde getroffen, da dieses Produkt Open-Source und kostenlos ist.    
@@ -101,13 +101,29 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     In Jira können Tickets erstellt, zugeordnet und bearbeitet werden. Sie lassen sich einem Sprint zuordnen und im Kanban Board visualisieren.
     Zusätzlich lassen sich einfach Diagramme erstellen, die die Projekt-Management-Prozesse darstellen.
     In unserem Projekt haben wir uns für Jira entschieden, da die meisten es aus ihrer Praxisphase bereits kannten.
-    Für unsere Projekt wurde auch das Kanban Board verwendet, diese hatte mehrere Swimlanes, welche den Status eines Tickets präsentiert haben.
-    Des weiteren haben wir in den einzelnen Swimlanes \ac{WIP} genutzt um einen Projekt Fluss zu gewährleisten. 
+    Für unser Projekt wurde auch das Kanban Board verwendet, diese hatte mehrere Swimlanes, welche den Status eines Tickets präsentiert haben.
+    Die Swimlanes beinhalteten folgenden Status:
+    \begin{itemize}
+        \item Open
+        \item In Progress
+        \item Needs Review
+        \item In Review
+        \item Done
+    \end{itemize}
+    Sobald von einem Ticket der Status verändert wurde, wird das Ticket auch in der Swimlane sich in die korrekte Spalte bewegen. Ebenso wenn man ein Ticket in eine andere Swimlane bewegt hat, hat sich der Status geändert.
+    Der Status wurde Beispielsweise benutzt, um besseres Filtern zu ermöglichen, oder direkt zu erkennen welches Tickets fertig sind, da diese dann durchgestrichen waren.
+    \begin{figure}[!hbt]
+        \includegraphics[width=\linewidth]{jiraSwimlanes.png}
+        \caption{Jira-Swimlanes}
+        \label{fig:Jira-Swimlanes}
+    \end{figure}  
+    Des Weiteren haben wir in den einzelnen Swimlanes \ac{WIP} genutzt, um einen Projekt-Fluss zu gewährleisten. Die \ac{WIP} sieht man in den Titel einer Swimlane, wie in \ref{fig:Jira-Swimlanes} zu sehen.
+    Sobald ein \ac{WIP} Limit überschritten wurde, ist die ganze Swimlane rot hervorgehoben und jedes Team Mitglied erkennt sofort, dass ein Problem vorliegt bzw. dort Tickets abgearbeitet werden müssen.
 \subsection{Github(Pull Requests)}
     Für jede Story wird ein eigener Pull-Request auf Github erstellt. Dieser wird von den Architekten und den Service-Leads überprüft, um anschließend in die
     produktive Anwendung integriert zu werden.  Pull Request wurden verwendet, um immer ein funktionierendes Inkrement des Produkts zu gewährleisten.
-    Der Zustand der Pull-Request wird automatisch mit den Tickets in Jira synchronisiert. Das heißt sobald ein neuer Branch mit dem Ticketnamen erstellt wird,
-    geht das Ticket von \textit{Open} in den Status \textit{In Progress}. Anschließend wenn ein Pull-Request eröffnet wird welchen den Branch beihnaltet der dem Ticker zugeordnet ist,
+    Der Zustand der Pull-Request wird automatisch mit den Tickets in Jira synchronisiert. Das heißt, sobald ein neuer Branch mit dem Ticketnamen erstellt wird,
+    geht das Ticket von \textit{Open} in den Status \textit{In Progress}. Anschließend wenn ein Pull-Request eröffnet wird welchen den Branch beinhaltet der dem Ticker zugeordnet ist,
     wird der Status von \textit{In Progress} in \textit{Needs Review} verändert. Hier muss dann ein Entwickler manuell das Ticket in \textit{In Review} verschieben da er seinen Namen unter dem Feld \textit{Reviewer}
     eintragen muss. Wenn ein Entwickler das Ticket bzw. den Pull-Request überprüft hat und in den Master Branch\textit{merged}, wird der Status von \textit{In Review} in \textit{Done} geändert.
 \subsection{Confluence}
@@ -115,7 +131,7 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
 \subsection{Figma}
     Figma ist eine Software für die Erstellung von Prototypen/Mockups im Bereich UI/UX. Durch die kollaborativen Funktionen können mehrere Personen einen Prototyp erstellen.
     Da es sich um eine Webanwendung handelt können Mockups schnell geöffnet werden und jeder mit Zugriff kann sich über den aktuellen Arbeitsstand Infomieren.
-    Vor einer Feature Implementierung in der Softwre wurde zurerst immer ein Mockup in Figma dafür erstellt.
+    Vor einer Feature-Implementierung in der Software wurde zuerst immer ein Mockup in Figma dafür erstellt.
 
 \section{Meetings}
 Zur Koordination des Teams wurden während des Projektes für Scrum übliche Meetings abgehalten und teilweise an unsere Rahmenbedingungen angepasst.
@@ -148,7 +164,7 @@ wöchentlich im Rahmen der Vorlesung vorgesehen. Um einen häufigeren Austausch 
 \subsection{Review}
 Zum Abschluss eines Sprints finden \glqq Review\grqq~und danach \glqq Retro\grqq~statt. Im Review wird besprochen, was im Sprint erreicht 
 wurde und wie dies den allgemeinen Fortschritt des Projektes beeinflusst. Dabei wird auch besprochen, was als Nächstes zu Erreichen ist. 
-Als Resultat dessen, kann der Produkt Backlog beeinflusst werden und Ideen für das Planning des nächsten Sprints gesammelt werden. 
+Als Resultat dessen kann der Produkt Backlog beeinflusst werden und Ideen für das Planning des nächsten Sprints gesammelt werden. 
 
 \subsection{Retro}
 In der \glqq Sprint-Retrospektive\grqq~oder kurz \glqq Retro\grqq~wird die Zusammenarbeit im Team mithilfe verschiedener Retro-Spiele bewertet. 
