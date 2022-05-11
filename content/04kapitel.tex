@@ -32,6 +32,48 @@ Das Ticket \enquote{SKIOS-22 POC for keycloak} hatte folgende User Story:
 Bearbeitet von Tim Horlacher.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-25 LaTeX Template}
+Das Ticket \enquote{SKIOS-25 LaTeX Template} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want a working LaTeX Template to be present so that the platform is easy to document.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The template is compiling to pdf
+    \item The template includes boilerplate information such as title, our names, the date, etc.
+    \item Potentially unnessicary pages (such as the \enquote*{Sperrvermerk}) are NOT in the template
+    \item A mechanism for dealing with sources (ex. Citavi, BibTex, etc.) is clarified
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-26 Preliminary Recommendation Service}
+Das Ticket \enquote{SKIOS-26 Preliminary Recommendation Service} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want a mock/boilerplate recommendation service to be created so that development can start.
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Boilerplate for a basic service internal architecture is created
+        \item Mock endpoints for sending random recommendations not coming from a database are created
+        \item Basic testing framework is set up for this service
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Tim Horlacher.
+
+\subsubsection{SKIOS-28 Clarify Article Structure}
+Das Ticket \enquote{SKIOS-28 Clarify Article Structure} hatte folgende User Story:
+\begin{quotation}
+    As a product owner I want a definition for the article Structure inside TypeScript and GraphQL.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A Structure inside TypeScript is created
+    \item The Structure uses GraphQL Decorators
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard und Tim Horlacher.
+Reviewed von Tim Horlacher und Lukas Huida.
+
 \subsubsection{SKIOS-29 Undesigned Angular Boilerplate}
 Das Ticket \enquote{SKIOS-29 Undesigned Angular Boilerplate} hatte folgende User Story:
 \begin{quotation}
@@ -100,6 +142,20 @@ Das Ticket \enquote{SKIOS-52 Devcontainer Guide} hatte folgende User Story:
     \end{itemize}
 \end{quotation}
 Bearbeitet von Tim Horlacher.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-53 Devcontainer for LaTeX Documentation}
+Das Ticket \enquote{SKIOS-53 Devcontainer for LaTeX Documentation} hatte folgende User Story:
+\begin{quotation}
+    As a developer I want a devcontainer for the documentation
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A docker devcontainer is created
+    \item The devcontainer is compatible with \ac{VSC}'s Extension Remote - Containers
+    \item \LaTeX is running in devcontainer
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
 Reviewed von Lukas Huida.
 
 \subsubsection{SKIOS-13 Create Basic Infrastructure}
@@ -289,12 +345,47 @@ Das Ticket \enquote{SKIOS-64 Guideline for Issues} hatte folgende User Story:
 Bearbeitet von Simon Morgenstern.
 Reviewed von Amos Groß.
 
+\subsubsection{SKIOS-23 Design Logo}
+Das Ticket \enquote{SKIOS-23 Design Logo} hatte folgende User Story:
+\begin{quotation}
+    As a user i would like to see a logo when visiting Skiosa. \\
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item A good looking icon exists
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-55 Skiosa Colorscheme}
+Das Ticket \enquote{SKIOS-55 Skiosa Colorscheme} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, i would like to know which colors to use for mockups. \\
+    \textbf{Ideas for a possible solution}
+    \begin{itemize}
+    \item Look at colors already used by the figma mockups 
+    \item Modify Logo or colors (ex. dark blue to dark green)
+    \item Possibly use a color scheme generator as suggested by Simon Morgenstern
+    \end{itemize}
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+    \item A colorscheme has been created
+    \item Colorscheme is decided on and briefly documented under “UI/UX” in confluence
+    \item Colorscheme has light and dark mode
+    \item Ladner Sabrina's Logo now reflects this color scheme
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
 \subsubsection{SKIOS-11 Update Mockups for possible design language}
 Das Ticket \enquote{SKIOS-11 Update Mockups for possible design language} hatte folgende User Story:
 \begin{quotation}
     As a ui/ux designer, I would like to like to have a design language to follow when creating mockups.
+
     If you're unsure about what a design langage is, the following article explains it:  (this story references the \enquote{Style guidelines} part of their definition)
     Also interesting thing to look up might be UI/UX design in general to understand why design languages matter and are necessary for good software. \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item deas are documented in confluence
@@ -309,7 +400,9 @@ Reviewed von Lukas Huida.
 \subsubsection{SKIOS-27 Document Initial Requirements}
 Das Ticket \enquote{SKIOS-27 Document Initial Requirements} hatte folgende User Story:
 \begin{quotation}
+
     As a product owner I want the plattform's requirements and features to be documented, so that we can refer to it in the final documentation. \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item All Requirements are listed in a confluence page
@@ -337,7 +430,9 @@ Reviewed von Lukas Huida.
 \subsubsection{SKIOS-43 Fix Jira Workflow}
 Das Ticket \enquote{SKIOS-43 Fix Jira Workflow} hatte folgende User Story:
 \begin{quotation}
+
     As a developer I want to see if a Issue/Story/Ticket is Done. At the moment if its done the story is not crossed out as at should be. \\ 
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Tickets/Story/Issues are crosses out if there are done/resolved.
@@ -352,6 +447,7 @@ Das Ticket \enquote{SKIOS-57 Figma Colors} hatte folgende User Story:
     As a ui/ux designer, I would like to have a central style in figma to base color choices off of.
 
     Subject of this story is to create a style based off of whatever the current color scheme is and to replace all instances of that color with the style. \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item A new style is created in the figma draft
@@ -413,7 +509,6 @@ Das Ticket \enquote{SKIOS-58 Approachable Filter} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Theo Krinitz
 Reviewed von Lukas Huida
-
 
 \section{Sprint 2}
 \subsection{Produktincrement}
@@ -531,6 +626,36 @@ Das Ticket \enquote{SKIOS-85 Repeated Polling runs} hatte folgende User Story:
 Bearbeitet von Lukas Huida.
 Reviewed von Tim Horlacher.
 
+
+\subsubsection{SKIOS-55 Skiosa Colorscheme}
+Das Ticket \enquote{SKIOS-55 Skiosa Colorscheme} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, i would like to know which colors to use for mockups. \\
+    \textbf{Ideas for a possible solution}
+    \begin{itemize}
+    \item Look at colors already used by the figma mockups 
+    \item Modify Logo or colors (ex. dark blue to dark green)
+    \item Possibly use a color scheme generator as suggested by Simon Morgenstern
+    \end{itemize}
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+    \item A colorscheme has been created
+    \item Colorscheme is decided on and briefly documented under “UI/UX” in confluence
+    \item Colorscheme has light and dark mode
+    \item Ladner Sabrina's Logo now reflects this color scheme
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-83 Create Issue Template}
+Das Ticket \enquote{SKIOS-83 Create Issue Template} hatte folgende User Story:
+\begin{quotation}
+    As a member of the Jira org, I would like to have a default template for issues
+\end{quotation}
+Bearbeitet von Amos Groß.
+Reviewed von Lukas Huida.
+
 \subsubsection{SKIOS-63 Create Issue Template}
 Das Ticket \enquote{SKIOS-63 Create Issue Template} hatte folgende User Story:
 \begin{quotation}
@@ -555,6 +680,7 @@ Das Ticket \enquote{SKIOS-77 Subscription Management Endpoints} hatte folgende U
     \end{itemize}
 
     This functionality is part of the core-service \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Use cases above can be performed with created endpoints
@@ -563,6 +689,7 @@ Das Ticket \enquote{SKIOS-77 Subscription Management Endpoints} hatte folgende U
 \end{quotation}
 Bearbeitet von Amos Groß.
 Reviewed von Tim Horlacher.
+
 
 \subsubsection{SKIOS-106 ORM in Polling Service}
 Das Ticket \enquote{SKIOS-106 ORM in Polling Service} hatte folgende User Story:
@@ -578,6 +705,25 @@ Das Ticket \enquote{SKIOS-106 ORM in Polling Service} hatte folgende User Story:
 Bearbeitet von Jannik Springer.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-81 creating feed service}
+Das Ticket \enquote{SKIOS-81 creating feed service} hatte folgende User Story:
+\begin{quotation}
+As a front-end developer I would like to have service to base feed views off of so that i can create their pages.
+The created service should cover the following use cases:
+\begin{itemize}
+    \item fetch single feeds
+    \item fetch articles of feed (paginated)
+\end{itemize}
+This functionality is part of the core-service.\\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Acceptance Criteria
+    \item This functionality is implemented in core-service
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcle Alex.
+Reviewed von Lukas Huida.
+
 \section{Sprint 3}
 
 \subsection{Produktincrement}
@@ -585,6 +731,7 @@ Reviewed von Lukas Huida.
 \subsection{Probleme und Verbesserungen}
 
 \subsection{Bearbeitete User Storys}
+
 \subsubsection{SKIOS-116 Structure and table of contents for submission (\LaTeX)}
 Das Ticket \enquote{SKIOS-116 Structure and table of contents for submission (\LaTeX)}
 hatte folgende User Story:
@@ -847,7 +994,7 @@ Reviewed von Lukas Huida.
 Das Ticket \enquote{SKIOS-109 Backend Feed Mutation} hatte folgende User Story:
 \begin{quotation}
 As a developer, I would like to have muations for creating and deleting feeds.
-Goal of this story is to create Graphql Mutation to add a feed into our database. \\
+Goal of this story is to create Graphql Mutation to add a feed into our database.\\
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Graphql mutation is created for feeds
@@ -984,15 +1131,122 @@ Das Ticket \enquote{SKIOS-80 Article View Page} hatte folgende User Story:
     \item Page uses endpoints from core-sevice to achieve this
 \end{itemize}
 \end{quotation}
-Bearbeitet von Simong Morgenstern und Jonas Eppard.
+Bearbeitet von Simon Morgenstern, Jonas Eppard.
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-105 Structure and table of contents for submission LaTeX}
+Das Ticket \enquote{SKIOS-105 Structure and table of contents for submission LaTeX} hatte folgende User Story:
+\begin{quotation}
+    As a team member, I would like to have a rough structure to orient myself while writing our submission documentation.
+    For this story, please read the requirements and guidelines set out by Garidis and develop a rough idea on how to structure our LaTeX project.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Table of contents is created (with \\section, \\subsection, etc.) in LaTeX
+    \item Structure reflects guidelines of Garidis
+    \item Structure is explained in confluence page
+    \item Existing LaTeX stories have a defined place where their pages will go
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-110 Mockup for Adding Feeds}
+Das Ticket \enquote{SKIOS-110 Mockup for Adding Feeds} hatte folgende User Story:
+\begin{quotation}
+    As a developer I would like a figma design for an adding feeds page. \\
+\textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma page follows color scheme and design guidelines
+        \item User has a field to add a URL
+        \begin{itemize}
+            \item Disabled Name, Description field.
+        \end{itemize}
+        \item Sidebar is updated to include button for link to this page
+        \item Workflow for adding link includes:
+        \begin{itemize}
+            \item Testing the url / rss feed if it can be parsed
+            \item Parse Name, Description and TTL
+            \item Name and Description fields are updated to the parsed ones, user can adjust them after parsing
+            \item (Add Button will send the actual post request)
+        \end{itemize}
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-78 Design Bookmarks Page}
+Das Ticket \enquote{SKIOS-78 Design Bookmarks Page} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer, I would like to know how our bookmark page should look. \\
+\textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma Mockups are designed for the bookmarks page
+        \item Mockups use existing components for articles, buttons and input fields
+        \item Pages follow workflow for likes and bookmarks
+        \item Design uses SKIOSA colorscheme
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-71 Design Login and registration pages}
+Das Ticket \enquote{SKIOS-71 Design Login and registration pages} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer, I would like to know how our login page and registration page should look. \\
+    This page should \textbf{not} include the sidebar, but be designed as a page for keycloak.
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item Figma Mockups are created for the login and registration pages
+        \item Mockups include all fields and elements (such as a field to enter name, username, email, etc) present in Keycloak
+        \item Design does not have a sidebar
+        \item Design uses colors of colorscheme
+        \item Design uses common input field or button components
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-56 Common Figma Components}
+Das Ticket \enquote{SKIOS-56 Common Figma Components} hatte folgende User Story:
+\begin{quotation}
+    As a ui/ux designer, I would like to have common components to drop in for Mockups. \\
+    These components include:
+    \begin{itemize}
+        \item Buttons
+        \item Input fields
+        \item Main Pages
+        \item Sidebars
+        \item Titles
+        \item Subtitles (ex. Recommended Feeds)
+        \item Article Tiles
+        \item etc.
+    \end{itemize}
+    More Information for how to create common components can be found at\\
+    \url{https://help.figma.com/hc/en-us/articles/360038662654-Guide-to-Components-in-Figma}\\
+    \textbf{Ideas for a possible solution}
+    \begin{itemize}
+        \item Look at design guidelines for fonts, separation, etc. (should comply with it)
+        \item Possibly copy some ideas from mockups you can find on the internet: ex.
+        \url{https://www.behance.net/gallery/104152447/Mobile-App-Design-Challenge-Figma-Free-UXUI-2} \\
+    \end{itemize}
+    \textbf{Acceptance Criteria}
+    \begin{itemize}
+        \item The components above have common components in figma
+        \item Components are in a seperate page in figma
+        (see \url{https://help.figma.com/hc/en-us/articles/360038511293-Create-and-Manage-Pages}) \\
+    \end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
+Reviewed von Amos Groß.
 
 \subsubsection{SKIOS-78 Subscription Page}
 Das Ticket \enquote{SKIOS-78 Subscription Page} hatte folgende User Story:
 \begin{quotation}
     As a user of Skiosa I would like to have a page for my subscriptions so that I can use them.
+
     Goal of this story is to use the backend components provided in SKIOS-77 and to create a subscription page following our design.
     Note: Subscription indicator of mockup will not be in scope for this story. \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Subcription page follows design of figma mockups
@@ -1007,8 +1261,10 @@ Reviewed von Lukas Huida.
 Das Ticket \enquote{SKIOS-94 Overview Page} hatte folgende User Story:
 \begin{quotation}
     As a user I would like to have a homepage.
+
     Goal of this story is to use the endpoints of the preliminary recomendation service and to display them as seen in the mockup.
     The recomended feeds are not to be regarded here. \\
+
 \textbf{Acceptance Criteria}
 \begin{itemize}
     \item Overview Page exists at root ('/')
@@ -1050,6 +1306,20 @@ Das Ticket \enquote{SKIOS-123 Latex Requirements Page} hatte folgende User Story
 Bearbeitet von Amos Groß.
 Reviewed von Lukas Huida.
 
+\subsubsection{SKIOS-128 Mock Recomendations for simmilar articles}
+Das Ticket \enquote{SKIOS-128 Mock Recomendations for simmilar articles} hatte folgende User Story:
+\begin{quotation}
+    As a frontend developer I would like a mock endpoint for “simmilar article” recomendations.
+This story is a part of recomendation service
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Resolver is created in recomendation service
+    \item Resolver returns a random list of articles when provided with an article ID
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Amos Groß und Tim Horlacher.
+
 \subsubsection{SKIOS-113 LaTeX Organigram/Orthography}
 Das Ticket \enquote{SKIOS-113 LaTeX Organigram/Orthography} hatte folgende User Story:
 \begin{quotation}
@@ -1073,12 +1343,50 @@ Das Ticket \enquote{SKIOS-113 LaTeX Organigram/Orthography} hatte folgende User 
 Bearbeitet von Theo Krinitz
 Reviewed von Jannik Springer
 
+\subsubsection{SKIOS-109 backend mutation for feeds}
+Das Ticket \enquote{SKIOS-109 backend mutation for feeds} hatte folgende User Story:
+\begin{quotation}
+As a developer, I would like to have muations for creating and deleting feeds.
+Goal of this story is to create Graphql Mutation to add a feed into our database. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Graphql mutation is created for feeds
+    \item calling one of the mutations results in a feed being created in the database
+    \item calling the mutation is possible only knowing the url of a feed (all other “not null” fields are left blank or filled with defaults)
+    \item calling the other mutation (by ID) results in the specified feed being deleted
+    \item deletion should only be possible for logged in users with a specific keycloak role
+    \item creation should be possible for all logged in users
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Lukas Huida.
+
 \section{Sprint 4}
 \subsection{Produktincrement}
 \subsection{Charts}
 \subsection{Probleme und Verbesserungen}
 
 \subsection{Bearbeitete User Storys}
+\subsubsection{SKIOS-125 LaTeX Article and Feed Workflow explanation and sequence diagrams}
+Das Ticket \enquote{SKIOS-125 LaTeX Article and Feed Workflow explanation and sequence diagrams} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our article and feed workflow documented in latex so that I won't fail this class.
+    This story is a part of chapter five (add a section after technical changes)\\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX (Use Chapter 5) for this section
+    \item Page includes UML sequence diagram for how:
+    \begin{itemize}
+        \item Articles are ingested, recommended and used in our platform
+        \item Feeds are ingested, recommended and used in our platform
+    \end{itemize}
+    \item Documentation is crosschecked with Architects
+    \item Diagrams are explained in the Page
+\end{itemize}
+\end{quotation}
+Bearbeitet von Lukas Huida und Jannik Springer.
+Reviewed von Amos Groß.
+
 \subsubsection{SKIOS-145 Mutators and Resolvers for Bookmarks}
 Das Ticket \enquote{SKIOS-145 Mutators and Resolvers for Bookmarks} hatte folgende User Story:
 \begin{quotation}
@@ -1100,7 +1408,7 @@ Das Ticket \enquote{SKIOS-145 Mutators and Resolvers for Bookmarks} hatte folgen
 Bearbeitet von Lukas Huida und Tim Horlacher.
 Reviewed von Jonas Eppard.
 
-\subsubsection{SKIOS-147 Angular Bookmarks Page}
+\subsubsection{SKIOS-147 Angular Bookmarks Page} \label{story:147}
 Das Ticket \enquote{SKIOS-147 Angular Bookmarks Page} hatte folgende User Story:
 \begin{quotation}
     As a user I would like to have a page to view my bookmarks in. \\
@@ -1134,6 +1442,39 @@ Das Ticket \enquote{SKIOS-144 Mutators and Resolvers for Likes} hatte folgende U
 \end{quotation}
 Bearbeitet von Tim Horlacher
 Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-150 Feed Adding Page} \label{story:150}
+Das Ticket \enquote{SKIOS-150 Feed Adding Page} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like a page to add RSS feeds into our plattform.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Any logged in User can add feeds to our application
+    \item Page looks like mockup
+    \item Page is linked as a button in our sidebar
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Simon Morgenstern.
+
+\subsubsection{SKIOS-161 Angular Bookmarks Buttons}
+Das Ticket \enquote{SKIOS-161 Angular Bookmarks Buttons} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like a bookmarks button to be able to bookmark articles.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Bookmarks Icon is visible in our (Angular) Article Component
+    \item Bookmarks Button is visible in the article page
+    \item In both cases:
+    \begin{itemize}
+        \item Clicking on the Bookmark button bookmarks the article (aka. makes the appropriate call to our backend)
+        \item For bookmarked articles the icon has a solid fill (same color as outline in mockup)
+        \item Clicking the button changes the fill of the icon WITHOUT having to refresh the page
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Simon Morgenstern und Sabrina Ladner.
 
 \subsubsection{SKIOS-164 LaTeX Meeting Summary}
 Das Ticket \enquote{SKIOS-164 LaTeX Meeting Summary} hatte folgende User Story:
@@ -1260,7 +1601,53 @@ Das Ticket \enquote{SKIOS-170 \LaTeX Technologies Summary (Collaboration)} hatte
     \end{itemize}
 \end{itemize}
 \end{quotation}
-Bearbeitet von Tim Horlacher und Lukas Huida
+Bearbeitet von Tim Horlacher und Lukas Huida.
+Reviewed von Amos Groß.
+
+\subsubsection{SKIOS-169 Link Angular Application Up}
+Das Ticket \enquote{SKIOS-169 Link Angular Application Up} hatte folgende User Story:
+\begin{quotation}
+    As a user I would like our applicatiion to have more links.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Link from Article to feed is created
+    \item The following links work:
+    \begin{itemize}
+        \item Clicking on feed in subscription => feed
+        \item Clicking on article in subscription => article
+        \item Article in Homepage => article
+        \item Article in feed overview => article
+        \item feed in article view => feed
+    \end{itemize}
+    \item Skiosa side bar contains buttons for and links to: 
+    \begin{itemize}
+        \item Recommendations => '/'
+        \item Subscriptions => ‘/subscriptions’
+        \item Feed adding page,(see SKIOS-150 Seite~\ref{story:150}) 
+        \item Bookmarks see SKIOS-147 Seite~\ref{story:147}
+        \item Explore button is removed
+    \end{itemize}
+    \item Clicking on the Skiosa logo leads to the homepage
+    \item Subscriptions, Bookmarks, Settings use login guard
+\end{itemize}
+\end{quotation}
+Bearbeitet von Jonas Eppard.
+Reviewed von Simon Morgenstern und Amos Groß.
+
+\subsubsection{SKIOS-126 \LaTeX Frontend Pages Explanation and Activity Chart}
+Das Ticket \enquote{SKIOS-126 \LaTeX Frontend Pages Explanation and Activity Chart} hatte folgende User Story:
+\begin{quotation}
+    As a team member I would like to have our use frontend pages documented in confluence so that I won't fail this class.
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item A page is created in LaTeX
+    \item Page is spellchecked
+    \item Page ist integrated into our Mockups page (See linked issue)
+    \item Page includes Aktionsdiagramm for all pages of our application
+    \item Page explains the diagrams in text form (prosa)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Sabrina Ladner.
 Reviewed von Amos Groß.
 
 \subsubsection{SKIOS-151 Latex Roadmap Chapter}
@@ -1307,3 +1694,43 @@ Das Ticket \enquote{SKIOS-153 LaTeX Mockup showcase} hatte folgende User Story:
 \end{quotation}
 Bearbeitet von Theo Krinitz
 Reviewed von Amos Groß.
+
+\subsubsection{SKIOS 82 Feed Overview Page}
+Das Ticket \enquote{SKIOS 82 Feed Overview Page} hatte folgende User Story:
+\begin{quotation}
+As a user of Skiosa, I would like to view a feed, so that I can decide if I want to subscribe to it.
+Content of this story is to implemented an overview page for feeds based on our mockups (this will exclude recommended feeds if part of the mockup). \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item The page displays: 
+    \begin{itemize}
+        \item name
+        \item description
+        \item articles
+    \end{itemize}
+    \item Page is designed as specified in figma+
+    \item The subscribe button subscribes a user (if not logged in redirects to login page)
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Lukas Huida.
+
+\subsubsection{SKIOS-146 Angular Likes}
+Das Ticket \enquote{SKIOS-146 Angular Likes} hatte folgende User Story:
+\begin{quotation}
+As a user I would like a likes component to be able to like articles.
+Goal of this story is to implement the likes button for articles in the view page and individual article components. \\
+\textbf{Acceptance Criteria}
+\begin{itemize}
+    \item Heart Icon is visible in our (Angular) Article Component
+    \item Like Button is visible in the article page
+    \item In both cases:
+    \begin{itemize}
+        \item Clicking on the Heart likes the article (aka. makes the appropriate call to our backend)
+        \item For liked articles this heart has a solid fill (same color as outline in mockup)
+        \item Clicking the heart changes the fill of the icon WITHOUT having to refresh the page
+    \end{itemize}
+\end{itemize}
+\end{quotation}
+Bearbeitet von Marcel Alex.
+Reviewed von Ladner Sabrina.
