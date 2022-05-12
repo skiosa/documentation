@@ -1,6 +1,24 @@
 {
     "cSpell.words": [
-        "SKIOS"
+        "argocd",
+        "Codeowners",
+        "Devcontainer",
+        "Devcontainers",
+        "Eppard",
+        "Garidis",
+        "Hashi",
+        "Horlacher",
+        "Huida",
+        "Kanban",
+        "Keycloak",
+        "kubectl",
+        "Kubernetes",
+        "newman",
+        "Qube",
+        "SKIOS",
+        "Skiosa",
+        "sonarqube",
+        "wontfix"
     ],
     "latex-workshop.latex.recipes": [
         {
