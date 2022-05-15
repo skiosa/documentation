@@ -3,19 +3,64 @@
 \chapter{Sprints} \label{sprints}
 
 \section{Sprint 1}
-\todo{Beschreibung des Produktincrements}
+PI: "Initial Infrastructure"\ref*{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Infrastructure-and-Boilerplate}
 
 \section{Ziele Sprint 1}
-\todo{Ziel Sprint 1}
+    \begin{itemize}
+        \item Aufsetzen der basic infra (server, domain kaufen)
+        \item Aufsetzen von Jira, Confluence, Figma
+        \item In Figma erste designs (colors)
+        \item Klären der Grundarchitektur
+    \end{itemize}
 
 \section{Ergebnisse Sprint 1}
 
 \subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Initial Increment: RSS-Reader}
+\begin{itemize}
+    \item Ingest Data
+    \begin{itemize}
+        \item Summary: allow users to add subscriptions by entering a URL into a creation page
+        \item No polling is theoretically needed at this point, the client could request data coming from RSS feeds
+    \end{itemize}
+    \item View Page:
+    \begin{itemize}
+        \item Summary: embedded page as an i-frame, without functionality to like/bookmark
+    \end{itemize}
+    \item Subscriptions
+    \begin{itemize}
+        \item Subscription page: A combined list of the articles of the RSS feeds a user is subscribed to
+    \end{itemize}
+    \item User Management
+    \begin{itemize}
+        \item Allow User Creation and Logging in
+    \end{itemize}
+\end{itemize}
 
 \subsection{Probleme und Verbesserungen}
-\todo{Retro Ergebnisse}
 
+\subsubsection{Start:}
+\begin{itemize}
+    \item Ticket distribution
+    \item Priorities
+    \item Workload estimate
+    \item Make own decisions
+\end{itemize}
+
+\subsubsection{Stop:}
+\begin{itemize}
+    \item Blocking tickets
+    \item Perfectionism
+    \item long discussions
+\end{itemize}
+
+\subsubsection{Continue:}
+\begin{itemize}
+    \item communication
+    \item Bi-weekly (tuesday)
+    \item Small tickets
+    \item Group work/pair programming
+\end{itemize}
 
 \subsection{Bearbeitete User Storys}
 \subsubsection{SKIOS-22 POC for keycloak}
@@ -506,9 +551,72 @@ Reviewed von Lukas Huida.
 
 
 \section{Sprint 2}
+PI: "Initial Infrastructure" **und** Anfang von "Article Views and Base Homepage"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-2}
+\section{Ziele Sprint 2}
+    \begin{itemize}
+        \item Fertigstellen des Service Boilerplates
+        \item Aufsetzen der CI/CD
+        \item Vorbereitung der Mockups für das Nächste PI
+        \item Backend Komponenten für Artikel und Homepage (aka. Backend Komponente des 2ten PIs)
+    \end{itemize}
+
 \subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Fleshed out RSS-Reader:}
+\begin{itemize}
+    \item Ingest Data
+    \begin{itemize}
+        \item Properly ingest Data from a number of RSS feeds (without categorization)
+    \end{itemize}
+    \item View Page:
+    \begin{itemize}
+        \item Ability to like and bookmark
+    \end{itemize}
+    \item Subscriptions
+    \begin{itemize}
+        \item Pages for RSS feeds with ability to subscribe from there → linked to from the overview, later recommendations
+    \end{itemize}
+    \item User Management
+    \begin{itemize}
+        \item Preferences: Language and Color
+    \end{itemize}
+    \item Overview Page
+    \begin{itemize}
+        \item Overview page without actual recommendations (random)
+    \end{itemize}
+\end{itemize}
+
 \subsection{Probleme und Verbesserungen}
+
+\subsubsection{Punkte die in Zukunft betrachtet werden sollten:}
+\begin{itemize}
+    \item Mehr Pair Programming (sharing of knowledge)
+    \item Add Deadlines for blocking Tickets
+    \item Es muss dokumentiert werden
+    \begin{itemize}
+        \item Estimations: service lead should present tickets (goal is that people explain tickets, that they didn't create)
+        \item Priority of tickets should be taken into account
+    \end{itemize} 
+\end{itemize}
+
+\subsubsection{Was nicht lief gut:}
+\begin{itemize}
+    \item Es wurde nicht dokumentiert
+    \item zu viele last Minute Changes
+\end{itemize}
+
+\subsubsection{Was gut lief:}
+\begin{itemize}
+    \item Weniger Diskussionen
+    \item Code Reviews fangen an sinnvoll zu werden durch Drone
+    \item Viel Fortschritt
+    \item Sprint Commitment besser geschafft
+\end{itemize}
+
+\subsubsection{Wasgesagt werden sollte:}
+\begin{itemize}
+    \item Danke, dass die Aufgaben der Kranken übernommen wurden
+    \item Jira-Automation und SonarQube sind geil
+\end{itemize}
 
 \subsection{Bearbeitete User Storys}
 
@@ -718,10 +826,69 @@ Bearbeitet von Marcle Alex.
 Reviewed von Lukas Huida.
 
 \section{Sprint 3}
+PI: "Article Views and Base Homepage" **und** Anfang von "User Interaction"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-3}
+
+\section{Ziele Sprint 3}
+    \begin{itemize}
+        \item Frontend Komponente des 2ten PIs -> Feed Overview, Article View Page, Homepage
+        \item Fertigstellen der Mockups
+        \item Analyse und Dokumentation der ersten 2 Sprints und des ertsen PIs und Requirements (das zeug, dass wir in LaTeX gemacht hatten)
+        \item Implementieren von Subscriptions
+    \end{itemize}
 
 \subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Recommendation Based RSS-Reader:}
+\begin{itemize}
+    \item Ingest Data
+    \begin{itemize}
+        \item Categorize Data at ingestion
+    \end{itemize}
+    \item Bookmarks Page:
+    \begin{itemize}
+        \item A page to see bookmarked pages
+    \end{itemize}
+    \item Topics Page
+    \begin{itemize}
+        \item New Page 
+    \end{itemize}
+    \item Overview Page
+    \begin{itemize}
+        \item An Overview Page with actual recommendations
+    \end{itemize}
+\end{itemize}
+
 \subsection{Probleme und Verbesserungen}
+
+\subsubsection{Start:}
+\begin{itemize}
+    \item Rollenaufteilung wahrnehmen:Scrum Master leitet und modieriert. PO trifft Entscheidungen im Projekt (und ist im besten Fall nicht noch UI Designer und Entwickler). Entwickler entwickeln.
+    \item With good Reviews. Code Quality is veryBad on master. There is any typeing and so on. Maybe fix Review time of 30 min to insure quality of review
+    \item Tickets kleinteiliger gestalten. Evtl direkt subtasks hinzufügen um Arbeit zu verschnellern und besser zu verteilen
+    \item Asking for help
+    \item Finishing Tickets halfway through the sprint
+    \item With technical Documentation
+\end{itemize}
+
+\subsubsection{Stop:}
+\begin{itemize}
+    \item Diskusionen.
+    \item Clogging Reviews with single points of failure (reviews from service leads aretaking 3-4 days, this is bad)
+    \item Ewig warten mit der Korrektur eines Reviews
+    \item Zu kurze/knappe Reviews. IMO sollte ein aktiver Austausch stattfinden anstatt nur 4 commits drauzupacken und zu mergen.
+    \item endlose Diskussionen an Stellen, an denen sie nicht angebracht sind
+    \item Arguing against decisions of the PO(especially padding)
+    \item Having to stress like hell to be able tofinish the sprint on time
+\end{itemize}
+
+\subsubsection{Continue:}
+\begin{itemize}
+    \item Prioritäten mehr wertschätzen
+    \item Stories am Tag vor Sprintende fertigstellen. Damit noch reviewt werden kann
+    \item Vorstellung der Estimations von den einzelnen Service Leads
+    \item having good retros
+    \item Erfolgreiches Beenden eines Sprints (wir haben uns gegenüber den ersten Sprints stark weiterentwickelt)
+\end{itemize}
+
 
 \subsection{Bearbeitete User Storys}
 
@@ -1418,9 +1585,50 @@ Bearbeitet von Marcel Alex.
 Reviewed von Lukas Huida.
 
 \section{Sprint 4}
+PI: "User Interaction"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-4}
+
+\section{Ziele Sprint 4}
+    \begin{itemize}
+        \item Likes
+        \item Bookmarks
+        \item Feed Adding Page
+        \item Dokumentation der Restlichen Sprints, der PIs und unserer Architektur
+    \end{itemize}
+
 \subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Management Creator Page}
+\begin{itemize}
+    \item All Stuff regarding the management Back-end and front-end
+\end{itemize}
+
 \subsection{Probleme und Verbesserungen}
+
+\subsubsection{Start:}
+\begin{itemize}
+    \item Wir sind alle gestresst müssen aber auchsehen, das manche mehr Arbeit haben als andere.
+    \item Scrum Master soll Team koordinieren und nicht PO (fragen wie, schaffen wir alles sollten nicht vom PO gefragt werden...)
+    \item Kleinigkeiten im Review selber fixen, wenn das der Grund der Rückweisung ist
+    \item Können wir mehr Struktur in unsere Meetings bekommen
+    \item sich weniger beschweren, dass beste drauß machen und akzeptieren
+    \item Beim erstellen von stories das Team miteinbinden und nicht im alleingang
+\end{itemize}
+
+\subsubsection{Stop:}
+\begin{itemize}
+    \item Einander anzufeinden jeder tut was er kann
+    \item leute zu blamen obwohl man selbst nichts macht
+    \item Frust aufzubauen
+    \item Sich über viel Arbeit beschwerem wir machen alle so viel wir können. Fragen sind nicht immer Offensiv sondern wollen das Problem verstehen
+\end{itemize}
+
+\subsubsection{Continue:}
+\begin{itemize}
+    \item Deadlines
+    \item An einem Strang ziehen
+    \item Gute PR's und gute Reviews
+    \item Einige liefern saubere PR's ab welche in angemessener Zeit bearbeitet werden, das kann so bleiben
+    \item Arbeiten
+\end{itemize}
 
 \subsection{Bearbeitete User Storys}
 \subsubsection{SKIOS-125 LaTeX Article and Feed Workflow explanation and sequence diagrams}
