@@ -3,19 +3,17 @@
 \chapter{Sprints} \label{sprints}
 
 \section{Sprint 1}
-\todo{Beschreibung des Produktincrements}
 
-\section{Ziele Sprint 1}
-\todo{Ziel Sprint 1}
-
-\section{Ergebnisse Sprint 1}
-
-\subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Ziele Sprint 1}
+Ziel des ersten Sprints war die ersten Schritte im PI \enquote{Initial Infrastructure} (siehe Abschnitt \ref{initial_infra}) zu gehen.
+Hierbei ging es darum die Arbeitsgrundlage für zukünftige Sprints zu legen.
+Konkret war es also das Ziel zum einen die grundlegende Infrastruktur aufzusetzen (Server, Domain zu kaufen und aufzusetzen), sowie die eingesetzten Kollaborationstools, wie Jira, Confluence, Github und Figma zu konfigurieren.
+Zum anderen aber auch die Grundarchitektur zu klären und erste Entwürfe in Figma zu erstellen.
 
 \subsection{Probleme und Verbesserungen}
-\todo{Retro Ergebnisse}
-
+Im Retro des ersten Sprints wurde das \enquote{Start, Stop, Continue} Verfahren gewählt.
+Hierbei ist aufgefallen, dass es Probleme mit zu vielen Blocking Tickets, aufgeblähten Diskussionsrunden und einem verfehlten Sprint Ziel gab. 
+Als Konsequenz wurde hierraus gezogen, dass zusätzlich zu den Weeklys nun ein Bi-Weekly Meeting existiert. Sprint Kapazitäten sollen vor den jeweiligen Sprints geschätzt werden (Die Auswirkung dieser Änderung ist in Abschnitt \ref{orga_changes} nachzulesen).
 
 \subsection{Bearbeitete User Storys}
 \subsubsection{SKIOS-22 POC for keycloak}
@@ -614,9 +612,17 @@ Bearbeitet von Sophie Gösch.
 Reviewed by Amos Groß.
 
 \section{Sprint 2}
-\subsection{Produktincrement}
-\subsection{Charts}
+
+\subsection{Ziele Sprint 2}
+Ziel des zweiten Sprints war es das verfehlte Sprint Ziel des ersten Sprints nachzuholen und somit das erste \ac{PI} fertig zu stellen. Zusätzlich sollten nun erste Backend Endpunkte für das zweite \ac{PI} \enquote{Article Views and Base Homepage} erstellt werden.
+Ein weiteres Ziel war die Service Boilerplates und die dafür notwendige \ac{CI/CD} Infrastruktur zu erstellen. Mit diesen Boilerplates sollen die Endpoints für Artikel View Pages und die Homepage erstellt werden.
+Für die Benutzeroberflächen, welche im folgenden Sprint eingefügt werden, sollen Mockups erstellt werden. 
+
 \subsection{Probleme und Verbesserungen}
+In der Retrospektive des zweiten Sprints wurde die Teamarbeit spielerisch, mithilfe einer Piratenanalogie, analysiert.
+Probleme die aufgefallen sind: Tickets waren häufig nicht allgemein verständlich beschrieben, es wurde zu wenig für die Abgabe Dokumentation gemacht wurde und zu viel Arbeit in letzter Minute vor Sprintende erledigt.
+Positiv aufgefallen ist dass das Sprintziel wesentlich besser erreicht wurde und es viel Fortschritt und weniger Disskussionsbedarf gab.
+Als Fazit wurden Deadlines für Stories erstellt und bei zukünftigen Estimation Meetings sollten die Stories vom Service Lead, statt vom Product Owner, vorgestellt werden. Letzteres stellt sicher dass Stories vom Service Lead verstanden werden bevor sie bearbeitet werden sollen. 
 
 \subsection{Bearbeitete User Storys}
 
@@ -826,10 +832,14 @@ Bearbeitet von Marcle Alex.
 Reviewed von Lukas Huida.
 
 \section{Sprint 3}
+Ziel des dritten Sprints war es die Frontend Komponenten des \ac{PI} \enquote{Article Views and Base Homepage} fertig zustellen und die Backend Funktionalität für den nächsten \ac{PI} \enquote{User Interaction} vorzubereiten.
+Im Frontend soll die Feed Overview Page, die Article View Page sowie die Startseite erstellt werden.
+Wie im letzten Sprint sollen Mockups für den nachfolgenden Sprint erstellt werden.
+Ein weiterer Fokus ist die Dokumentation der vergangenen und des aktuellen Sprints.
 
-\subsection{Produktincrement}
-\subsection{Charts}
 \subsection{Probleme und Verbesserungen}
+In der Retrospektive des dritten Sprints wurde ein neues Tool getestet. Da dieses Meeting online stattfand ermöglichte das Tool trotz der fehlenden Gemeinschaft einen effektiven Austausch.
+Positiv aufgefallen ist dass in diesem Sprint sehr erfolgreich viele Stories bearbeitet werden konnten und es zwischen Teammitgliedern weniger Reibungen gab. Negativ aufgefallen ist dass Reviews noch nicht gründlich genug waren. Als Lösungsvorschlag wurde hier eingebracht dass mehr Zeit für Reviews eingeplant werden soll.
 
 \subsection{Bearbeitete User Storys}
 
@@ -1525,10 +1535,44 @@ Goal of this story is to create Graphql Mutation to add a feed into our database
 Bearbeitet von Marcel Alex.
 Reviewed von Lukas Huida.
 
-\section{Sprint 4}
-\subsection{Produktincrement}
-\subsection{Charts}
+\subsection{Sprint 4}
+Ziel des letzten Sprints war es das \ac{PI} \enquote{User Interaction} fertig zustellen und die Abgabedokumentation, für die Abgabe, vorzubereiten.
+Für den \acp{PI} bedeutetet dies das Erstellen von Likes, Bookmarks und der Feed Adding Page.
+Zusätzlich war es hier ein Ziel die vergangenen Sprints, die Projektarchitektur und resultierenden Mockups zu dokumentieren
+
 \subsection{Probleme und Verbesserungen}
+In der Retro des letzten Sprints wurde erneut das Tool aus dem dritten Sprint verwendet.
+Positiv ist aufgefallen, dass Reviews besser gehandhabt wurden, Deadlines im Vergleich zum restlichen Sprint und das Sprintziel gut eingehalten wurde.
+Neue Action Items sind im Laufe dieses Meetings nicht entstanden, da keine weiteren Sprints vorgesehen sind.
+Dennoch wurde ein generelles Fazit zum Projekt gezogen, welches in Kapitel \ref{proj_ergebnisse} nachzulesen ist.
+
+
+\subsubsection{Start:}
+\begin{itemize}
+    \item Wir sind alle gestresst müssen aber auchsehen, das manche mehr Arbeit haben als andere.
+    \item Scrum Master soll Team koordinieren und nicht PO (fragen wie, schaffen wir alles sollten nicht vom PO gefragt werden...)
+    \item Kleinigkeiten im Review selber fixen, wenn das der Grund der Rückweisung ist
+    \item Können wir mehr Struktur in unsere Meetings bekommen
+    \item sich weniger beschweren, dass beste drauß machen und akzeptieren
+    \item Beim erstellen von stories das Team miteinbinden und nicht im alleingang
+\end{itemize}
+
+\subsubsection{Stop:}
+\begin{itemize}
+    \item Einander anzufeinden jeder tut was er kann
+    \item leute zu blamen obwohl man selbst nichts macht
+    \item Frust aufzubauen
+    \item Sich über viel Arbeit beschwerem wir machen alle so viel wir können. Fragen sind nicht immer Offensiv sondern wollen das Problem verstehen
+\end{itemize}
+
+\subsubsection{Continue:}
+\begin{itemize}
+    \item Deadlines
+    \item An einem Strang ziehen
+    \item Gute PR's und gute Reviews
+    \item Einige liefern saubere PR's ab welche in angemessener Zeit bearbeitet werden, das kann so bleiben
+    \item Arbeiten
+\end{itemize}
 
 \subsection{Bearbeitete User Storys}
 
