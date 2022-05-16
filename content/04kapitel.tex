@@ -3,64 +3,17 @@
 \chapter{Sprints} \label{sprints}
 
 \section{Sprint 1}
-PI: "Initial Infrastructure"\ref*{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Infrastructure-and-Boilerplate}
 
-\section{Ziele Sprint 1}
-    \begin{itemize}
-        \item Aufsetzen der basic infra (server, domain kaufen)
-        \item Aufsetzen von Jira, Confluence, Figma
-        \item In Figma erste designs (colors)
-        \item Klären der Grundarchitektur
-    \end{itemize}
-
-\section{Ergebnisse Sprint 1}
-
-\subsection{Produktincrement}
-\subsection{Initial Increment: RSS-Reader}
-\begin{itemize}
-    \item Ingest Data
-    \begin{itemize}
-        \item Summary: allow users to add subscriptions by entering a URL into a creation page
-        \item No polling is theoretically needed at this point, the client could request data coming from RSS feeds
-    \end{itemize}
-    \item View Page:
-    \begin{itemize}
-        \item Summary: embedded page as an i-frame, without functionality to like/bookmark
-    \end{itemize}
-    \item Subscriptions
-    \begin{itemize}
-        \item Subscription page: A combined list of the articles of the RSS feeds a user is subscribed to
-    \end{itemize}
-    \item User Management
-    \begin{itemize}
-        \item Allow User Creation and Logging in
-    \end{itemize}
-\end{itemize}
+\subsection{Ziele Sprint 1}
+Ziel des ersten Sprintes war es die ersten Schritte im PI \enquote{Initial Infrastructure} (siehe Abschnitt \ref{initial_infra}) zu gehen.
+Hierbei ging es darum die Arbeitsgrundlage für zukünftige Sprints zu legen.
+Konkret war es also das Ziel zum einen die Grundlegende Infra aufzusetzten (Server und Domain zu kaufen und aufzusetzten), sowie die eingesetzten Collaborationstools, wie Jira, Confluence, Github und Figma vorzukonfigurieren.
+Zum anderen aber auch die Grundarchitektur zu klären und erste Mockups in Figma zu erstellen.
 
 \subsection{Probleme und Verbesserungen}
-
-\subsubsection{Start:}
-\begin{itemize}
-    \item Ticket distribution
-    \item Priorities
-    \item Workload estimate
-    \item Make own decisions
-\end{itemize}
-
-\subsubsection{Stop:}
-\begin{itemize}
-    \item Blocking tickets
-    \item Perfectionism
-    \item long discussions
-\end{itemize}
-
-\subsubsection{Continue:}
-\begin{itemize}
-    \item communication
-    \item Bi-weekly (tuesday)
-    \item Small tickets
-    \item Group work/pair programming
-\end{itemize}
+Im Retro des ersten Sprintes wurde das \enquote{Start, Stop, Continue} verfahren gewählt.
+Hierbei ist aufgefallen, dass es Probleme mit zu vielen Blocking Tickets, aufgeblähten Diskussionsrunden und einem verfehlten Sprint Ziel gab. 
+Als Konsequenz wurde hierraus gezogen, dass zusätzlich zu den Weeklys nun ein Bi-Weekly organisiert werden sollte und Sprint Kapazitäten vor den jeweiligen Sprints geschätzt werden sollten (Die Auswirkung dieser Änderung ist in Abschnitt \ref{orga_changes} nachzulesen).
 
 \subsection{Bearbeitete User Storys}
 \subsubsection{SKIOS-22 POC for keycloak}
@@ -551,72 +504,17 @@ Reviewed von Lukas Huida.
 
 
 \section{Sprint 2}
-PI: "Initial Infrastructure" **und** Anfang von "Article Views and Base Homepage"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-2}
-\section{Ziele Sprint 2}
-    \begin{itemize}
-        \item Fertigstellen des Service Boilerplates
-        \item Aufsetzen der CI/CD
-        \item Vorbereitung der Mockups für das Nächste PI
-        \item Backend Komponenten für Artikel und Homepage (aka. Backend Komponente des 2ten PIs)
-    \end{itemize}
 
-\subsection{Produktincrement}
-\subsection{Fleshed out RSS-Reader:}
-\begin{itemize}
-    \item Ingest Data
-    \begin{itemize}
-        \item Properly ingest Data from a number of RSS feeds (without categorization)
-    \end{itemize}
-    \item View Page:
-    \begin{itemize}
-        \item Ability to like and bookmark
-    \end{itemize}
-    \item Subscriptions
-    \begin{itemize}
-        \item Pages for RSS feeds with ability to subscribe from there → linked to from the overview, later recommendations
-    \end{itemize}
-    \item User Management
-    \begin{itemize}
-        \item Preferences: Language and Color
-    \end{itemize}
-    \item Overview Page
-    \begin{itemize}
-        \item Overview page without actual recommendations (random)
-    \end{itemize}
-\end{itemize}
+\subsection{Ziele Sprint 2}
+Ziel des zweiten Sprintes war es das verfehlte Sprint Ziel des ersten Sprintes nachzuholen und somit das erste \ac{PI} fertig zu stellen. Zusätzlich sollten nun erste Backend Komponenten für das zweite \ac{PI} \enquote{Article Views and Base Homepage} erstellt werden.
+Hier war es also nun das Ziel die Service Boilerplates und die darum stehende \ac{CI/CD} Infrastruktur yu erstellen, als auch mit diesen Boilerplates Endpoints für Artikel View Pages und die Homepage zu erstellen.
+Auf Seite der Mockups war es nun das Ziel diese für die folgenden \acp{PI} zu erstellen. 
 
 \subsection{Probleme und Verbesserungen}
-
-\subsubsection{Punkte die in Zukunft betrachtet werden sollten:}
-\begin{itemize}
-    \item Mehr Pair Programming (sharing of knowledge)
-    \item Add Deadlines for blocking Tickets
-    \item Es muss dokumentiert werden
-    \begin{itemize}
-        \item Estimations: service lead should present tickets (goal is that people explain tickets, that they didn't create)
-        \item Priority of tickets should be taken into account
-    \end{itemize} 
-\end{itemize}
-
-\subsubsection{Was nicht lief gut:}
-\begin{itemize}
-    \item Es wurde nicht dokumentiert
-    \item zu viele last Minute Changes
-\end{itemize}
-
-\subsubsection{Was gut lief:}
-\begin{itemize}
-    \item Weniger Diskussionen
-    \item Code Reviews fangen an sinnvoll zu werden durch Drone
-    \item Viel Fortschritt
-    \item Sprint Commitment besser geschafft
-\end{itemize}
-
-\subsubsection{Wasgesagt werden sollte:}
-\begin{itemize}
-    \item Danke, dass die Aufgaben der Kranken übernommen wurden
-    \item Jira-Automation und SonarQube sind geil
-\end{itemize}
+In der Retro des zweiten Sprintes wurde auf Basis einer Schatzsuche mit Piraten, gefählichen Gewässern und Scätzen die Teamarbeit analysiert.
+Hierbei kam zum Vorschein, dass häufig Tickets nicht allgemein verständlich beschrieben waren, zu wenig für die Abgabe Dokumentation bisher gemacht wurde und zu viel Arbeit in letzter Minute vor Sprintende erledigt wurde.
+An positiver Seite wurde aber erläutert wie hier das Sprintziel wesentlich besser erreicht wurde und es viel Fortschritt und weniger Disskussionsbedarf gab.
+Als Fazit wurden nun Deadlines für Stories erstellt und bei zukünftigen Estimation meetings sollten nun Statt vom Product Owner, Stories von Service Leads vorgestellt werden. Mit letzterem kann so sichergestellt werden, dass Stories erst bearbeitet werden können, sobald zumindest ein Service Lead dessen Inhalt versteht.
 
 \subsection{Bearbeitete User Storys}
 
@@ -826,69 +724,13 @@ Bearbeitet von Marcle Alex.
 Reviewed von Lukas Huida.
 
 \section{Sprint 3}
-PI: "Article Views and Base Homepage" **und** Anfang von "User Interaction"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-3}
-
-\section{Ziele Sprint 3}
-    \begin{itemize}
-        \item Frontend Komponente des 2ten PIs -> Feed Overview, Article View Page, Homepage
-        \item Fertigstellen der Mockups
-        \item Analyse und Dokumentation der ersten 2 Sprints und des ertsen PIs und Requirements (das zeug, dass wir in LaTeX gemacht hatten)
-        \item Implementieren von Subscriptions
-    \end{itemize}
-
-\subsection{Produktincrement}
-\subsection{Recommendation Based RSS-Reader:}
-\begin{itemize}
-    \item Ingest Data
-    \begin{itemize}
-        \item Categorize Data at ingestion
-    \end{itemize}
-    \item Bookmarks Page:
-    \begin{itemize}
-        \item A page to see bookmarked pages
-    \end{itemize}
-    \item Topics Page
-    \begin{itemize}
-        \item New Page 
-    \end{itemize}
-    \item Overview Page
-    \begin{itemize}
-        \item An Overview Page with actual recommendations
-    \end{itemize}
-\end{itemize}
+Ziel des dirtten Sprintes war es die Frontend Komponenten des \ac{PI} \enquote{Article Views and Base Homepage} fertig zu erstellen und die Backend Komponenten des nächsten \ac{PI} \enquote{User Interaction} vorzubereiten.
+Hierbei ging es darum im Frontend die Feed Overview Page, die Article View Page sowie die Homepage zu erstellen.
+Zusätzlich war es nun das Ziel die restlichen Mockups für die letzten (im Zuge dieses Projektes machbaren \acp{PI}) zu erstellen und alle vergangenen Geschehnissen des Projektes zu dokumentieren.
 
 \subsection{Probleme und Verbesserungen}
-
-\subsubsection{Start:}
-\begin{itemize}
-    \item Rollenaufteilung wahrnehmen:Scrum Master leitet und modieriert. PO trifft Entscheidungen im Projekt (und ist im besten Fall nicht noch UI Designer und Entwickler). Entwickler entwickeln.
-    \item With good Reviews. Code Quality is veryBad on master. There is any typeing and so on. Maybe fix Review time of 30 min to insure quality of review
-    \item Tickets kleinteiliger gestalten. Evtl direkt subtasks hinzufügen um Arbeit zu verschnellern und besser zu verteilen
-    \item Asking for help
-    \item Finishing Tickets halfway through the sprint
-    \item With technical Documentation
-\end{itemize}
-
-\subsubsection{Stop:}
-\begin{itemize}
-    \item Diskusionen.
-    \item Clogging Reviews with single points of failure (reviews from service leads aretaking 3-4 days, this is bad)
-    \item Ewig warten mit der Korrektur eines Reviews
-    \item Zu kurze/knappe Reviews. IMO sollte ein aktiver Austausch stattfinden anstatt nur 4 commits drauzupacken und zu mergen.
-    \item endlose Diskussionen an Stellen, an denen sie nicht angebracht sind
-    \item Arguing against decisions of the PO(especially padding)
-    \item Having to stress like hell to be able tofinish the sprint on time
-\end{itemize}
-
-\subsubsection{Continue:}
-\begin{itemize}
-    \item Prioritäten mehr wertschätzen
-    \item Stories am Tag vor Sprintende fertigstellen. Damit noch reviewt werden kann
-    \item Vorstellung der Estimations von den einzelnen Service Leads
-    \item having good retros
-    \item Erfolgreiches Beenden eines Sprints (wir haben uns gegenüber den ersten Sprints stark weiterentwickelt)
-\end{itemize}
-
+In der Retro des Dritten Sprintes wurde ein neues online Retro Tool probeweise genutzt. Da dieses Meeting online stattfand erlaubte das Tool trozt der Fehlenden Gemeinschaft einen effektiven Austausch.
+Beim Ablauf ist aufgefallen, dass in diesem Sprint sehr erfolgreich viele Stories bearbeitet werden konnten und es zwischen Teammitgliedern weniger Reibungen gab. Nicht desto trotz wurde hervorgehoben, dass Reviews noch nicht gründlich genug waren. Als Lösungsvorschlag wurde hier erhoben, dass mehr Zeit für diese eingeräumt werden sollte.
 
 \subsection{Bearbeitete User Storys}
 
@@ -1584,24 +1426,17 @@ Goal of this story is to create Graphql Mutation to add a feed into our database
 Bearbeitet von Marcel Alex.
 Reviewed von Lukas Huida.
 
-\section{Sprint 4}
-PI: "User Interaction"\ref{https://skiosa.atlassian.net/wiki/spaces/SKIOSA/pages/12451841/Product+Increments#Sprint-4}
-
-\section{Ziele Sprint 4}
-    \begin{itemize}
-        \item Likes
-        \item Bookmarks
-        \item Feed Adding Page
-        \item Dokumentation der Restlichen Sprints, der PIs und unserer Architektur
-    \end{itemize}
-
-\subsection{Produktincrement}
-\subsection{Management Creator Page}
-\begin{itemize}
-    \item All Stuff regarding the management Back-end and front-end
-\end{itemize}
+\subsection{Sprint 4}
+Ziel des letzten Sprints war es das \ac{PI} \enquote{User Interaction} fertig zustellen und die Abgabedokumentation für die Abgabe zurzubereiten.
+Im Zuge des \acp{PI} bedeutetet dies das ertellen von Likes, Bookmarks und der Feed Adding Page.
+Zusätzlich war es hier ein Ziel die vergangenen Sprints, die Projektarchitektur und resultierenden Mockups zu dokumentieren
 
 \subsection{Probleme und Verbesserungen}
+In der Retro des letzten Sprintes wurde erneut das Tool aus dem dritten Sprint verwendet.
+Hierbei ist aufgefallen, dass nun Reviews besser gehandhabt wurden, deadlines im vergleich zu den restlichen Sprint besonders gut eingehalten worden sind und das Sprint Ziel erneut gut eingehalten worden ist.
+Neue Action Items sind im laufe dieser Retro nicht entstanden, da keine weiteren Sprints vorgesehen sind.
+Nicht desto trotz wurde ein generelles Fazit zum Projekt gezogen, welches in Kapitel \ref{proj_ergebnisse} nachzulesen ist.
+
 
 \subsubsection{Start:}
 \begin{itemize}
