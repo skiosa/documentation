@@ -3,24 +3,25 @@
 \chapter{Projektziel}
 
 Betrachtet man weltweit die aktuell größten IT-Firmen und Start-ups, so fällt schnell auf, dass diese überwiegend auf dem gleichen Konzept aufgebaut sind.
-Egal ob Amazon, Spotify oder Netflix, besteht das zentrale Angebot dieser Firmen aus einer Plattform, die als Anlaufstelle für ein vorherig schwer zu navigierendes Medium genutzt wird.
+Egal ob Amazon, Spotify oder Netflix, das zentrale Angebot dieser Firmen ist eine Plattform, die als Anlaufstelle für ein vorherig schwer zu navigierendes Medium dient.
 Bei Spotify findet man an einer Stelle alle Lieder und zusätzlich erleichtert die Plattform das Auffinden von neuen Genres und Musikern.
 Netflix und Amazon haben ähnliche Konzepte was Filme und (physische) Einkaufswaren angeht.
 Ziel dieses Projektes soll es sein eine solche Plattform für RSS Feeds und den darin übermittelten Artikeln zu erstellen.
-Das Projekt \enquote{Skiosa} soll eine Plattform anbieten, die zur zentralen Anlaufstelle für RSS Feeds agieren kann und so ihren Nutzern das Entdecken von neuen Artikeln aus bekannten, sowie unbekannten Feeds erleichtert.
+Mit dem \enquote{Skiosa} Projekt soll eine Plattform entstehen, die zur zentralen Anlaufstelle für RSS Feeds agieren kann und so ihren Nutzern das Entdecken von neuen Artikeln aus bekannten, sowie unbekannten Feeds erleichtert.
 
 \section{Projektanforderungen}
 
-Im Folgenden soll nun beschrieben werden, wie zu Anfang des Projektes die Requirements aufgefasst und beschreiben wurden.
-Aus technischen Gründen hat sich im Verlauf des Prozesses herausgestellt, dass einige dieser Anforderungen nicht so implementierbar sind und wurden daher leicht abgeändert.
+Im Folgenden soll beschrieben werden, wie zu Anfang des Projektes die Requirements aufgefasst und beschreiben wurden.
+Aus technischen Gründen hat sich im Verlauf des Prozesses herausgestellt, dass einige dieser Anforderungen nicht implementierbar sind und wurden daher leicht abgeändert.
 Mehr Informationen hierzu sind im Abschnitt \ref{tech_changes} nachzulesen.
 
 \subsection{Unverzichtbare Ziele}
-Zu Begin müssen zentrale Interaktionsmechanismen für Artikel und Feeds gegeben sein.
+Zu Begin müssen zentrale Interaktionsmechanismen für Artikel und RSS-Feeds gegeben sein.
 Seiten für das Einsehen von Artikeln und Feeds bilden daher den Kern der Applikation.
 % NOTE: INHALT wurde rausgestrichen und warum muss in section \ref{tech_changes} erklärt werden
-Auf den Einsichtsseiten für Artikel und Feeds muss es möglich sein Basisinformationen, wie etwa Titel, Inhalt oder Beschreibung, nachlesen zu können.
-Bei Artikeln muss die Einsichtsseite zusätzlich auf den eigentlichen Artikel verweisen, während bei Feeds auf die in ihnen enthaltenen Artikel verlinkt wird.
+% hä?: Auf den Einsichtsseiten muss es möglich sein Basisinformationen, wie etwa Titel, Inhalt oder Beschreibung, nachlesen zu können.
+Die Benutzeroberflächen, welche Artikel und Feeds anzeigen, müssen grundlegende Informationen, wie etwa Titel, Inhalt oder Beschreibung, darstellen.
+Bei Artikeln muss die Benutzeroberfläche zusätzlich auf den eigentlichen Artikel verweisen, während bei Feeds auf die in ihnen enthaltenen Artikel verlinkt wird.
 
 Den größten Mehrwert der Plattform sollen vorgeschlagene Artikel bilden.
 Es soll Nutzern möglich sein innerhalb der Plattform neue Artikel zu entdecken.
@@ -37,14 +38,14 @@ Auf nicht-funktionaler Ebene ist es für die Plattform wichtig, dass diese ästh
 Konkrete nicht-funktionale Requirements, die sich hieraus ableiten sind, dass die Oberflächen der Plattform einer festen Design-Sprache folgen und User Experience Design seitenübergreifen einheitlich gestaltet ist.
 
 \subsection{Erreichbare Ziele}
-Zusätzlich für das Projekt hilfreiche Funktionalitäten, die zu Anfang als erreichbar angesehen wurden wenden, sich um das Optimieren der vorgeschlagenen Artikeln.
+Zusätzlich für das Projekt hilfreiche Funktionalitäten, die zu Anfang als erreichbar angesehen wurden, wenden sich um das Optimieren der vorgeschlagenen Artikel.
 Es wäre für Nutzer, die es aus bspw. Spotify oder YouTube gewohnt sind ihre Präferenzen als \enquote{Likes} anzugeben, hilfreich, wenn sie dies ebenfalls in Skiosa machen könnten.
 Als optionales Requirement folgt hieraus, dass Nutzer bei Artikeln durch einen \enquote{Like}-Knopf angeben können, welche Artikel Ihnen besonders gefallen und dann ihnen mehr Artikel vorgeschlagen werden, die zu diesen ähnliche sind.
 
-Zusätzlich ist es bei Artikeln von Zeitschriften und Blogs üblich diese einzukategorisieren.
+Zusätzlich ist es bei Artikeln von Zeitschriften und Blogs üblich diese zu kategorisieren.
 In Skiosa wäre es hilfreich, wenn ein Benutzer diese Kategorien angeben könnten und die Vorschläge für diese Nutzer sich dann an den angegebenen Kategorien orientiert.
 
-\subsection{Mögliche weiteren Ziele}
+\subsection{Mögliche weitere Ziele}
 Eine weitere mögliche Erweiterung der Plattform, die aber im Zeitrahmen des Semesters nicht realistisch erscheint, ist das Erstellen einer Content-Management-Seite.
 In dieser Content-Management-Seite könnten Besitzer von RSS Feeds ihre eigenen Feeds hinzufügen und verwalten.
 Hier wäre es möglich Polling-Intervalle, Aussehen, Beschreibungen oder Titel von Feeds abzuändern.
