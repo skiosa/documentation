@@ -1,17 +1,17 @@
 % !TeX root = ../dokumentation.tex
 
-\chapter{Teamorganisation}
+\chapter{Teamorganisation} \label{team_orga}
 
 \section{Rollenverteilung}
     Zusätzlich zu den klassischen Scrum-Rollen Product-Owner, Scrum-Master und Entwickler 
     wurden im Projekt weitere Rollen eingeführt: Architekten und Service-Leads (vgl. \ref*{fig:Rollenverteilung}). 
     Grundsätzliches Ziel war es die Komplexität des Projektes durch Arbeitsteilung und feste Ansprechpartner abzufangen.
-    Damit sollte auch eine Zusammenarbeit trotz verschiedener Kenntnisstände zu ermöglichen und einen Wissensaustausch zu erleichtern.   
+    Damit sollte auch eine Zusammenarbeit trotz verschiedener Kenntnisstände ermöglicht und einen Wissensaustausch erleichtert werden.
 
-    Die Aufgabe des Produkt-Owners ist es, den Wert des Produkts bzw. des Projekts
-    zu maximieren. Mithilfe des Backlogs und der Priorisierung der Aufgaben darin stellt der Produkt Owner
+    Die Aufgabe des Produkt-Owners (PO) ist es, den Wert des Produkts bzw. des Projektes
+    zu maximieren. Mithilfe des Backlogs und der Priorisierung der Aufgaben darin, stellt der Produkt Owner
     sicher, dass das Team an den richtigen Aufgaben arbeitet.
-    Zusätzlich wurden in unserem Team die Storys vom Product Owner erstellt und die Estimation- sowie Planning-Meetings geplant.
+    Zusätzlich wurden in unserem Team die Storys vom Product-Owner erstellt und die Estimation- sowie Planning-Meetings geplant.
 
     Ein Scrum-Master ist vergleichbar mit einem Teamleiter. Er kümmert sich darum, dass
     das Team (Entwickler und PO) ihrer Arbeit bestmöglich nachgehen können und schützt
@@ -22,7 +22,7 @@
 
     Die Architekten sind für die grundsätzliche Infrastruktur im Projekt zuständig. 
     Dazu entwarfen sie eine Service-übergreifende Architektur und bestimmten nach Evaluierung die eingesetzten Technologien.
-    Ziel war es, dass die Architekten einen Gesamtüberblick über das Projekt behalten, 
+    Ziel war es, dass die Architekten einen Gesamtüberblick über das Projekt behalten
     und somit Kommunikation zwischen den Services ermöglichen.
      
     
@@ -41,11 +41,11 @@
 Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt haben und weshalb diese gewählt wurden.
 
 \subsection{Typescript} \label{sub:Typescript}
-    Typescript ist ein Superset von JavaScript. Dabei wurden in dieser Sprache Programmierkonstrukte wie Klassen und Vererbungen sowie Typisierungen implementiert. Das hilft uns, besseren Code zu entwickeln als in JavaScript.
-    Der Grund weshalb wir Typescript in diesem Projekt verwenden, lässt sich damit Begründen, dass in vorherigen Semestern diese Sprache schon des Öfteren in Projekten verwendet wurde und deshalb bei jedem Entwickler gewisse Grundkenntnisse
-    gegeben sind. Daher kann Zeit eingespart werden, um eine neue Sprache zu lernen. Typescript wird in diesem Projekt bei jedem Service verwendet, dass heißt sowohl Backend Services als auch das Frontend werden in Typescript geschrieben.
+    Typescript ist ein Superset von JavaScript. Dabei wurden in dieser Sprache Programmierkonstrukte, wie Klassen und Vererbungen, sowie Typisierungen implementiert. Das hilft uns, besseren Code zu entwickeln, als in JavaScript.
+    Der Grund weshalb wir Typescript in diesem Projekt verwenden, lässt sich damit Begründen, dass in vorherigen Semestern diese Sprache schon des öfteren in Projekten verwendet wurde und deshalb bei jedem Entwickler gewisse Grundkenntnisse
+    gegeben sind. Daher kann Zeit eingespart werden, um eine neue Sprache zu lernen. Typescript wird in diesem Projekt bei jedem Service verwendet, das heißt sowohl Backend- als auch das Frontend-Services werden in Typescript geschrieben.
 \subsection{Node.js}
-    Node.js ist eine Javascript Laufzeitumgebung, welches ermöglicht Javascript Code, ohne einen Browser auszuführen. Dies kann zum Beispiel für Backend Services verwendet werden. Dabei muss nicht zwingend Javascript verwendet werden,
+    Node.js ist eine Javascript Laufzeitumgebung, welche es ermöglicht JavaScript-Code, ohne einen Browser auszuführen. Dies kann zum Beispiel für Backend Services verwendet werden. Dabei muss nicht zwingend JavaScript verwendet werden,
     in unserem Projekt benutzen wir es in Verbindung mit Typescript. Dies hat denselben Grund, wie der aus Abschnitt \ref{sub:Typescript}.
 \subsection{Express}
     Express ist ein Web-Framework welches im Zusammenhang mit Node.js benutzt wird. Diese Technologie kommt im \textit{Core-Service} zum Einsatz. Es erleichtert in Typescript Web-Services zu entwickeln.
@@ -81,7 +81,7 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Zum Beispiel wird \textit{skiosa.de} und \textit{argocd.dev.skiosa.de} auf dem gleichen Server gehosted und Traefik verwalten den Netzwerkverkehr so, dass die korrekte Anfrage an den richtigen Service geht.
     Alternativ hätte man ein \textit{Nginx} benutzen können, hier wäre aber der Konfigurationsaufwand größer.
 \subsection{Argo CD}
-    ArgoCD ist eine deklarative \ac{CD} Software. Diese verwaltet alle unseren Kubernetes Konfigurationen, dabei kann es auch automatisch neue Builds unseres Projektes deployen.
+    ArgoCD ist eine deklarative \ac{CD} Software. Diese verwaltet alle unsere Kubernetes Konfigurationen, dabei kann es auch automatisch neue Builds unseres Projektes deployen.
     ArgoCD dient nur als Erleichterung für die Entwickler, man könnte alle Kubernetes Konfigurationen auch mit Skripten automatisiert verwalten lassen. Jedoch bietet ArgoCD eine übersichtliche UI,
     welche es auch Entwicklern, die kein Verständnis von Kubernetes haben, ermöglicht ihre Software in der Produktion zu beobachten.
 \subsection{Drone}
@@ -90,14 +90,14 @@ Im Folgenden wird erklärt, welche Technologien wir in diesem Projekt eingesetzt
     Aufwand in der Ersteinrichtung hätte, jedoch wären wir dort bei Privaten Repositories limitiert was Ressourcen betrifft. Ein Vorteil von \textit{Drone.io} ist, dass es selber gehosted wird und somit eine bessere Privacy gewährt.
 \subsection{SonarQube}
     SonarQube ist eine Software, welche Code analysieren kann und dabei auch zum Beispiel Sicherheitslücken erkennt.
-    Es wird in diesem Projekt verwendet, um den Code zu analysieren, um dadurch wiederum die Qualität zu verbessern.
+    Es wird in diesem Projekt verwendet, um den Code zu analysieren und dadurch wiederum die Qualität zu verbessern.
     Dabei wird bei jedem Pull-Request der Code überprüft und ein Entwickler erkennt direkt, ob zum Beispiel Bugs gefunden wurden oder sogenannte \textit{Code-Smells}. 
     Diese können zum Beispiel aufkommen, wenn vergessen wurde, nicht genutzte \textit{Imports} zu entfernen.
-    Des Weiteren wird auch überprüft ob duplizierter Code vorhanden ist.
+    Des Weiteren wird auch überprüft, ob duplizierter Code vorhanden ist.
 
 \section{Eingesetzte Collaboration Technologien} 
 \subsection{Jira}
-    Jira ist ein Issue-Tracking-System, das für die Projekt-Management- und Projekt-Management-Prozesse verwendet wird.
+    Jira ist ein Issue-Tracking-System, welches für die Projekt-Management-Prozesse verwendet wird.
     In Jira können Tickets erstellt, zugeordnet und bearbeitet werden. Sie lassen sich einem Sprint zuordnen und im Kanban Board visualisieren.
     Zusätzlich lassen sich einfach Diagramme erstellen, die die Projekt-Management-Prozesse darstellen.
     In unserem Projekt haben wir uns für Jira entschieden, da die meisten es aus ihrer Praxisphase bereits kennen.
@@ -162,13 +162,13 @@ wöchentlich im Rahmen der Vorlesung vorgesehen. Um einen häufigeren Austausch 
 \glqq BI-Weekly\grqq~eingeführt, welches inhaltlich dem Daily gleicht und ebenso wöchentlich abgehalten wird.
 
 \subsection{Review}
-Zum Abschluss eines Sprints finden \glqq Review\grqq~und danach \glqq Retro\grqq~statt. Im Review wird besprochen, was im Sprint erreicht 
+Zum Abschluss eines Sprints finden \glqq Review\grqq~und danach \glqq Retrospektive\grqq~statt. Im Review wird besprochen, was im Sprint erreicht 
 wurde und wie dies den allgemeinen Fortschritt des Projektes beeinflusst. Dabei wird auch besprochen, was als Nächstes zu Erreichen ist. 
 Als Resultat dessen kann der Produkt Backlog beeinflusst werden und Ideen für das Planning des nächsten Sprints gesammelt werden. 
 
 \subsection{Retro}
 In der \glqq Sprint-Retrospektive\grqq~oder kurz \glqq Retro\grqq~wird die Zusammenarbeit im Team mithilfe verschiedener Evaluationstechniken bewertet. 
 Dabei wird besprochen, was gut lief und weitergeführt werden sollte, welche Probleme aufgetreten sind, was im weiteren Verlauf des Projektes 
-vermieden werden sollte sowie potenzielle Neuerungen, die eingeführt werden sollten. Dies resultiert in sogenannten Action Items, welche das 
+vermieden werden sollte, sowie potenzielle Neuerungen, die eingeführt werden sollten. Dies resultiert in sogenannten Action Items, welche das 
 besprochene konkretisieren.
 

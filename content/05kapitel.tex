@@ -40,7 +40,7 @@ Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur. Die Sevi
 \caption{Diagramm – Darstellung der Service Architektur}
 \end{figure}
 
-\subsection{CI/CD Infrastrukture}
+\subsection{CI/CD Infrastruktur}
 Um Code Qualität zu gewährleisten, wurde eine \ac{CI/CD} Infrastruktur entwickelt.
 Diese ermöglicht es uns automatisiert Tests wie Unit und Integration Tests auszuführen und nach jeder Änderung die aktuelle Versionen der Software zu veröffentlichen.
 Da zum Beispiel eine neue Veröffentlichung bei Änderungen auf der Master Branch stattfinden sollen, gibt es drei verschieden \ac{CI/CD} Pipelines.
@@ -67,9 +67,9 @@ Diese führt nur die Unit-Tests aus, dazu muss der Code geladen und alle externe
 \end{figure}
 
 \subsubsection{Übersicht der Pull-Request \ac{CI}-Pipline}
-Die Pull-Request \ac{CI}-Pipeline wird ausgeführt sobald ein Pull-Request erstellt wird. Ihr Ziel ist es den jeweiligen Reviewer zu unterstützen, indem sie Tests und Code-Analyse durchführt.
-Die Ergebnisse der Code Analyse werden direkt auf der Pull-Request Seite dargestellt. Sollten diese nicht den mindestanforderungen entsprechen, wird der Pull-Request dadurch blockiert.
-Die Pipeline beinhaltet die selben Schritte wie die Standard Pipeline, sie erweitert diese lediglich um Integration-Tests.
+Die Pull-Request \ac{CI}-Pipeline wird ausgeführt, sobald ein Pull-Request erstellt wird. Ihr Ziel ist es den jeweiligen Reviewer zu unterstützen, indem sie Tests und Code-Analyse durchführt.
+Die Ergebnisse der Code Analyse werden direkt auf der Pull-Request Seite dargestellt. Sollten diese nicht den Mindestanforderungen entsprechen, wird der Pull-Request dadurch blockiert.
+Die Pipeline beinhaltet die selben Schritte, wie die Standard Pipeline, sie erweitert diese lediglich um Integration-Tests.
 \begin{figure}[!htbp]
     \centering    
     \usetikzlibrary{positioning}
@@ -124,9 +124,9 @@ erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt die
 \section{Mockups}
 \subsection{Design Language}
 Im Projekt haben wir mit dem Ziel eines einheitlichen Designs eine Design-Language definiert.
-Eine Design-Language kann als Framework verstanden werden, das Teams ermöglicht, 
-zusammenhängende Schnittstellen zu Erstellen und zu Entwerfen um Anwendungen ein \enquote{einzigartiges Gefühl} zu verleihen.
-Im engeren Sinne kann eine Design-Language ein Set von Regeln, die Typografie, Formen und Muster vorschreiben.
+Eine Design-Language kann als Framework verstanden werden, welches es Teams ermöglicht, 
+zusammenhängende Schnittstellen zu erstellen und zu entwerfen, um Anwendungen ein \enquote{einzigartiges Gefühl} zu verleihen.
+Im engeren Sinne kann eine Design-Language als Set von Regeln, die Typografie, Formen und Muster vorschreiben.
 
 Zur Maximierung der Vorteile eines solchen Systems in unserem Projekt wurden folgende Ziele und Ideen genutzt:
 \begin{itemize}
@@ -140,14 +140,14 @@ Für zusätzliche \enquote{Helper Texte} wie Menüpunkte, Schaltflächen oder Un
 
 In SKIOSA gibt es drei Arten von Content.  
 \begin{itemize}
-    \item Side bar (split top bar on mobile) mit wichtigen Inhalten
+    \item Sidebar (split top bar on mobile) mit wichtigen Inhalten
     \item Main Content
     \item Meta Content
 \end{itemize}
 
 Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser drei Items unterschiedlich sein.
 
-\textbf{Side bar:}
+\textbf{Sidebar:}
 \begin{itemize}
     \item Dunklere (oder umgekehrte) Färbung, um sie hervorzuheben
     \item Das Skiosa Logo wird immer oben angezeigt
@@ -163,7 +163,7 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 
 \begin{figure}
     \includegraphics[width=\linewidth]{Page-Structure.png}
-    \caption{Example for page structure (red: subtitle, green: card)}
+    \caption{Beispiel für die Seitenstruktur (rot: Untertitel, grün: Kachel)}
     \label{fig:Page-Structure-Example}
 \end{figure}
 
@@ -171,7 +171,7 @@ Damit Nutzer Content besser unterscheiden zu können, wird das Design dieser dre
 \begin{itemize}
     \item Seiten haben eine Karte
     \item Unterscheidet sich von normalen Seiten durch eine abgeschwächte Version der Seitenleiste
-    \item Vermeidung von mehreren Farben (wie bei der obigen Feed)
+    \item Vermeidung von mehreren Farben (wie beim obigen Feed)
 \end{itemize}
  
 \textbf{Formen}
@@ -196,12 +196,12 @@ In Skiosa wurde ein Farbschema festgelegt mit dem Ziel,
 eine möglichst einheitliche Nutzererfahrung zu ermöglichen. 
 Dabei wird zwischen einem Dark-Mode und einem Light-Mode unterschieden (vgl. Abbildung~\ref{fig:Vergleich-light-dark}).
 Für beide Modi wurden die Farben von Hintergründen und Artikelschriftart festgelegt.
-Der Light- und Dark-Modus verwendet 
+Der Light- und Dark-Mode verwendet, 
 aber bei sonstigen Schriftfarben, Buttons, Eingabefeldern und Navigationshintergründen die selben Farben.
 
 \begin{figure}[h]
     \includegraphics[width=\linewidth]{Vergleich-zwischen-light-und-dark-theme.png}
-    \caption{Vergleich zwischen Light- und Dark-Modus in Skiosa}
+    \caption{Vergleich zwischen Light- und Dark-Mode in Skiosa}
     \label{fig:Vergleich-light-dark}
 \end{figure}
 
@@ -217,7 +217,7 @@ Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design pas
 \subsection{Figma Designs}
 
 Auf der Add-Feed-Page kann ein RSS-Feed für die Seite hinzugefügt werden. Mit dem Button \enquote{search} kann überprüft werden, ob die RSS-URL funktioniert.
-Dabei kann einem RSS-Feed ein eigener Namen und Beschreibung gegeben werden.(vgl. Abbildung~\ref{fig:Add Feed Desktop Light}) 
+Dabei kann einem RSS-Feed ein eigener Namen und eine Beschreibung gegeben werden.(vgl. Abbildung~\ref{fig:Add Feed Desktop Light}) 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Add Feed Desktop Lightfigma-mockups.png}
     \caption{Mockup für Add-Feed-Page auf Desktop im Light-Mode}
@@ -233,8 +233,8 @@ Dabei können diese Artikel noch zusätzlich geliked werden. (vgl. Abbildung~\re
     \label{fig:Bookmarks Interface Desktop Light}
 \end{figure}
 
-Auf der Feed-Overview-Page werden von einem Feed sowohl die neusten Artkel als auch alternative Artikel aus dem Feed angezeigt.
-Die Artikel können hier direkt sowohl geliked als auch bookmarked werden. (vgl. Abbildung~\ref{fig:Feed Overview Page Light Desktop})
+Auf der Feed-Overview-Page werden von einem Feed, sowohl die neuesten Artkel, als auch alternative Artikel aus dem Feed angezeigt.
+Die Artikel können hier direkt, sowohl geliked, als auch gebookmarked werden. (vgl. Abbildung~\ref{fig:Feed Overview Page Light Desktop})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Feed Overview Page Desktop Lightfigma-mockups.png}
@@ -259,7 +259,7 @@ Auf der Login-Page wird der User nach seinem Nutzername und Passwort gefragt, da
     \label{fig:Login Page Desktop Light}
 \end{figure}
 
-Auf der Overview-Page werden dem Nutzer empfohlende Artikel und Feeds vorgeschlagen. Dabei kann in eine detailierte Sicht für den Artikel gewechselt werden mit einem Klick auf einen Artikel. (vgl. Abbildung~\ref{fig:Overview Page Desktop Light})
+Auf der Overview-Page werden dem Nutzer empfohlende Artikel und Feeds vorgeschlagen. Dabei kann in eine detaillierte Sicht für den Artikel gewechselt werden, mit einem Klick auf einen Artikel. (vgl. Abbildung~\ref{fig:Overview Page Desktop Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Overview Page Desktop Lightfigma-mockups.png}
@@ -267,7 +267,7 @@ Auf der Overview-Page werden dem Nutzer empfohlende Artikel und Feeds vorgeschla
     \label{fig:Overview Page Desktop Light}
 \end{figure}
 
-In den Einstellungen hat der Nutzer die Möglichkeit seine Konto-Einstellungen anzupassen oder zwischen dem Light- und Darkmodus zu wechseln. (vgl. Abbildung~\ref{fig:Settings Interface Desktop Light})
+In den Einstellungen hat der Nutzer die Möglichkeit seine Konto-Einstellungen anzupassen oder zwischen dem Light- und Dark-Mode zu wechseln. (vgl. Abbildung~\ref{fig:Settings Interface Desktop Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{images/Settings Interface Desktop Lightfigma-mockups.png}
@@ -292,10 +292,9 @@ Darüber hinaus gibt es Links zum Originalartikel und zum Feed, in dem der Artik
     \label{fig:View Page Desktop Light}
 \end{figure}
 
-Für jede Page wurde dabei ein Mockup für den Light-Mode, 
-für den Dark-Mode in der Desktop-Ansicht und ein Mockup im 
-Light-Mode und ein Mockup im Dark-Mode in der mobilen Ansicht 
-erstellt. Zur Feed-Overview-Page sehen diese folgendermaßen aus:
+Für jede Page wurde dabei je ein Mockup für den Light- und Dark-Mode in der Desktop-Ansicht 
+und je ein Mockup im Light- und Dark-Mode in der mobilen Ansicht erstellt.
+Zur Feed-Overview-Page sehen diese folgendermaßen aus:
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Feed Overview Page Desktop Darkfigma-mockups.png}
@@ -323,11 +322,11 @@ erstellt. Zur Feed-Overview-Page sehen diese folgendermaßen aus:
 
 \subsection{Erläuterung zur Funktionalität einzelner Seiten}
 
-Um zusätzliche Fragen, wie etwa die Funktionalität einzelner Mockups und unserer Plattform zu erklären, wurden nachtäglich ebenfalls Aktivitätsdiagramme zu den einzelnen Seiten (bzw. globalen Komponenten) erstellt.
-Diese erläutern das Verhalten verschiedener Seiten und werden im Folgenden erläutert.
+Um zusätzliche Fragen, wie etwa die Funktionalität einzelner Mockups und unserer Plattform zu erklären, wurden nachträglich ebenfalls Aktivitätsdiagramme zu den einzelnen Seiten (bzw. globalen Komponenten) erstellt.
+Diese erläutern das Verhalten verschiedener Seiten und werden im Folgenden erklärt.
 
 Das Aktivitätsdiagramm der Loginseite ist in Abbildung~\ref{fig:umlActivityLogin.png} dargestellt.
-Auf dieser Seite ist es möglich kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
+Auf dieser Seite kann man sich entweder direkt mit Username und Passwort anmelden oder auf registrieren klicken.
 Sind die Anmeldedaten korrekt wird man eingeloggt, sind die Anmeldedaten fehlerhaft können diese korrigiert werden.
 \begin{figure}
     \includegraphics[width=\linewidth]{umlActivityLogin.png}
@@ -348,8 +347,8 @@ Zu jedem Zeitpunkt kann die Registrierung abgebrochen und zur Loginseite zurück
 Die Seitenleiste ist auf jeder Seite mit Außnahme der Login- und Registrierungsseite, sowie während des Pop-ups zum Hinzufügen eines Feeds erreichbar.
 In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Seitenleiste dargestellt.
 Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich einloggen
-oder falls bereits geschehen auf die Einstellungen gewechselt werden. Die Schaltfläche des Login wird nach erfolgreichem Login auf Settings geändert.
-Es kann immer auf die Empfehlungen zugegriffen werden, sowohl als eingeloggter wie auch als nicht eingeloggter Nutzer.
+oder falls bereits geschehen auf die Einstellungen gewechselt werden. Die Schaltfläche des Logins wird nach erfolgreichem Login auf Settings geändert.
+Es kann immer auf die Empfehlungen zugegriffen werden, sowohl als eingeloggter, wie auch als nicht eingeloggter Nutzer.
 Unter der Voraussetzung, dass der Benutzer eingeloggt ist, kann direkt zu den Lesezeichen und den Abonnements gewechselt werden.
 Zusätzlich kann direkt ein neuer RSS Feed hinzugefügt werden.
 \begin{figure}
@@ -431,7 +430,7 @@ Ausloggen kann sich der Nutzer in den Einstellungen auch.
 
 
 \section{Technische Änderungen zur anfänglichen Struktur} \label{tech_changes}
-Im Laufe unseres Projektes sind einige technischen Hürden entstanden. Diese haben zum Teil dazu geführt das unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
+Im Laufe unseres Projektes sind einige technische Hürden entstanden. Diese haben zum Teil dazu geführt, dass unsere ursprünglichen Requirements nicht mehr erfüllt werden konnten.
 Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
 
 \begin{table}[h]
@@ -447,9 +446,9 @@ Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
 \end{table}
 
 Wie am Beispiel des RSS Feeds der Tagesschau\footnote{https://www.tagesschau.de/xml/rss2/} zu erkennen ist, liefern viele RSS Feeds einen TTL Wert.
-Mit diesem ist zu erkennen, in welchem Intervall der jeweilige Feed neue Informationen bereitstellt. Das mögliches Polling Intervall in der Content-Creator-Page (falls implementiert) wird dadurch redundant.
+Mit diesem ist zu erkennen, in welchem Intervall der jeweilige Feed neue Informationen bereitstellt. Das mögliche Polling Intervall in der Content-Creator-Page (falls implementiert) wird dadurch redundant.
 Zusätzlich ist am obersten Artikel zu sehen, wie im Inhalt nur auf ein Link zur Webseite der Tagesschau verwiesen wird und nicht etwa der Inhalt des Artikels enthalten ist.
-So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in den initialen Requirements enthalten ist, nicht möglich ist.
+So ist ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in den initialen Requirements enthalten ist, nicht möglich ist.
 
 \begin{lstlisting}[title=Tagesschau RSS Feed,language=xml]
 <rss version="2.0">
@@ -484,9 +483,9 @@ So ist es ebenfalls leicht zu erkennen, dass das Anzeigen des Inhalts, wie es in
 
 \section{Workflows}
 \subsection{Feed-Workflow}
-Feeds können nur von angemeldeten Benutzer mittels unseres Frontends hinzugefügt werden. Hierfür gibt es eine Button \textit{Add Feed}, welcher ein Pop-up öffnet, in dem eine \ac{URL} zu einem \ac{RSS} Feed angegeben werden kann.
+Feeds können nur von angemeldeten Benutzer mittels unseres Frontends hinzugefügt werden. Hierfür gibt es einen Button \textit{Add Feed}, welcher ein Pop-up öffnet, in dem eine \ac{URL} zu einem \ac{RSS} Feed angegeben werden kann.
 Nachdem dieser angegeben wurde, muss der Nutzer einen \textit{Load} Button betätigen, um Basis Informationen des gewünschten Feeds zu erhalten.
-Falls es ein valider RSS Feed ist, werden dann die darunter liegenden Felder automatisch mit den Metadaten wie Title und Beschreibung ausgefüllt.
+Falls es ein valider RSS Feed ist, werden dann die darunter liegenden Felder automatisch mit den Metadaten, wie Titel und Beschreibung ausgefüllt.
 Dem Benutzer ist es dann möglich den Feed mit dem Button \textit{Add Feed} der Plattform hinzuzufügen.
 Erst dann geschieht der eigentliche Core-Service Request, welcher versucht den angeforderten Feed abzuspeichern. Falls der Feed bereits existiert, wird eine Fehlermeldung ausgegeben.
 Der Core-Service wiederum speichert den RSS Feed in der Datenbank ab. Der gesamte Workflow ist in Abbildung~\ref{fig:feedWorkflow} dargestellt.
@@ -499,10 +498,10 @@ Der Core-Service wiederum speichert den RSS Feed in der Datenbank ab. Der gesamt
 \subsection{Article-Workflow}
 Mithilfe des Polling-Service werden periodisch neue Artikel-Metadaten in unsere Datenbank eingepflegt. Dieser holt sich zuerst die Feeds aus der Datenbank deren \ac{TTL} abgelaufen sind und ruft diese ab (polling).
 Die dabei erhaltenen XML-Daten werden dann in ein Objekt geparst, welches weiter in unser Artikel-Objekt-Format geparst wird. Dieses enthält Informationen wie Titel, Beschreibung und einen Link zum eigentlichen Artikel.
-Diese Artikel werden dann in die Datenbank eingetragen und die entsprechenden Zeitstempel der Feeds (welche zum prüfen der \acs{TTL} verwendet werden) geupdated.
+Diese Artikel werden dann in die Datenbank eingetragen und die entsprechenden Zeitstempel der Feeds (welche zum Prüfen der \acs{TTL} verwendet werden) geupdated.
 
 Besucht ein Nutzer unsere Startseite oder eine Artikel-Seite wird vom Frontend eine Anfrage an das Backend (Core-Service) gestellt, um Artikel zu erhalten. Dieses holt sich Artikel aus der Datenbank und gibt explizit
-angefragte Artikel sowie Empfehlungen für weitere Artikel an das Frontend zurück. Das Frontend stellt dem Nutzer dann die Artikel(-empfehlungen) dar. Der gesamte Workflow ist in Abbildung~\ref{fig:articleWorkflow} dargestellt.
+angefragte Artikel, sowie Empfehlungen für weitere Artikel an das Frontend zurück. Das Frontend stellt dem Nutzer dann die Artikel(-empfehlungen) dar. Der gesamte Workflow ist in Abbildung~\ref{fig:articleWorkflow} dargestellt.
 
 \begin{figure}[!hbt]
     \includegraphics[width=\linewidth]{umlArticleWorkflow.png}
