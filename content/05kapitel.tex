@@ -5,20 +5,20 @@
 
 \section{Architektur}
 Um unsere Plattform potenziellen Nutzern zugänglich zu machen und bestimmte Teile unseres Workflows\footnote{Arbeitsablauf} zu Automatisieren, hosten wir unsere Architektur in einer Cloud Umgebung.
-Dabei läuft unsere Architektur auf der Container-Orchestrierungs Plattform Kubernetes, für welches wir die leichgewichtige (und leichter zu verwaltende) Variante \textit{K3s}~\parencite{web/K3s} verwenden.
-Auf diesem Kubernetes System werden \ac{CI/CD} Plattformen gehosted und unsere Applikation, sowie deren Abhängigkeiten. Dadurch sind wir nicht an öffentlich-kostenfreie System limitiert und können unser
+Dabei läuft unsere Architektur auf der Kontainer Orchestrierungs Plattform Kubernetes, für welches wir die leichgewichtige (und leichter zu verwaltende) Variante \textit{k3s}~\parencite{web/k3s} verwenden.
+Auf diesem Kubernetes System werden \ac{CI/CD} Plattformen gehosted und unsere Applikation sowie deren Abhängigkeiten. Dadurch sind wir nicht vom öffentlich-kostenfreie System limitiert und können unsere
 System perfekt auf unseren Workflow und die Applikation anpassen.
 
 \subsection{Übersicht der Services}
 Unser Produkt ist in mehrere Services aufgeteilt. Die Services sind \textit{Core-Service}, \textit{Polling-Service} und das \textit{Frontend}.
-Desweiteren gibt es eine \textit{PostgreSQL Datenbank} und eine \textit{Keycloak} Instanz. Die letzten beiden Services sind Abhänigkeiten von unseren entwickelten Services.
-Die Datenbank wird dafür verwendet Daten wie RSS-Feeds und Artikel zu speichern.
-Keycloak wird dafür verwendet den \textit{Core-Service} und das \textit{Frontend} abzusichern und die Benutzer zu verwalten.
+Desweiteren gibt es eine \textit{PostgreSQL Datenbank} und eine \textit{Keycloak} Instanz. Die letzten beiden Services sind Abhängigkeiten von unseren entwickelten Services.
+Die Datenbank wird dafür verwendet um Daten wie RSS-Feeds und Artikel zu speichern.
+Keycloak wird dafür verwendet um den \textit{Core-Service} und das \textit{Frontend} abzusichern und die Benutzer zu verwalten.
 Die Hauptaufgabe des \textit{Core-Services} ist es RSS-Feeds und Artikel zur Verfügung zu stellen, dies geschieht mittels \textit{GraphQL}. Desweiteren bietet er die Möglichkeit
-RSS-Feeds anzulegen und Abonnements, Favoriten und Lesezeichen eines Benutzers zu verwalten.
+RSS-Feeds anzulegen und Abonnents, Favoriten und Lesezeichen eines Benutzers zu verwalten.
 Der \textit{Polling-Service} ist für die automatische Datenabfrage von RSS-Feeds und deren Artikel zuständig. Diese werden anschließend in der Datenbank gespeichert.
-Das \textit{Frontend} ist die Endschnittstelle unseres Produkts zu dem Benutzer.
-Es wird dafür verwendet, um die Daten des \textit{Core-Services} dem Benutzer zugänglich zu machen.
+Das \textit{Frontend} ist die Schnittstelle unseres Produkts zu dem Benutzer.
+Es wird verwendet um die Daten des \textit{Core-Services} dem Benutzer anzuzeigen.
 Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur. Die Sevices mit den gestrichelten Linien sind die Abhängigkeiten.
 \begin{figure}[!htbp]
     \centering    
@@ -42,13 +42,13 @@ Das folgenden Diagramm veranschautlicht die Skiosa Service-Architektur. Die Sevi
 
 \subsection{CI/CD Infrastruktur}
 Um Code Qualität zu gewährleisten, wurde eine \ac{CI/CD} Infrastruktur entwickelt.
-Diese ermöglicht es uns automatisiert Tests, wie Unit und Integration Tests auszuführen und nach jeder Änderung aktuelle Versionen der Software zu veröffentlichen.
+Diese ermöglicht es uns automatisiert Tests wie Unit und Integration Tests auszuführen und nach jeder Änderung die aktuelle Versionen der Software zu veröffentlichen.
 Da zum Beispiel eine neue Veröffentlichung bei Änderungen auf der Master Branch stattfinden sollen, gibt es drei verschieden \ac{CI/CD} Pipelines.
 Eine die nur Unit-Tests ausführt, eine die komplexe Tests ausführt und eine die eine neue Version veröffentlicht.
 
 \subsubsection{Übersicht der Standard \ac{CI}-Pipline}
-Die Standard \ac{CI}-Pipeline wird bei jedem Commit, der nicht auf dem Master Branch stattfindet, ausgeführt. Dabei hat die Standard Pipeline den geringsten Umfang und Aufgaben.
-Diese führt nur die Unit-Tests aus, dazu muss der Code geklont und alle Dependencies installiert werden. Somit sind  Fehler direkt früh erkennbar, wenn diese Pipeline fehlschlägt.
+Die Standard \ac{CI}-Pipeline wird bei jedem Commit, der nicht auf dem Master Branch stattfindet, ausgeführt. Dabei hat die Standard Pipeline den geringsten Umfang and Aufgaben.
+Diese führt nur die Unit-Tests aus, dazu muss der Code geladen und alle externen Softwarebibliotheken installiert werden. Fehler werden früh erkannt, weil im Fehlerfall die Pipeline fehlschlägt.
 \begin{figure}[!htbp]
     \centering    
     \usetikzlibrary{positioning}
@@ -96,8 +96,8 @@ Die Pipeline beinhaltet die selben Schritte, wie die Standard Pipeline, sie erwe
 \end{figure}
 
 \subsubsection{Übersicht der Master \ac{CI}-Pipline}
-Die Master \ac{CI}-Pipeline wird bei einen Commit auf den Master Branch ausgeführt. Dabei hat die Pipeline die Aufgabe den neuen Code auszurollen und sommit live zu bringen.
-Zur Sicherheit werden auch wieder die Unit-Tests ausgeführt, damit auch wirklich sichergestellt wird, dass der Code lauffähig ist. Anschließend wird ein neues Docker-Image gebaut,
+Die Master \ac{CI}-Pipeline wird bei einen Commit auf den Master Branch ausgeführt. Dabei hat die Pipeline die Aufgabe den neuen Code auszurollen und live zu bringen.
+Zur Sicherheit werden auch wieder die Unit-Tests ausgeführt, damit auch wirklich sichergestellt wird, dass der Code lauffähig ist. Anschließend wird ein neues Docker-Image gebaut
 welches dann in der Docker-Registry gespeichert wird. Nach erfolgreichem Bauen des Images, wird die neue Image-Version in das Kubernetes-Deployment geschrieben. Denn ArgoCD~\parencite{web/argocd} unser \ac{CD} Tool
 erkennt automatisch Änderungen an den Kubernetes-Deployments und übernimmt diese. Somit sind die Code Änderungen an der Software in wenigen Minuten live ausgerollt.
 \begin{figure}[!htbp]
@@ -209,8 +209,8 @@ aber bei sonstigen Schriftfarben, Buttons, Eingabefeldern und Navigationshinterg
 
 Zur Erstellung des Designs und der Mockups wurde in Skiosa das Tool Figma verwendet. 
 Für Komponenten die häufig verwendet werden sollen (bpsw. Buttons oder Farben) wurden sogenannte Common-Components erstellt.
-Diese können bei der Erstellung von neuen Seiten wiederverwendet werden. 
-Dadurch bleibt ein Button immer gleich und wird auch nur einmal in einem Angular-Component umgesetzt werden.
+Diese können bei der Erstellung von neuen Seiten wieder verwendet werden. 
+Dadurch bleibt ein Button immer gleich und wird auch nur einmal in einem Angular-Component umgesetzt.
 Ähnlich werden auch die Farben umgesetzt. 
 Ziel ist es, effizienter neue Seiten erstellen zu können, die in das Design passen.
 
@@ -242,8 +242,8 @@ Die Artikel können hier direkt, sowohl geliked, als auch gebookmarked werden. (
     \label{fig:Feed Overview Page Light Desktop}
 \end{figure}
 
-Auf der Registrierungsseite wird der User nach dem Vornamen, Nachnamen, E-Mail-Adresse, Nutzername und nach seinem Passwort gefragt.
-Das Passwort muss dabei wiederhohlt werden. (vgl. Abbildung~\ref{fig:Registration Page Light})
+Auf der Registrierungsseite wird der User nach dem 
+Vornamen, Nachnamen, E-Mail-Adresse, Nutzername und nach seinem Passwort gefragt. Das Passwort muss dabei wiederholt werden. (vgl. Abbildung~\ref{fig:Registration Page Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{Framefigma-mockups-1.png}
@@ -275,7 +275,7 @@ In den Einstellungen hat der Nutzer die Möglichkeit seine Konto-Einstellungen a
     \label{fig:Settings Interface Desktop Light}
 \end{figure}
 
-Auf der Subscription-Page werden alle abbonierten RSS-Feeds angezeigt. Dabei können mit einem Klick auf den Pfeil auf der rechten Seite die letzten veröffentlichten Artikel dieses Feeds angezeigt werden. (vgl. Abbildung~\ref{fig:Subscription Interface Desktop Light})
+Auf der Subscription-Page werden alle abonierten RSS-Feeds angezeigt. Dabei können mit einem Klick auf den Pfeil auf der rechten Seite die letzten veröffentlichten Artikel dieses Feeds angezeigt werden. (vgl. Abbildung~\ref{fig:Subscription Interface Desktop Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{images/Subscription Interface Desktop Lightfigma-mockups.png}
@@ -284,7 +284,7 @@ Auf der Subscription-Page werden alle abbonierten RSS-Feeds angezeigt. Dabei kö
 \end{figure}
 
 Auf der Article-View-Page werden die Details des Artikel angezeigt. Dabei kann man den Link zu dem Artikes teilen, den Artikel liken und bookmarken. 
-Darüber hinaus gibt es Links zum Originalartikel und zum Feed, indem der Artikel veröffentlicht wurde. Unter \enquote{Similar Articles} werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
+Darüber hinaus gibt es Links zum Originalartikel und zum Feed, in dem der Artikel veröffentlicht wurde. Unter \enquote{Similar Articles} werden zum Artikel ähnliche Artikel angezeigt. (vgl. Abbildung~\ref{fig:View Page Desktop Light})
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{images/View Page Desktop Lightfigma-mockups.png}
@@ -344,7 +344,7 @@ Zu jedem Zeitpunkt kann die Registrierung abgebrochen und zur Loginseite zurück
     \label{fig:umlActivityRegister.png}
 \end{figure}
 
-Die Seitenleiste ist auf jeder Seite mit Außnahme Login- und Registrierungsseite, sowie während des Pop-ups zum Hinzufügen eines Feeds erreichbar.
+Die Seitenleiste ist auf jeder Seite mit Außnahme der Login- und Registrierungsseite, sowie während des Pop-ups zum Hinzufügen eines Feeds erreichbar.
 In Abbildung~\ref{fig:umlActivitySidebar.png} werden die möglichen Aktionen der Seitenleiste dargestellt.
 Von dieser kann direkt zwischen Dark- und Light-Mode umgeschalten werden. Zudem kann man sich einloggen
 oder falls bereits geschehen auf die Einstellungen gewechselt werden. Die Schaltfläche des Logins wird nach erfolgreichem Login auf Settings geändert.
@@ -438,8 +438,8 @@ Deshalb wurden sie im Nachhinein dementsprechend leicht angepasst.
     \hline
     Beschreibung der Änderung & Begründung der Änderung\\ \hline
     In der Plattform soll von RSS Feeds kein Inhalt (bzw. nur eine Beschreibung) angezeigt werden & Ein Großteil der im Internet vohandenen RSS Feeds verlinken nur auf Artikel und enthalten keinen Inhalt. \\ 
-    Das Hinzufügen von Feeds aus der Creator Page wurde zu einem Must-Have Requirement & Das anfänglich geplante manuelle Einbinden von Feeds ist als zu zeitaufwändig eingeschätzt worden. \\
-    Polling Intervall (TTL) nicht mehr Teil der Creator Page & Ein RSS Feed besitzt bereits ein TTL Feld, durch das dieser Intervall bereits angegeben wird. \\
+    Das Hinzufügen von Feeds aus der Creator Page wurde zu einem Must-Have Requirement & Das anfänglich geplante manuelle Einbinden von Feeds ist als zu Zeitaufwändig eingeschätzt worden. \\
+    Polling Intervall (TTL) nicht mehr Teil der Creator Page & Ein RSS Feed besitzt bereits ein TTL Feld, durch das dieser Interval bereits angegeben wird. \\
     \hline
 \end{tabular}}
 \caption{Tabelle – Änderungen zur anfänglichen Struktur}
